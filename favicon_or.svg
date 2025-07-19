@@ -29,7 +29,7 @@
  
   <line x1="16" y1="8" x2="16" y2="26" stroke="#ffffff" stroke-width="1"/>
 
-  <rect x="15.3" y="8" width="1.4" height="6" fill="#dc2626"/>
+  <rect x="15.3" y="8" width="1.4" height="6" fill="#3b82f6"/>
  
   <circle cx="23" cy="11" r="1.5" fill="#f59e0b"/>
   <rect x="22.5" y="9.5" width="1" height="3" fill="#92400e" rx="0.2"/>
