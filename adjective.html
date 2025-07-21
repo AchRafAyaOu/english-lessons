@@ -1,11 +1,123 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adjectives & Adverbs - الصفات والظروف</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Inter&display=swap" rel="stylesheet" />
-    <style>
+<div class="container">
+      <h1>الظروف والصفات</h1>
+      <p class="subtitle">Adjectives &amp; Adverbs</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="section">
+        <h2 class="section-title">Understanding the Difference / فهم الفرق</h2>
+        <div class="comparison-grid" role="region" aria-label="Comparison adjectives and adverbs">
+          <article class="comparison-side" aria-labelledby="adj-title">
+            <h3 id="adj-title" class="comparison-title adjective-title">Adjectives / الصفات</h3>
+            <div class="tip-box" role="note" aria-live="polite">
+              <div class="tip-title">تصف الأسماء والضمائر</div>
+              <p>Adjectives describe nouns and pronouns</p>
+            </div>
+            <div class="examples">
+              <div class="example">
+                <div class="example-en">The <span class="highlight-adjective">beautiful</span> flower smells nice.</div>
+                <div class="example-ar">الزهرة الجميلة رائحتها جميلة.</div>
+              </div>
+              <div class="example">
+                <div class="example-en">She is very <span class="highlight-adjective">smart</span>.</div>
+                <div class="example-ar">هي ذكية جداً.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="comparison-side" aria-labelledby="adv-title">
+            <h3 id="adv-title" class="comparison-title adverb-title">Adverbs / الظروف</h3>
+            <div class="tip-box" role="note" aria-live="polite">
+              <div class="tip-title">تصف الأفعال والصفات والظروف</div>
+              <p>Adverbs describe verbs, adjectives, and other adverbs</p>
+            </div>
+            <div class="examples">
+              <div class="example">
+                <div class="example-en">She sings <span class="highlight-adverb">beautifully</span>.</div>
+                <div class="example-ar">تغني بشكل جميل.</div>
+              </div>
+              <div class="example">
+                <div class="example-en">He runs <span class="highlight-adverb">quickly</span>.</div>
+                <div class="example-ar">يجري بسرعة.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <nav class="tabs" role="tablist" aria-label="Words tabs">
+        <button role="tab" aria-selected="true" aria-controls="common" id="tab-common" class="tab active" onclick="showTab('common', this)">Common Words / كلمات شائعة</button>
+        <button role="tab" aria-selected="false" aria-controls="formation" id="tab-formation" class="tab" onclick="showTab('formation', this)">Formation Rules / قواعد التكوين</button>
+      </nav>
+
+      <section id="common" class="tab-content active" role="tabpanel" aria-labelledby="tab-common">
+        <div class="section" aria-label="Common adjectives">
+          <h2 class="section-title">Common Adjectives / صفات شائعة</h2>
+          <div class="words-grid" id="adjectivesGrid" aria-live="polite" aria-relevant="additions">
+            <!-- loaded dynamically -->
+          </div>
+        </div>
+
+        <div class="section" aria-label="Common adverbs">
+          <h2 class="section-title">Common Adverbs / ظروف شائعة</h2>
+          <div class="words-grid" id="adverbsGrid" aria-live="polite" aria-relevant="additions">
+            <!-- loaded dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <section id="formation" class="tab-content" role="tabpanel" aria-labelledby="tab-formation" hidden>
+        <div class="section" aria-label="How to form adverbs">
+          <h2 class="section-title">How to Form Adverbs / كيفية تكوين الظروف</h2>
+          <div class="tip-box" role="note" aria-live="polite">
+            <div class="tip-title">القاعدة الأساسية / Basic Rule:</div>
+            <p>غالباً ما نضيف "-ly" إلى الصفة لتكوين الظرف</p>
+            <p>Usually add "-ly" to the adjective to form an adverb</p>
+          </div>
+          <div class="examples">
+            <div class="example">
+              <div class="example-en"><span class="highlight-adjective">Quick</span> → <span class="highlight-adverb">Quickly</span></div>
+              <div class="example-ar">سريع → بسرعة</div>
+            </div>
+            <div class="example">
+              <div class="example-en"><span class="highlight-adjective">Careful</span> → <span class="highlight-adverb">Carefully</span></div>
+              <div class="example-ar">حذر → بحذر</div>
+            </div>
+            <div class="example">
+              <div class="example-en"><span class="highlight-adjective">Easy</span> → <span class="highlight-adverb">Easily</span></div>
+              <div class="example-ar">سهل → بسهولة</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="exercise-section" aria-label="Exercise: classify the words">
+        <h2 class="exercise-title">Classify the Words / صنف الكلمات</h2>
+        <p style="text-align: center; margin-bottom: 1.25rem; font-family: 'Cairo', serif;">قم بسحب الكلمة وإفلاتها في الفئة الصحيحة / Drag each word to the correct category</p>
+
+        <div class="word-options" id="wordOptions" aria-live="polite" aria-relevant="additions" role="list">
+          <!-- dynamically loaded words -->
+        </div>
+
+        <div class="drop-zones">
+          <div id="adjectiveZone" class="drop-zone adjective-zone" tabindex="0" aria-label="Drop zone for adjectives" aria-dropeffect="copy">
+            <div class="drop-zone-title">Adjectives / الصفات</div>
+            <div>Describe nouns</div>
+          </div>
+          <div id="adverbZone" class="drop-zone adverb-zone" tabindex="0" aria-label="Drop zone for adverbs" aria-dropeffect="copy">
+            <div class="drop-zone-title">Adverbs / الظروف</div>
+            <div>Describe verbs</div>
+          </div>
+        </div>
+
+        <button class="btn" id="checkBtn" type="button">Check Answers / تحقق من الإجابات</button>
+        <button class="btn hidden" id="tryAgainBtn" type="button">Try Again / حاول مرة أخرى</button>
+        <div id="classificationResults" class="results hidden" aria-live="assertive" role="alert"></div>
+      </section>
+    </div>
+      <style>
       * {
         margin: 0;
         padding: 0;
@@ -413,129 +525,6 @@
       }
 
     </style>
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <h1>الظروف والصفات</h1>
-      <p class="subtitle">Adjectives &amp; Adverbs</p>
-    </div>
-  </header>
-
-  <main>
-    <div class="container">
-      <section class="section">
-        <h2 class="section-title">Understanding the Difference / فهم الفرق</h2>
-        <div class="comparison-grid" role="region" aria-label="Comparison adjectives and adverbs">
-          <article class="comparison-side" aria-labelledby="adj-title">
-            <h3 id="adj-title" class="comparison-title adjective-title">Adjectives / الصفات</h3>
-            <div class="tip-box" role="note" aria-live="polite">
-              <div class="tip-title">تصف الأسماء والضمائر</div>
-              <p>Adjectives describe nouns and pronouns</p>
-            </div>
-            <div class="examples">
-              <div class="example">
-                <div class="example-en">The <span class="highlight-adjective">beautiful</span> flower smells nice.</div>
-                <div class="example-ar">الزهرة الجميلة رائحتها جميلة.</div>
-              </div>
-              <div class="example">
-                <div class="example-en">She is very <span class="highlight-adjective">smart</span>.</div>
-                <div class="example-ar">هي ذكية جداً.</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="comparison-side" aria-labelledby="adv-title">
-            <h3 id="adv-title" class="comparison-title adverb-title">Adverbs / الظروف</h3>
-            <div class="tip-box" role="note" aria-live="polite">
-              <div class="tip-title">تصف الأفعال والصفات والظروف</div>
-              <p>Adverbs describe verbs, adjectives, and other adverbs</p>
-            </div>
-            <div class="examples">
-              <div class="example">
-                <div class="example-en">She sings <span class="highlight-adverb">beautifully</span>.</div>
-                <div class="example-ar">تغني بشكل جميل.</div>
-              </div>
-              <div class="example">
-                <div class="example-en">He runs <span class="highlight-adverb">quickly</span>.</div>
-                <div class="example-ar">يجري بسرعة.</div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <nav class="tabs" role="tablist" aria-label="Words tabs">
-        <button role="tab" aria-selected="true" aria-controls="common" id="tab-common" class="tab active" onclick="showTab('common', this)">Common Words / كلمات شائعة</button>
-        <button role="tab" aria-selected="false" aria-controls="formation" id="tab-formation" class="tab" onclick="showTab('formation', this)">Formation Rules / قواعد التكوين</button>
-      </nav>
-
-      <section id="common" class="tab-content active" role="tabpanel" aria-labelledby="tab-common">
-        <div class="section" aria-label="Common adjectives">
-          <h2 class="section-title">Common Adjectives / صفات شائعة</h2>
-          <div class="words-grid" id="adjectivesGrid" aria-live="polite" aria-relevant="additions">
-            <!-- loaded dynamically -->
-          </div>
-        </div>
-
-        <div class="section" aria-label="Common adverbs">
-          <h2 class="section-title">Common Adverbs / ظروف شائعة</h2>
-          <div class="words-grid" id="adverbsGrid" aria-live="polite" aria-relevant="additions">
-            <!-- loaded dynamically -->
-          </div>
-        </div>
-      </section>
-
-      <section id="formation" class="tab-content" role="tabpanel" aria-labelledby="tab-formation" hidden>
-        <div class="section" aria-label="How to form adverbs">
-          <h2 class="section-title">How to Form Adverbs / كيفية تكوين الظروف</h2>
-          <div class="tip-box" role="note" aria-live="polite">
-            <div class="tip-title">القاعدة الأساسية / Basic Rule:</div>
-            <p>غالباً ما نضيف "-ly" إلى الصفة لتكوين الظرف</p>
-            <p>Usually add "-ly" to the adjective to form an adverb</p>
-          </div>
-          <div class="examples">
-            <div class="example">
-              <div class="example-en"><span class="highlight-adjective">Quick</span> → <span class="highlight-adverb">Quickly</span></div>
-              <div class="example-ar">سريع → بسرعة</div>
-            </div>
-            <div class="example">
-              <div class="example-en"><span class="highlight-adjective">Careful</span> → <span class="highlight-adverb">Carefully</span></div>
-              <div class="example-ar">حذر → بحذر</div>
-            </div>
-            <div class="example">
-              <div class="example-en"><span class="highlight-adjective">Easy</span> → <span class="highlight-adverb">Easily</span></div>
-              <div class="example-ar">سهل → بسهولة</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="exercise-section" aria-label="Exercise: classify the words">
-        <h2 class="exercise-title">Classify the Words / صنف الكلمات</h2>
-        <p style="text-align: center; margin-bottom: 1.25rem; font-family: 'Cairo', serif;">قم بسحب الكلمة وإفلاتها في الفئة الصحيحة / Drag each word to the correct category</p>
-
-        <div class="word-options" id="wordOptions" aria-live="polite" aria-relevant="additions" role="list">
-          <!-- dynamically loaded words -->
-        </div>
-
-        <div class="drop-zones">
-          <div id="adjectiveZone" class="drop-zone adjective-zone" tabindex="0" aria-label="Drop zone for adjectives" aria-dropeffect="copy">
-            <div class="drop-zone-title">Adjectives / الصفات</div>
-            <div>Describe nouns</div>
-          </div>
-          <div id="adverbZone" class="drop-zone adverb-zone" tabindex="0" aria-label="Drop zone for adverbs" aria-dropeffect="copy">
-            <div class="drop-zone-title">Adverbs / الظروف</div>
-            <div>Describe verbs</div>
-          </div>
-        </div>
-
-        <button class="btn" id="checkBtn" type="button">Check Answers / تحقق من الإجابات</button>
-        <button class="btn hidden" id="tryAgainBtn" type="button">Try Again / حاول مرة أخرى</button>
-        <div id="classificationResults" class="results hidden" aria-live="assertive" role="alert"></div>
-      </section>
-    </div>
   </main>
 
   <script>
