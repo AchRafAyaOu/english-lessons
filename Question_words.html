@@ -1,11 +1,37 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question Words - كلمات الاستفهام</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
+</head>
+<body>
+    <header>
+        <div class="container">
+           
+                    <h1>Question Words</h1>
+                    <p class="subtitle">كلمات الاستفهام</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h2 class="section-title">Essential Question Words / كلمات الاستفهام الأساسية</h2>
+                <div class="question-words-grid" id="questionWordsGrid">
+                    <!-- Question words will be loaded here -->
+                </div>
+            </section>
+
+            <section class="exercise-section">
+                <h2 class="exercise-title">Complete the Questions / أكمل الأسئلة</h2>
+                <div id="exerciseContainer">
+                    <!-- Exercises will be loaded here -->
+                </div>
+                <div style="text-align: center;">
+                    <button class="btn" onclick="checkAnswers()">Check Answers / تحقق من الإجابات</button>
+                    <button class="btn hidden" onclick="resetExercises()">Try Again / حاول مرة أخرى</button>
+                </div>
+                <div id="exerciseResults" class="results hidden"></div>
+            </section>
+        </div>
+           <style>
         :root {
             --primary-blue: hsl(221.2, 83.2%, 53.3%);
             --light-blue: hsl(210, 40%, 98%);
@@ -571,39 +597,6 @@ h2 {
 }
 
     </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-           
-                    <h1>Question Words</h1>
-                    <p class="subtitle">كلمات الاستفهام</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <section class="section">
-                <h2 class="section-title">Essential Question Words / كلمات الاستفهام الأساسية</h2>
-                <div class="question-words-grid" id="questionWordsGrid">
-                    <!-- Question words will be loaded here -->
-                </div>
-            </section>
-
-            <section class="exercise-section">
-                <h2 class="exercise-title">Complete the Questions / أكمل الأسئلة</h2>
-                <div id="exerciseContainer">
-                    <!-- Exercises will be loaded here -->
-                </div>
-                <div style="text-align: center;">
-                    <button class="btn" onclick="checkAnswers()">Check Answers / تحقق من الإجابات</button>
-                    <button class="btn hidden" onclick="resetExercises()">Try Again / حاول مرة أخرى</button>
-                </div>
-                <div id="exerciseResults" class="results hidden"></div>
-            </section>
-        </div>
     </main>
 
     <script>
