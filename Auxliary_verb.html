@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>الأفعال المساعدة في اللغة الإنجليزية - شرح شامل</title>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" as="style" onload="this.rel='stylesheet'">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+</noscript>
+<style>
+  :root {
+    --primary-color: #1976d2;
+    --secondary-color: #42a5f5;
+    --table-bg: #fff;
+    --table-border: #2196f3;
+    --table-hint-bg: #e3f0fb;
+    --danger: #d32f2f;
+    --success: #388e3c;
+    --gray: #444;
+    --highlight: #e8f0fe;
+    --side-accent: #e3f0fb;
+    --shadow-primary: rgba(25, 118, 210, 0.3);
+  }
+  body {
+    background: #fdfdfd;
+    color: var(--gray);
+    font-family: 'Cairo', Arial, sans-serif;
+    line-height: 2;
+    margin: 0;
+    padding: 0 0 50px 0;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, .section-heading {
+    color: var(--primary-color);
+    margin-top: 22px;
+    user-select: none;
+  }
+  h1 {
+    font-size: 2.1em;
+    text-align: center;
+    font-weight: 800;
+    margin: 30px 0 18px;
+    letter-spacing: .02em;
+    text-shadow: 2px 2px 10px #dbeafb66;
+  }
+  h2 {
+    font-size: 1.3em;
+    margin-top: 28px;
+    font-weight: 900;
+  }
+  .lesson {
+    background: #fff;
+    border-radius: 13px;
+    margin: 20px auto;
+    padding: 30px 24px 26px 24px;
+    max-width: 900px;
+    box-shadow: 0 2px 18px var(--shadow-primary);
+    border-right: 6px solid var(--primary-color);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .lesson:hover, .lesson:focus-within {
+    box-shadow: 0 14px 38px var(--shadow-primary);
+    transform: translateY(-6px) scale(1.02);
+    outline: none;
+  }
+  ul {
+    padding: 0 28px 0 0;
+    list-style: none;
+    font-size: 1.08em;
+    font-weight: 600;
+  }
+  ul li {
+    position: relative;
+    padding-right: 26px;
+    margin-bottom: 15px;
+  }
+  ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    top: 3px;
+    right: 0;
+    font-size: 1.3em;
+    user-select: none;
+  }
+  table {
+    width: 100%;
+    background: var(--table-bg);
+    margin: 30px auto 22px auto;
+    border-collapse: collapse;
+    font-size: 1.1em;
+    box-shadow: 0 3px 14px rgba(25,118,210,0.12);
+    border-radius: 10px;
+    overflow: hidden;
+    user-select: none;
+  }
+  th, td {
+    padding: 14px 10px;
+    border: 1.3px solid var(--table-border);
+    text-align: center;
+  }
+  th {
+    background: var(--secondary-color);
+    color: #fff;
+    font-weight: 900;
+    border-bottom: 4px solid var(--primary-color);
+  }
+  td {
+    background: var(--table-hint-bg);
+    color: var(--gray);
+    font-weight: 700;
+  }
+  tr:nth-child(even) td {
+    background: #f8fbff;
+  }
+  p, li {
+    word-break: keep-all;
+  }
+  .hint {
+    font-size: 1.07em;
+    background: #e3f0fb;
+    color: #1565c0;
+    padding: 9px 14px;
+    border-radius: 6px;
+    border: 1px solid #c6e3fa;
+    margin: 14px 0 16px 0;
+    display: block;
+    box-shadow: 0 1.5px 8px #c6e3fa44;
+    user-select: none;
+  }
+  input[type="text"] {
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 320px;
+    font-family: inherit;
+    margin: 12px 0 14px 0;
+    border: 2px solid #c6e3fa;
+    background: #f8fbfe;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    box-sizing: border-box;
+  }
+  input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(25,118,210,0.3);
+  }
+  .option {
+    display: inline-block;
+    margin: 8px 10px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background-color: #e3f0fb;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 700;
+    position: relative;
+    user-select: none;
+    font-size: 1.1em;
+  }
+  .option:hover {
+    background-color: var(--highlight);
+    border-color: var(--primary-color);
+    transform: scale(1.06);
+    box-shadow: 0 2px 16px #90caf944;
+  }
+  .option.correct {
+    background-color: #4caf50 !important;
+    border-color: #2e7d32 !important;
+    color: #fff !important;
+    box-shadow: 0 0 8px #4caf5044 !important;
+    cursor: default;
+  }
+  .option.incorrect {
+    background-color: #f44336 !important;
+    border-color: #c62828 !important;
+    color: #fff !important;
+    cursor: default;
+  }
+  .option .icon {
+    font-size: 1.12em;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 12px;
+    font-size: 1.1em;
+    font-weight: 900;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    user-select: none;
+  }
+  .btn:hover:not(:disabled) {
+    background-color: #1565c0;
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px rgba(21, 101, 192, 0.5);
+  }
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.28em; margin: 24px 0 14px; }
+    .lesson { padding: 6vw 4vw 6vw 4vw; max-width: 100%; margin: 15px auto; border-right-width: 3px; }
+    table { font-size: 0.93em; }
+    input[type="text"] { max-width: 100%; }
+    .option { font-size: 1em; padding: 10px 14px; margin: 6px 8px; }
+    .btn { width: 100%; padding: 14px 0; margin-top: 16px; }
+  }
+</style>
+</head>
+<body>
+<h1>الأفعال المساعدة في اللغة الإنجليزية</h1>
+
+<div class="lesson" tabindex="0" aria-label="مقدمة شاملة">
+  <div class="section-heading" tabindex="-1">🌟 مقدمة شاملة</div>
+  <p>
+    الأفعال المساعدة (Auxiliary Verbs) أدوات مهمة للنفي، السؤال، الأزمنة، النصيحة والتخمين. تنقسم إلى رئيسية (be, have, do) وناقصة (modals) مثل can, may, will, ought to وغيرها. في هذا الدرس ستتعلم تعريفها، تصريفاتها، استخداماتها العملية مع أمثلة وتمارين تفاعلية.
+  </p>
+  <div class="hint" tabindex="0">عدد الأفعال العادية كبير، لكن الأفعال المساعدة محدودة وحاسمة لصياغة الجمل المختلفة.</div>
+</div>
+
+<div class="lesson" tabindex="0" aria-label="لماذا نحتاج الأفعال المساعدة؟">
+  <h2>1. لماذا نحتاج الأفعال المساعدة؟</h2>
+  <ul>
+    <li>تكوين النفي والسؤال: <strong>Do you like tea?</strong> (هل تحب الشاي؟)</li>
+    <li>تشكيل الأزمنة المستمرة والتامة: <strong>I am working</strong> (أعمل الآن)</li>
+    <li>بيان المستقبل والاحتمال: <strong>It will rain</strong> (ستمطر)</li>
+    <li>تحقيق الإلزام والهام: <strong>You must study.</strong> (يجب أن تذاكر)</li>
+  </ul>
+</div>
+
+<div class="lesson" tabindex="0" aria-label="الفرق بين الأفعال العادية والمساعدة">
+  <h2>2. الفرق بين الأفعال العادية والمساعدة</h2>
+  <table role="table" aria-describedby="desc1" tabindex="0">
+    <caption id="desc1" class="sr-only">جدول يوضح الفرق بين الفعل المساعد والفعل العادي</caption>
+    <thead>
+      <tr>
+        <th>الميزة</th>
+        <th>الفعل المساعد</th>
+        <th>الفعل العادي</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>التصريف</td>
+        <td>لا يُصرف غالبًا، ولا يضاف له -ing أو -s أو -ed (عدا be/have/do كفعل عادي).</td>
+        <td>يأخذ كل التصريفات الزمنية.</td>
+      </tr>
+      <tr>
+        <td>الفعل الذي بعده</td>
+        <td>في المصدر دائمًا (بعد modal auxiliaries).</td>
+        <td>يتغير حسب الزمن.</td>
+      </tr>
+      <tr>
+        <td>النفي والسؤال</td>
+        <td>أساس تكوين النفي والسؤال.</td>
+        <td>غير قادر بمفرده على ذلك.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><em>مثال خاطئ:</em> <span style="color:#d32f2f;">He wills go.</span> <br><em>الصحيح:</em> <span style="color:#388e3c;">He will go.</span></p>
+</div>
+
+<div class="lesson" tabindex="0" aria-label="تصريف الأفعال الأساسية">
+  <h2>3. تصريف وأمثلة الأفعال الأساسية <span style="color:var(--primary-color);">be, have, do</span></h2>
+  <table role="table" aria-describedby="desc2" tabindex="0" style="margin-bottom:24px;">
+    <caption id="desc2" class="sr-only">تصريفات أفعال be, have, do</caption>
+    <thead>
+      <tr>
+        <th>الفعل</th>
+        <th>الحاضر</th>
+        <th>الماضي</th>
+        <th>تصريف ثالث</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>be</td><td>am / is / are</td><td>was / were</td><td>been / being</td></tr>
+      <tr><td>have</td><td>have / has</td><td>had</td><td>had / having</td></tr>
+      <tr><td>do</td><td>do / does</td><td>did</td><td>done / doing</td></tr>
+    </tbody>
+  </table>
+  <ul>
+    <li><b>be</b> كفعل مساعد: <i>I am reading. / Are you ready? / It was raining.</i></li>
+    <li><b>be</b> كفعل عادي: <i>He is a teacher. / They are clever.</i></li>
+    <li><b>have</b> كفعل مساعد: <i>I have finished. / They had seen him.</i></li>
+    <li><b>have</b> كفعل عادي: <i>She has a book. / I have time.</i></li>
+    <li><b>do</b> كفعل مساعد للنفي والسؤال: <i>Do you play? / I do not know. / Did he come?</i></li>
+    <li><b>do</b> كفعل عادي: <i>They do their job well.</i></li>
+  </ul>
+  <div class="hint" tabindex="0">الاختصارات الشائعة: I'm, He's, She's, We're / I've, You've / I'd, We'd / Don't, Didn't, Doesn't</div>
+</div>
+
+<div class="lesson" tabindex="0" aria-label="الأفعال المساعدة الناقصة مودال">
+  <h2>4. الأفعال المساعدة الناقصة (Modal Verbs) - استخدامات وأمثلة</h2>
+  <table role="table" aria-describedby="desc3" tabindex="0" style="font-size:1em; margin-bottom:20px;">
+    <caption id="desc3" class="sr-only">جدول يوضح أفعال المودال واستخداماتها</caption>
+    <thead>
+      <tr>
+        <th>Modal</th>
+        <th>الاستخدام</th>
+        <th>النفي</th>
+        <th>أمثلة حياتية</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>can</td><td>القدرة / الإذن / الاحتمال</td><td>cannot (can't)</td><td>Can you swim? / I can't come today.</td></tr>
+      <tr><td>could</td><td>قدرة في الماضي / طلب مهذب / احتمال بعيد</td><td>could not (couldn't)</td><td>I could run fast. / Could you help me?</td></tr>
+      <tr><td>may</td><td>إذن رسمي / احتمال متوسط</td><td>may not</td><td>May I leave? / It may rain.</td></tr>
+      <tr><td>might</td><td>احتمال ضعيف</td><td>might not (mightn't)</td><td>She might call tonight.</td></tr>
+      <tr><td>will</td><td>المستقبل / وعد / قرار سريع</td><td>will not (won't)</td><td>I will visit you tomorrow.</td></tr>
+      <tr><td>would</td><td>طلب مهذب / عادة في الماضي / شرط</td><td>would not (wouldn't)</td><td>Would you sign here? / When I was young, I would play outside.</td></tr>
+      <tr><td>shall</td><td>عرض أو اقتراح (بريطاني أكثر)</td><td>shall not (shan't)</td><td>Shall we begin? Shall I open the door?</td></tr>
+      <tr><td>should</td><td>نصيحة / واجب / احتمال راجح</td><td>should not (shouldn't)</td><td>You should see a doctor.</td></tr>
+      <tr><td>must</td><td>ضرورة أو إلزام أو استنتاج</td><td>must not (mustn't)</td><td>You must do your homework. / He must be tired.</td></tr>
+      <tr><td>ought to</td><td>واجب أخلاقي أو نصيحة قوية</td><td>ought not to</td><td>You ought to rest more.</td></tr>
+      <tr><td>used to</td><td>عادة في الماضي فقط</td><td>did not use to</td><td>I used to jog daily. / I did not use to eat junk food.</td></tr>
+    </tbody>
+  </table>
+  <div class="hint" tabindex="0">
+    بعد أي Modal يأتي الفعل في المصدر (بدون to) باستثناء "ought to" و "used to". النفي يُكوّن بإضافة 'not' بعد المودال.
+  </div>
+</div>
+
+<div class="lesson" tabindex="0" aria-label="تغير معنى الأفعال حسب السياق">
+  <h2>5. تغير المعنى حسب الاستخدام</h2>
+  <ul>
+    <li>must / have to: <b>must</b> تعبير أقوى، عادة للتوجيهات، و <b>have to</b> تستخدم للواجبات المفروضة.</li>
+    <li>should / ought to: للنصيحة والواجب غير الإلزامي.</li>
+    <li>might / may: الاحتمالات المختلفة، <b>might</b> احتمال ضعيف، و <b>may</b> احتمال متوسط.</li>
+    <li>would: طلب مهذب أو لإظهار عادة في الماضي.</li>
+    <li>used to: تعبير عن عادات قديمة منتهية.</li>
+    <li>الصيغ المركبة مثل must/may have + التصريف الثالث للتحدث عن احتمالات ومناسبات ماضية.</li>
+  </ul>
+</div>
+
+<div class="lesson" tabindex="0" aria-label="تمارين تفاعلية للأفعال المساعدة">
+  <h2>6. تمارين تفاعلية</h2>
+  <div class="exercise" aria-live="polite">
+    <b>1. اختر الكلمة المناسبة:</b><br />
+    <span class="option" role="button" tabindex="0" data-answer="false">Will</span>
+    <span class="option" role="button" tabindex="0" data-answer="false">Should</span>
+    <span class="option" role="button" tabindex="0" data-answer="true">Could</span>
+    <span class="option" role="button" tabindex="0" data-answer="false">Must</span>
+    <div class="hint" aria-live="assertive" role="alert"></div>
+  </div>
+
+  <div class="exercise" aria-live="polite">
+    <b>2. أكمل الفراغ:</b><br />
+    She <input type="text" id="ex2-i" placeholder="الإجابة هنا" aria-label="اكمل الفراغ" />
+    play piano when she was five.<br />
+    <button class="btn" id="ex2-check">تأكيد</button>
+    <div class="hint" aria-live="assertive" role="alert"></div>
+  </div>
+
+  <div class="exercise" aria-live="polite">
+    <b>3. اختر الاستخدام المناسب لكلمة may:</b><br />
+    <span class="option" role="button" tabindex="0" data-answer="false">واجب أخلاقي</span>
+    <span class="option" role="button" tabindex="0" data-answer="true">إذن أو احتمال</span>
+    <span class="option" role="button" tabindex="0" data-answer="false">عادة في الماضي</span>
+    <span class="option" role="button" tabindex="0" data-answer="false">قدرة في الماضي</span>
+    <div class="hint" aria-live="assertive" role="alert"></div>
+  </div>
+</div>
+
+<div class="lesson" tabindex="0" aria-label="خاتمة وقواعد مهمة">
+  <h2>7. قواعد ذهبية تذكرها دائمًا</h2>
+  <ol style="padding-inline-start: 25px; line-height: 2; font-weight: 700;">
+    <li>الأفعال المساعدة الناقصة لا تقبل أي تصريف (ing, ed, s).</li>
+    <li>الفعل بعدها يكون مصدرًا دون to، سوى اتباع خاص لبعض الأفعال (ought to, used to).</li>
+    <li>للنفي والسؤال، أضف not أو استخدم التصريف الصحيح مع do/does/did.</li>
+    <li>استخدم الجداول والتمارين للمساعدة على التذكر وفهم الفرق في الاستخدام.</li>
+  </ol>
+</div>
+
+<div class="lesson" tabindex="0" aria-label="أمثلة تطبيقية من الحياة اليومية">
+  <h2>8. أمثلة تطبيقية واقعية</h2>
+  <ul>
+    <li>Can you open the window? <i>طلب إذن</i></li>
+    <li>She should rest, she's tired. <i>نصيحة</i></li>
+    <li>He may join us later. <i>احتمال</i></li>
+    <li>You must return the book today. <i>إلزام</i></li>
+    <li>We used to live near the river. <i>عادة قديمة</i></li>
+    <li>Would you like some coffee? <i>عرض مهذب</i></li>
+    <li>I do my homework every day. <i>فعل عادي</i></li>
+    <li>Does he know the answer? <i>سؤال باستخدام do</i></li>
+  </ul>
+</div>
+
+<div class="lesson" tabindex="0" aria-label="مصادر إضافية">
+  <h2>9. مصادر للتعلم والمراجعة</h2>
+  <ul>
+    <li><a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/80976701/d44cbacb-4980-43a8-ac70-85b620c3c2d5/dzexams-docs-anglais-201002.pdf" target="_blank" rel="noopener" style="color: var(--primary-color); font-weight: 700;">ملف PDF شرح مفصل</a></li>
+    <li><a href="https://www.expenglish.com" target="_blank" rel="noopener" style="color: var(--primary-color); font-weight: 700;">موقع ExpEnglish للشرح والتدريبات</a></li>
+  </ul>
+</div>
+
+<script>
+  // تفاعل اختيارات التمارين مع ردود ذكية ومباشرة
+  document.querySelectorAll('.exercise .option').forEach(opt => {
+    opt.addEventListener('click', function () {
+      if(this.classList.contains('correct') || this.classList.contains('incorrect')) return;
+      let siblingOpts = this.parentElement.querySelectorAll('.option');
+      siblingOpts.forEach(o => {
+        o.classList.remove('correct', 'incorrect');
+        o.style.pointerEvents = 'none';
+      });
+      const hintBox = this.parentElement.querySelector('.hint');
+      if (this.dataset.answer === "true") {
+        this.classList.add('correct');
+        hintBox.textContent = 'إجابة صحيحة! 👌';
+      } else {
+        this.classList.add('incorrect');
+        hintBox.textContent = 'إجابة خاطئة، حاول مرة أخرى.';
+      }
+    });
+  });
+
+  // تأكيد صيغة نصّية في تمرين
+  document.getElementById('ex2-check').addEventListener('click', () => {
+    let input = document.getElementById('ex2-i');
+    let answer = input.value.trim().toLowerCase();
+    const hintBox = input.parentElement.querySelector('.hint');
+    if (answer === 'could') {
+      hintBox.textContent = 'إجابة صحيحة! 👍';
+      input.style.borderColor = 'var(--success)';
+    } else {
+      hintBox.textContent = 'خطأ، الجواب الصحيح: could (قدرة في الماضي)';
+      input.style.borderColor = 'var(--danger)';
+    }
+  });
+</script>
+</body>
+</html>

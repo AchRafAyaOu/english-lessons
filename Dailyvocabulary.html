@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Essential Daily Vocabulary - English Learning</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Inter&display=swap" rel="stylesheet" />
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    min-height: 100vh;
+    padding: 20px 12px 60px;
+    color: #1e293b;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding-bottom: 3rem;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Cairo', serif;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    animation: float 20s linear infinite;
+    z-index: 0;
+  }
+
+  .header h1 {
+    font-size: 2.75rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    font-weight: 900;
+  }
+
+  .header .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    direction: rtl;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .content {
+    padding: 40px 24px 0 24px;
+  }
+
+  .search-container {
+    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 520px;
+    padding: 15px 22px;
+    border: 2px solid #e2e8f0;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background: white;
+    font-family: 'Inter', sans-serif;
+    color: #334155;
+  }
+  .search-box:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79,172,254,0.15);
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .stat-card {
+    background: white;
+    padding: 20px 12px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    user-select: none;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #4facfe;
+    font-family: 'Cairo', serif;
+  }
+
+  .stat-label {
+    color: #64748b;
+    margin-top: 6px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .vocab-category {
+    margin-bottom: 48px;
+    background: #f8f9fa;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 7px 25px rgb(5 175 207 / 0.15);
+  }
+
+  .category-header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 24px 30px;
+    position: relative;
+    font-family: 'Cairo', serif;
+  }
+
+  .category-header h2 {
+    font-size: 1.95rem;
+    margin-bottom: 6px;
+    font-weight: 900;
+  }
+
+  .category-subtitle {
+    opacity: 0.9;
+    direction: rtl;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px 24px;
+  }
+
+  .vocab-card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px 22px 28px 22px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    user-select: none;
+  }
+
+  .vocab-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .vocab-card:hover,
+  .vocab-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(79,172,254,0.35);
+    border-color: #4facfe;
+    outline-offset: 4px;
+  }
+  .vocab-card:hover::before,
+  .vocab-card:focus-within::before {
+    transform: scaleX(1);
+  }
+
+  .vocab-word {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #1e293b;
+    margin-bottom: 10px;
+    font-family: 'Cairo', serif;
+  }
+
+  .vocab-pronunciation {
+    color: #475569;
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+
+  .vocab-translation {
+    color: #4facfe;
+    font-weight: 600;
+    font-size: 1.2rem;
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .vocab-example {
+    background: #f0f8ff;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border-left: 4px solid #4facfe;
+    margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .vocab-example .example-en {
+    color: #1e293b;
+    margin-bottom: 7px;
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .vocab-example .example-ar {
+    color: #475569;
+    font-size: 0.95rem;
+    direction: rtl;
+    text-align: right;
+  }
+
+  .vocab-level {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #48bb78;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+  }
+
+  .quiz-section {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+    border-radius: 18px;
+    padding: 36px 28px 48px 28px;
+    text-align: center;
+    margin-top: 40px;
+    user-select: none;
+  }
+
+  .quiz-section h3 {
+    color: #2d3436;
+    font-family: 'Cairo', serif;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+  }
+
+  .quiz-section p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+
+  .quiz-container {
+    margin-top: 28px;
+  }
+
+  .quiz-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 7px 20px rgba(0,0,0,0.12);
+    display: none;
+    animation: slideIn 0.5s ease-out forwards;
+  }
+
+  .quiz-card.active {
+    display: block;
+  }
+
+  .quiz-word {
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: #1e293b;
+    margin-bottom: 28px;
+    font-family: 'Cairo', serif;
+  }
+
+  .quiz-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+
+  .quiz-option {
+    padding: 18px 14px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    direction: rtl;
+    text-align: center;
+    user-select: none;
+  }
+  .quiz-option:focus-visible {
+    outline: 3px solid #4facfe;
+    outline-offset: 4px;
+  }
+  .quiz-option:hover:not(.correct):not(.wrong) {
+    background: #4facfe;
+    color: white;
+    border-color: #4facfe;
+  }
+
+  .quiz-option.correct {
+    background: #48bb78;
+    border-color: #48bb78;
+    color: white;
+    cursor: default;
+  }
+
+  .quiz-option.wrong {
+    background: #e74c3c;
+    border-color: #e74c3c;
+    color: white;
+    cursor: default;
+  }
+
+  .quiz-controls {
+    margin-top: 28px;
+  }
+
+  .btn {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.15rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+    min-width: 140px;
+  }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 22px rgba(79,172,254,0.45);
+  }
+  .btn:focus-visible {
+    outline: 3px solid #00c0ff;
+    outline-offset: 3px;
+  }
+  .btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+
+  #prevBtn, #nextBtn, #restartBtn {
+    display: inline-block;
+  }
+  #prevBtn[disabled], #nextBtn[disabled] {
+    display: none;
+  }
+
+  #quizResult {
+    margin-top: 26px;
+    font-size: 1.3rem;
+    font-weight: 900;
+    font-family: 'Cairo', serif;
+    color: #1e293b;
+    user-select: none;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px);}
+    50% { transform: translateY(-22px);}
+    100% { transform: translateY(0px);}
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      padding: 24px 16px 0 16px;
+    }
+    .vocab-grid {
+      grid-template-columns: 1fr !important;
+      padding: 20px 16px;
+    }
+    .quiz-options {
+      grid-template-columns: 1fr !important;
+    }
+    .stats {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .btn {
+      margin: 12px 4px;
+      min-width: unset;
+      width: 100%;
+      max-width: 320px;
+    }
+    .quiz-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header class="header" aria-label="Page header">
+      <h1>Essential Daily Vocabulary</h1>
+      <div class="subtitle">المفردات اليومية الأساسية</div>
+    </header>
+
+    <section class="content" aria-label="Vocabulary content and quiz">
+
+      <div class="search-container" role="search">
+        <input type="search" id="searchBox" class="search-box" placeholder="Search vocabulary... ابحث عن المفردات" aria-label="Search vocabulary" />
+      </div>
+
+      <section class="stats" aria-label="Learning statistics">
+        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
+          <div class="stat-number">50</div>
+          <div class="stat-label">Total Words</div>
+        </div>
+        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
+          <div class="stat-number" id="studiedCount">0</div>
+          <div class="stat-label">Studied</div>
+        </div>
+        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
+          <div class="stat-number" id="correctAnswers">0</div>
+          <div class="stat-label">Correct</div>
+        </div>
+        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
+          <div class="stat-number" id="accuracy">0%</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+      </section>
+
+      <section class="vocab-category" aria-label="Family and relationships vocabulary">
+        <div class="category-header">
+          <h2>Family & Relationships</h2>
+          <div class="category-subtitle">الأسرة والعلاقات</div>
+        </div>
+        <div class="vocab-grid" role="list" aria-label="Family and relationships words">
+          <article class="vocab-card" data-word="family" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Family</div>
+            <div class="vocab-pronunciation">/ˈfæməli/</div>
+            <div class="vocab-translation">عائلة</div>
+            <div class="vocab-example">
+              <div class="example-en">"I love spending time with my family."</div>
+              <div class="example-ar">أحب قضاء الوقت مع عائلتي.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="mother" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Mother</div>
+            <div class="vocab-pronunciation">/ˈmʌðər/</div>
+            <div class="vocab-translation">أم</div>
+            <div class="vocab-example">
+              <div class="example-en">"My mother is a teacher."</div>
+              <div class="example-ar">أمي معلمة.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="father" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Father</div>
+            <div class="vocab-pronunciation">/ˈfɑːðər/</div>
+            <div class="vocab-translation">أب</div>
+            <div class="vocab-example">
+              <div class="example-en">"My father works in a bank."</div>
+              <div class="example-ar">أبي يعمل في بنك.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="brother" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Brother</div>
+            <div class="vocab-pronunciation">/ˈbrʌðər/</div>
+            <div class="vocab-translation">أخ</div>
+            <div class="vocab-example">
+              <div class="example-en">"I have one older brother."</div>
+              <div class="example-ar">لدي أخ أكبر واحد.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="sister" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Sister</div>
+            <div class="vocab-pronunciation">/ˈsɪstər/</div>
+            <div class="vocab-translation">أخت</div>
+            <div class="vocab-example">
+              <div class="example-en">"My sister is studying medicine."</div>
+              <div class="example-ar">أختي تدرس الطب.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="friend" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Friend</div>
+            <div class="vocab-pronunciation">/frend/</div>
+            <div class="vocab-translation">صديق</div>
+            <div class="vocab-example">
+              <div class="example-en">"She is my best friend."</div>
+              <div class="example-ar">هي أعز صديقاتي.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="vocab-category" aria-label="Daily activities vocabulary">
+        <div class="category-header">
+          <h2>Daily Activities</h2>
+          <div class="category-subtitle">الأنشطة اليومية</div>
+        </div>
+        <div class="vocab-grid" role="list" aria-label="Daily activities words">
+          <article class="vocab-card" data-word="work" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Work</div>
+            <div class="vocab-pronunciation">/wɜːrk/</div>
+            <div class="vocab-translation">عمل</div>
+            <div class="vocab-example">
+              <div class="example-en">"I work from 9 AM to 5 PM."</div>
+              <div class="example-ar">أعمل من الساعة 9 صباحاً إلى 5 مساءً.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="study" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Study</div>
+            <div class="vocab-pronunciation">/ˈstʌdi/</div>
+            <div class="vocab-translation">دراسة</div>
+            <div class="vocab-example">
+              <div class="example-en">"I study English every day."</div>
+              <div class="example-ar">أدرس الإنجليزية كل يوم.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="eat" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Eat</div>
+            <div class="vocab-pronunciation">/iːt/</div>
+            <div class="vocab-translation">يأكل</div>
+            <div class="vocab-example">
+              <div class="example-en">"We eat dinner at 7 PM."</div>
+              <div class="example-ar">نتناول العشاء في السابعة مساءً.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="sleep" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Sleep</div>
+            <div class="vocab-pronunciation">/sliːp/</div>
+            <div class="vocab-translation">ينام</div>
+            <div class="vocab-example">
+              <div class="example-en">"I sleep 8 hours every night."</div>
+              <div class="example-ar">أنام 8 ساعات كل ليلة.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="read" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Read</div>
+            <div class="vocab-pronunciation">/riːd/</div>
+            <div class="vocab-translation">يقرأ</div>
+            <div class="vocab-example">
+              <div class="example-en">"She reads the newspaper every morning."</div>
+              <div class="example-ar">هي تقرأ الجريدة كل صباح.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="watch" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Watch</div>
+            <div class="vocab-pronunciation">/wɑːtʃ/</div>
+            <div class="vocab-translation">يشاهد</div>
+            <div class="vocab-example">
+              <div class="example-en">"They watch TV in the evening."</div>
+              <div class="example-ar">هم يشاهدون التلفاز في المساء.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="vocab-category" aria-label="Food and drinks vocabulary">
+        <div class="category-header">
+          <h2>Food & Drinks</h2>
+          <div class="category-subtitle">الطعام والمشروبات</div>
+        </div>
+        <div class="vocab-grid" role="list" aria-label="Food and drinks words">
+          <article class="vocab-card" data-word="food" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Food</div>
+            <div class="vocab-pronunciation">/fuːd/</div>
+            <div class="vocab-translation">طعام</div>
+            <div class="vocab-example">
+              <div class="example-en">"This food is delicious."</div>
+              <div class="example-ar">هذا الطعام لذيذ.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="water" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Water</div>
+            <div class="vocab-pronunciation">/ˈwɔːtər/</div>
+            <div class="vocab-translation">ماء</div>
+            <div class="vocab-example">
+              <div class="example-en">"I drink a lot of water."</div>
+              <div class="example-ar">أشرب الكثير من الماء.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="coffee" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Coffee</div>
+            <div class="vocab-pronunciation">/ˈkɔːfi/</div>
+            <div class="vocab-translation">قهوة</div>
+            <div class="vocab-example">
+              <div class="example-en">"I like my coffee black."</div>
+              <div class="example-ar">أحب قهوتي سادة.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="bread" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Bread</div>
+            <div class="vocab-pronunciation">/bred/</div>
+            <div class="vocab-translation">خبز</div>
+            <div class="vocab-example">
+              <div class="example-en">"We buy fresh bread every morning."</div>
+              <div class="example-ar">نشتري الخبز الطازج كل صباح.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="fruit" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Fruit</div>
+            <div class="vocab-pronunciation">/fruːt/</div>
+            <div class="vocab-translation">فاكهة</div>
+            <div class="vocab-example">
+              <div class="example-en">"Fruit is good for your health."</div>
+              <div class="example-ar">الفاكهة مفيدة لصحتك.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="vegetable" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Vegetable</div>
+            <div class="vocab-pronunciation">/ˈvedʒtəbəl/</div>
+            <div class="vocab-translation">خضار</div>
+            <div class="vocab-example">
+              <div class="example-en">"We eat vegetables with every meal."</div>
+              <div class="example-ar">نأكل الخضار مع كل وجبة.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="quiz-section" aria-label="Interactive vocabulary quiz">
+        <h3>Test Your Knowledge | اختبر معرفتك</h3>
+        <p>Choose the correct Arabic translation for each English word.</p>
+        <p style="direction: rtl; margin-top: 10px;">اختر الترجمة العربية الصحيحة لكل كلمة إنجليزية.</p>
+
+        <div class="quiz-container" aria-live="polite" aria-atomic="true">
+          <div class="quiz-card active" role="group" aria-label="Quiz question 1">
+            <div class="quiz-word">Family</div>
+            <div class="quiz-options" role="list">
+              <button class="quiz-option" data-correct="true" role="listitem" tabindex="0" type="button">عائلة</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">صديق</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">عمل</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">طعام</button>
+            </div>
+          </div>
+
+          <div class="quiz-card" role="group" aria-label="Quiz question 2">
+            <div class="quiz-word">Water</div>
+            <div class="quiz-options" role="list">
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">قهوة</button>
+              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">ماء</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">خبز</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">فاكهة</button>
+            </div>
+          </div>
+
+          <div class="quiz-card" role="group" aria-label="Quiz question 3">
+            <div class="quiz-word">Study</div>
+            <div class="quiz-options" role="list">
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">ينام</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">يأكل</button>
+              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">يدرس</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">يشاهد</button>
+            </div>
+          </div>
+
+          <div class="quiz-card" role="group" aria-label="Quiz question 4">
+            <div class="quiz-word">Friend</div>
+            <div class="quiz-options" role="list">
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">أخ</button>
+              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">صديق</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">أب</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">أم</button>
+            </div>
+          </div>
+
+          <div class="quiz-card" role="group" aria-label="Quiz question 5">
+            <div class="quiz-word">Coffee</div>
+            <div class="quiz-options" role="list">
+              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">قهوة</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">ماء</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">خضار</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">خبز</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-controls" role="region" aria-label="Quiz navigation controls">
+          <button class="btn" id="prevBtn" type="button" disabled>Previous</button>
+          <button class="btn" id="nextBtn" type="button">Next</button>
+          <button class="btn hidden" id="restartBtn" type="button">Restart Quiz</button>
+        </div>
+
+        <div id="quizResult" aria-live="assertive" role="alert" tabindex="0"></div>
+      </section>
+    </section>
+  </div>
+
+<script>
+  const searchBox = document.getElementById('searchBox');
+  const vocabCards = document.querySelectorAll('.vocab-card');
+
+  searchBox.addEventListener('input', () => {
+    const searchTerm = searchBox.value.trim().toLowerCase();
+    vocabCards.forEach(card => {
+      const word = card.dataset.word.toLowerCase();
+      const translation = card.querySelector('.vocab-translation').textContent.trim();
+      if (word.includes(searchTerm) || translation.includes(searchTerm)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+
+  const quizCards = document.querySelectorAll('.quiz-card');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const restartBtn = document.getElementById('restartBtn');
+  const quizResult = document.getElementById('quizResult');
+
+  let currentQuizIndex = 0;
+  let quizScore = 0;
+  let answeredQuestions = 0;
+
+  function showQuizCard(index) {
+    quizCards.forEach((card, i) => {
+      const options = card.querySelectorAll('.quiz-option');
+      card.classList.toggle('active', i === index);
+      card.setAttribute('aria-hidden', i===index ? 'false' : 'true');
+      options.forEach((opt, oi) => {
+        opt.tabIndex = i === index ? 0 : -1;
+      });
+    });
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = true; // prevent next before answer
+    restartBtn.classList.add('hidden');
+    quizResult.textContent = '';
+  }
+
+  function updateStats() {
+    document.getElementById('studiedCount').textContent = answeredQuestions;
+    document.getElementById('correctAnswers').textContent = quizScore;
+    const accuracyPercent = answeredQuestions > 0 ? Math.round(quizScore / answeredQuestions * 100) : 0;
+    document.getElementById('accuracy').textContent = accuracyPercent + '%';
+  }
+
+  function handleOptionClick(e) {
+    if (e.target.classList.contains('correct') || e.target.classList.contains('wrong')) return; // already selected
+    const card = e.target.closest('.quiz-card');
+    const options = card.querySelectorAll('.quiz-option');
+    const isCorrect = e.target.dataset.correct === 'true';
+
+    options.forEach(opt => {
+      opt.style.pointerEvents = 'none';
+      if (opt.dataset.correct === 'true') {
+        opt.classList.add('correct');
+      } else if (opt === e.target && !isCorrect) {
+        opt.classList.add('wrong');
+      }
+    });
+
+    if (isCorrect) quizScore++;
+    answeredQuestions++;
+    updateStats();
+
+    nextBtn.disabled = false;
+    if (currentQuizIndex === quizCards.length - 1) {
+      nextBtn.textContent = 'Finish';
+    }
+
+    // Move focus to Next button for better keyboard navigation
+    nextBtn.focus();
+  }
+
+  function showResults() {
+    const totalQs = quizCards.length;
+    const percentage = Math.round(quizScore / totalQs * 100);
+    quizResult.innerHTML = `Quiz Completed!<br/>Score: <b>${quizScore} / ${totalQs}</b> (${percentage}%)<br>تم إكمال الاختبار! النتيجة: <b>${quizScore} / ${totalQs}</b> (${percentage}%)`;
+    restartBtn.classList.remove('hidden');
+    prevBtn.disabled = true;
+    nextBtn.disabled = true;
+    nextBtn.textContent = 'Next';
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentQuizIndex > 0) {
+      currentQuizIndex--;
+      showQuizCard(currentQuizIndex);
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentQuizIndex < quizCards.length - 1) {
+      currentQuizIndex++;
+      showQuizCard(currentQuizIndex);
+    } else {
+      showResults();
+    }
+  });
+
+  restartBtn.addEventListener('click', () => {
+    quizScore = 0;
+    answeredQuestions = 0;
+    currentQuizIndex = 0;
+
+    quizCards.forEach(card => {
+      const options = card.querySelectorAll('.quiz-option');
+      options.forEach(opt => {
+        opt.style.pointerEvents = '';
+        opt.classList.remove('correct', 'wrong');
+      });
+    });
+
+    nextBtn.textContent = 'Next';
+    updateStats();
+    showQuizCard(currentQuizIndex);
+    quizResult.textContent = '';
+    restartBtn.classList.add('hidden');
+  });
+
+  document.querySelectorAll('.quiz-option').forEach(opt => {
+    opt.addEventListener('click', handleOptionClick);
+  });
+
+  updateStats();
+  showQuizCard(0);
+
+  // Card hover anim
+  vocabCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-8px) scale(1.03)';
+      card.style.boxShadow = '0 16px 36px rgba(79,172,254,0.32)';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      card.style.boxShadow = '0 4px 12px rgba(0,0,0,0.12)';
+    });
+  });
+</script>
+</body>
+</html>

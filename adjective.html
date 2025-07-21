@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adjectives & Adverbs - الصفات والظروف</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Inter&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #fff;
+        color: #1e293b;
+        line-height: 1.7;
+        padding: 0 1rem;
+      }
+
+      h1, h2, h3 {
+        font-family: 'Cairo', serif;
+        color: #334155;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+        margin-bottom: 0.25rem;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #64748b;
+        margin-bottom: 1.5rem;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+      }
+
+      header {
+        background: #f9fafb;
+        padding: 1.5rem 0 2rem 0;
+        border-bottom: 1px solid #e2e8f0;
+        text-align: center;
+      }
+
+      main {
+        margin-top: 2rem;
+      }
+
+      .section {
+        background: #f9fafb;
+        border: 1px solid #cbd5e1;
+        border-radius: 0.75rem;
+        padding: 1.75rem 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 8px rgb(203 213 225 / 0.3);
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #2563eb;
+        font-family: 'Cairo', serif;
+      }
+
+      .tip-box {
+        background: #fef3c7;
+        border: 1px solid #fde68a;
+        border-radius: 0.5rem;
+        padding: 1rem 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .tip-title {
+        font-weight: 700;
+        color: #b45309;
+        margin-bottom: 0.5rem;
+      }
+
+      .examples {
+        margin-top: 1rem;
+      }
+
+      .example {
+        background: #e0e7ff;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.75rem;
+        border-left: 4px solid #2563eb;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .example-en {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: #1e293b;
+      }
+      .example-ar {
+        color: #475569;
+        font-size: 0.9rem;
+        font-family: 'Cairo', serif;
+      }
+
+      .highlight-adjective {
+        background-color: #d1fae5;
+        color: #059669;
+        padding: 0.15rem 0.4rem;
+        border-radius: 4px;
+        font-weight: 700;
+        font-family: 'Cairo', serif;
+      }
+
+      .highlight-adverb {
+        background-color: #dbeafe;
+        color: #2563eb;
+        padding: 0.15rem 0.4rem;
+        border-radius: 4px;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .comparison-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .comparison-side {
+        background: #fff;
+        border: 1px solid #cbd5e1;
+        border-radius: 0.75rem;
+        padding: 1.25rem 1.5rem;
+        box-shadow: 0 2px 6px rgb(203 213 225 / 0.15);
+      }
+
+      .comparison-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .adjective-title {
+        color: #059669;
+        font-family: 'Cairo', serif;
+      }
+
+      .adverb-title {
+        color: #2563eb;
+      }
+
+      .words-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .word-card {
+        cursor: pointer;
+        background: #f1f5f9;
+        border-radius: 8px;
+        padding: 1.25rem 1rem;
+        box-shadow: 0 2px 6px rgb(100 116 139 / 0.1);
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.125rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.25s ease;
+        user-select: none;
+        text-align: center;
+      }
+      .word-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 15px rgb(100 116 139 / 0.15);
+        background: #e0e7ff;
+      }
+
+      .adjective-word {
+        color: #059669;
+      }
+      .adverb-word {
+        color: #2563eb;
+      }
+
+      .meaning {
+        color: #475569;
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
+        font-family: 'Cairo', serif;
+      }
+
+      .tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+        border-bottom: 2px solid #cbd5e1;
+        user-select: none;
+      }
+      
+      .tab {
+        color: #475569;
+        padding: 0.75rem 1.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        border-bottom: 3px solid transparent;
+        transition: color 0.3s, border-color 0.3s;
+        border-radius: 0 0 10px 10px;
+      }
+      .tab:hover {
+        color: #2563eb;
+      }
+      .tab.active {
+        border-color: #2563eb;
+        color: #2563eb;
+        background-color: #e0e7ff;
+        font-weight: 700;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .exercise-section {
+        background: #f9fafb;
+        border: 1px solid #cbd5e1;
+        border-radius: 0.75rem;
+        padding: 2rem 2rem;
+        margin-top: 3rem;
+        box-shadow: 0 4px 8px rgb(203 213 225 / 0.3);
+      }
+      
+      .exercise-title {
+        font-size: 1.9rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-family: 'Cairo', serif;
+        color: #2563eb;
+      }
+
+      .word-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-bottom: 1.75rem;
+        justify-content: center;
+      }
+
+      .word-option {
+        background: #e2e8f0;
+        border-radius: 12px;
+        padding: 0.75rem 1.25rem;
+        font-weight: 600;
+        cursor: grab;
+        user-select: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.125rem;
+        box-shadow: 0 2px 6px rgb(148 163 184 / 0.3);
+        transition: background-color 0.25s ease, transform 0.15s ease;
+      }
+      .word-option:active {
+        cursor: grabbing;
+        transform: scale(1.05);
+      }
+      .word-option.correct {
+        border: 2px solid #059669;
+        background-color: #d1fae5;
+        box-shadow: 0 0 8px #05966999;
+      }
+      .word-option.wrong {
+        border: 2px solid #dc2626;
+        background-color: #fee2e2;
+        box-shadow: 0 0 8px #dc262699;
+      }
+
+      .drop-zones {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .drop-zone {
+        border: 2px dashed #94a3b8;
+        border-radius: 12px;
+        background-color: #f9fafb;
+        min-height: 120px;
+        text-align: center;
+        font-weight: 700;
+        color: #475569;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.75rem;
+        font-family: 'Inter', sans-serif;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        user-select: none;
+      }
+      .drop-zone.adjective-zone:hover {
+        border-color: #059669;
+        background-color: #dcfce7;
+      }
+      .drop-zone.adverb-zone:hover {
+        border-color: #2563eb;
+        background-color: #dbeafe;
+      }
+
+      .drop-zone-title {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+        font-family: 'Cairo', serif;
+        color: inherit;
+      }
+
+      .btn {
+        font-family: 'Inter', sans-serif;
+        background-color: #2563eb;
+        color: white;
+        padding: 0.75rem 1.75rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        box-shadow: 0 4px 6px rgb(37 99 235 / 0.5);
+        transition: background-color 0.3s ease, transform 0.15s ease;
+        user-select: none;
+        margin: 0 auto;
+        display: block;
+        min-width: 180px;
+        margin-top: 1rem;
+      }
+      .btn:hover:not(:disabled) {
+        background-color: #1d4ed8;
+        box-shadow: 0 6px 10px rgb(29 78 216 / 0.6);
+        transform: translateY(-2px);
+      }
+      .btn:active:not(:disabled) {
+        background-color: #1e40af;
+        transform: translateY(1px);
+        box-shadow: none;
+      }
+      .btn:disabled {
+        background-color: #9ca3af;
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+      .btn.hidden {
+        display: none;
+      }
+
+      .results {
+        text-align: center;
+        padding: 1.25rem 1.5rem;
+        margin-top: 1.5rem;
+        border-radius: 0.75rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        user-select: none;
+      }
+      .results-excellent {
+        background: #d1fae5;
+        color: #047857;
+        box-shadow: 0 4px 12px #04785766;
+      }
+      .results-good {
+        background: #fef3c7;
+        color: #b45309;
+        box-shadow: 0 4px 12px #b4530966;
+      }
+      .results-needs-practice {
+        background: #fee2e2;
+        color: #991b1b;
+        box-shadow: 0 4px 12px #991b1b66;
+      }
+
+      @media (max-width: 768px) {
+        .comparison-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .drop-zones {
+          grid-template-columns: 1fr !important;
+        }
+        .tabs {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+
+    </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>الظروف والصفات</h1>
+      <p class="subtitle">Adjectives &amp; Adverbs</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="section">
+        <h2 class="section-title">Understanding the Difference / فهم الفرق</h2>
+        <div class="comparison-grid" role="region" aria-label="Comparison adjectives and adverbs">
+          <article class="comparison-side" aria-labelledby="adj-title">
+            <h3 id="adj-title" class="comparison-title adjective-title">Adjectives / الصفات</h3>
+            <div class="tip-box" role="note" aria-live="polite">
+              <div class="tip-title">تصف الأسماء والضمائر</div>
+              <p>Adjectives describe nouns and pronouns</p>
+            </div>
+            <div class="examples">
+              <div class="example">
+                <div class="example-en">The <span class="highlight-adjective">beautiful</span> flower smells nice.</div>
+                <div class="example-ar">الزهرة الجميلة رائحتها جميلة.</div>
+              </div>
+              <div class="example">
+                <div class="example-en">She is very <span class="highlight-adjective">smart</span>.</div>
+                <div class="example-ar">هي ذكية جداً.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="comparison-side" aria-labelledby="adv-title">
+            <h3 id="adv-title" class="comparison-title adverb-title">Adverbs / الظروف</h3>
+            <div class="tip-box" role="note" aria-live="polite">
+              <div class="tip-title">تصف الأفعال والصفات والظروف</div>
+              <p>Adverbs describe verbs, adjectives, and other adverbs</p>
+            </div>
+            <div class="examples">
+              <div class="example">
+                <div class="example-en">She sings <span class="highlight-adverb">beautifully</span>.</div>
+                <div class="example-ar">تغني بشكل جميل.</div>
+              </div>
+              <div class="example">
+                <div class="example-en">He runs <span class="highlight-adverb">quickly</span>.</div>
+                <div class="example-ar">يجري بسرعة.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <nav class="tabs" role="tablist" aria-label="Words tabs">
+        <button role="tab" aria-selected="true" aria-controls="common" id="tab-common" class="tab active" onclick="showTab('common', this)">Common Words / كلمات شائعة</button>
+        <button role="tab" aria-selected="false" aria-controls="formation" id="tab-formation" class="tab" onclick="showTab('formation', this)">Formation Rules / قواعد التكوين</button>
+      </nav>
+
+      <section id="common" class="tab-content active" role="tabpanel" aria-labelledby="tab-common">
+        <div class="section" aria-label="Common adjectives">
+          <h2 class="section-title">Common Adjectives / صفات شائعة</h2>
+          <div class="words-grid" id="adjectivesGrid" aria-live="polite" aria-relevant="additions">
+            <!-- loaded dynamically -->
+          </div>
+        </div>
+
+        <div class="section" aria-label="Common adverbs">
+          <h2 class="section-title">Common Adverbs / ظروف شائعة</h2>
+          <div class="words-grid" id="adverbsGrid" aria-live="polite" aria-relevant="additions">
+            <!-- loaded dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <section id="formation" class="tab-content" role="tabpanel" aria-labelledby="tab-formation" hidden>
+        <div class="section" aria-label="How to form adverbs">
+          <h2 class="section-title">How to Form Adverbs / كيفية تكوين الظروف</h2>
+          <div class="tip-box" role="note" aria-live="polite">
+            <div class="tip-title">القاعدة الأساسية / Basic Rule:</div>
+            <p>غالباً ما نضيف "-ly" إلى الصفة لتكوين الظرف</p>
+            <p>Usually add "-ly" to the adjective to form an adverb</p>
+          </div>
+          <div class="examples">
+            <div class="example">
+              <div class="example-en"><span class="highlight-adjective">Quick</span> → <span class="highlight-adverb">Quickly</span></div>
+              <div class="example-ar">سريع → بسرعة</div>
+            </div>
+            <div class="example">
+              <div class="example-en"><span class="highlight-adjective">Careful</span> → <span class="highlight-adverb">Carefully</span></div>
+              <div class="example-ar">حذر → بحذر</div>
+            </div>
+            <div class="example">
+              <div class="example-en"><span class="highlight-adjective">Easy</span> → <span class="highlight-adverb">Easily</span></div>
+              <div class="example-ar">سهل → بسهولة</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="exercise-section" aria-label="Exercise: classify the words">
+        <h2 class="exercise-title">Classify the Words / صنف الكلمات</h2>
+        <p style="text-align: center; margin-bottom: 1.25rem; font-family: 'Cairo', serif;">قم بسحب الكلمة وإفلاتها في الفئة الصحيحة / Drag each word to the correct category</p>
+
+        <div class="word-options" id="wordOptions" aria-live="polite" aria-relevant="additions" role="list">
+          <!-- dynamically loaded words -->
+        </div>
+
+        <div class="drop-zones">
+          <div id="adjectiveZone" class="drop-zone adjective-zone" tabindex="0" aria-label="Drop zone for adjectives" aria-dropeffect="copy">
+            <div class="drop-zone-title">Adjectives / الصفات</div>
+            <div>Describe nouns</div>
+          </div>
+          <div id="adverbZone" class="drop-zone adverb-zone" tabindex="0" aria-label="Drop zone for adverbs" aria-dropeffect="copy">
+            <div class="drop-zone-title">Adverbs / الظروف</div>
+            <div>Describe verbs</div>
+          </div>
+        </div>
+
+        <button class="btn" id="checkBtn" type="button">Check Answers / تحقق من الإجابات</button>
+        <button class="btn hidden" id="tryAgainBtn" type="button">Try Again / حاول مرة أخرى</button>
+        <div id="classificationResults" class="results hidden" aria-live="assertive" role="alert"></div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const adjectives = [
+      { word: "beautiful", meaning: "جميل" },
+      { word: "big", meaning: "كبير" },
+      { word: "small", meaning: "صغير" },
+      { word: "happy", meaning: "سعيد" },
+      { word: "sad", meaning: "حزين" },
+      { word: "fast", meaning: "سريع" },
+      { word: "slow", meaning: "بطيء" },
+      { word: "good", meaning: "جيد" },
+      { word: "bad", meaning: "سيء" },
+      { word: "new", meaning: "جديد" },
+      { word: "old", meaning: "قديم" },
+      { word: "easy", meaning: "سهل" }
+    ];
+
+    const adverbs = [
+      { word: "beautifully", meaning: "بجمال" },
+      { word: "quickly", meaning: "بسرعة" },
+      { word: "slowly", meaning: "ببطء" },
+      { word: "carefully", meaning: "بحذر" },
+      { word: "easily", meaning: "بسهولة" },
+      { word: "loudly", meaning: "بصوت عالٍ" },
+      { word: "quietly", meaning: "بهدوء" },
+      { word: "happily", meaning: "بسعادة" },
+      { word: "sadly", meaning: "بحزن" },
+      { word: "well", meaning: "جيداً" },
+      { word: "badly", meaning: "بشكل سيء" },
+      { word: "hard", meaning: "بجد" }
+    ];
+
+    const exerciseWords = [
+      { word: "quick", type: "adjective" },
+      { word: "quickly", type: "adverb" },
+      { word: "beautiful", type: "adjective" },
+      { word: "beautifully", type: "adverb" },
+      { word: "careful", type: "adjective" },
+      { word: "carefully", type: "adverb" },
+      { word: "loud", type: "adjective" },
+      { word: "loudly", type: "adverb" }
+    ];
+
+    const adjectivesGrid = document.getElementById('adjectivesGrid');
+    const adverbsGrid = document.getElementById('adverbsGrid');
+    const wordOptions = document.getElementById('wordOptions');
+    const adjectiveZone = document.getElementById('adjectiveZone');
+    const adverbZone = document.getElementById('adverbZone');
+    const classificationResults = document.getElementById('classificationResults');
+    const checkBtn = document.getElementById('checkBtn');
+    const tryAgainBtn = document.getElementById('tryAgainBtn');
+
+    let draggedWord = null;
+    let userClassifications = { adjectives: [], adverbs: [] };
+    let exerciseSubmitted = false;
+
+    function showTab(tabId, btn) {
+      document.querySelectorAll('.tab').forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+        content.hidden = true;
+      });
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      const content = document.getElementById(tabId);
+      if(content){
+        content.classList.add('active');
+        content.hidden = false;
+      }
+    }
+
+    function loadWords() {
+      adjectivesGrid.innerHTML = '';
+      adjectives.forEach(adj => {
+        const wordCard = document.createElement('div');
+        wordCard.className = 'word-card';
+        wordCard.innerHTML = `
+          <div class="word adjective-word">${adj.word}</div>
+          <div class="meaning">${adj.meaning}</div>
+        `;
+        adjectivesGrid.appendChild(wordCard);
+      });
+
+      adverbsGrid.innerHTML = '';
+      adverbs.forEach(adv => {
+        const wordCard = document.createElement('div');
+        wordCard.className = 'word-card';
+        wordCard.innerHTML = `
+          <div class="word adverb-word">${adv.word}</div>
+          <div class="meaning">${adv.meaning}</div>
+        `;
+        adverbsGrid.appendChild(wordCard);
+      });
+    }
+
+    function loadExerciseWords() {
+      wordOptions.innerHTML = '';
+      const shuffledWords = [...exerciseWords].sort(() => Math.random() - 0.5);
+      shuffledWords.forEach(wordData=>{
+        const div = document.createElement('div');
+        div.className = 'word-option';
+        div.textContent = wordData.word;
+        div.dataset.word = wordData.word;
+        div.dataset.type = wordData.type;
+        div.draggable = true;
+        div.setAttribute('role', 'listitem');
+        div.setAttribute('tabindex', '0');
+
+        div.addEventListener('dragstart', drag);
+        div.addEventListener('dragend', dragEnd);
+        // For keyboard accessibility: add focus + key for "pick up" and "drop"
+
+        // Keyboard accessibility for selection and moving
+        div.addEventListener('keydown', keyboardDragDrop);
+
+        wordOptions.appendChild(div);
+      });
+    }
+
+    function drag(e) {
+      if(exerciseSubmitted) {
+        e.preventDefault();
+        return;
+      }
+      draggedWord = e.target;
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData("text/plain", e.target.dataset.word);
+    }
+
+    function dragEnd(e) {
+      draggedWord = null;
+      resetDropZonesStyle();
+    }
+
+    function allowDrop(e) {
+      e.preventDefault();
+      if(exerciseSubmitted) return;
+      e.currentTarget.style.borderColor = e.currentTarget.classList.contains('adjective-zone') ? '#059669' : '#2563eb';
+      e.currentTarget.style.backgroundColor = e.currentTarget.classList.contains('adjective-zone') ? '#dcfce7' : '#dbeafe';
+      e.dataTransfer.dropEffect = 'move';
+    }
+
+    function drop(e) {
+      e.preventDefault();
+      if(exerciseSubmitted) return;
+      resetDropZonesStyle();
+
+      const dropZone = e.currentTarget;
+
+      if(!draggedWord) return;
+
+      const word = draggedWord.dataset.word;
+      const type = draggedWord.dataset.type;
+
+      userClassifications.adjectives = userClassifications.adjectives.filter(w => w !== word);
+      userClassifications.adverbs = userClassifications.adverbs.filter(w => w !== word);
+
+      if(dropZone.classList.contains('adjective-zone')){
+        userClassifications.adjectives.push(word);
+      } else if(dropZone.classList.contains('adverb-zone')){
+        userClassifications.adverbs.push(word);
+      }
+
+      dropZone.appendChild(draggedWord);
+      draggedWord.classList.remove('wrong', 'correct');
+      draggedWord = null;
+    }
+
+    function resetDropZonesStyle(){
+      adjectiveZone.style.borderColor = '#94a3b8';
+      adjectiveZone.style.backgroundColor = '#f9fafb';
+      adverbZone.style.borderColor = '#94a3b8';
+      adverbZone.style.backgroundColor = '#f9fafb';
+    }
+
+    function checkClassification() {
+      if(exerciseSubmitted) return;
+      exerciseSubmitted = true;
+      let correctCount = 0;
+
+      const allWords = document.querySelectorAll('.word-option');
+      allWords.forEach(wordEl=>{
+        const word = wordEl.dataset.word;
+        const type = wordEl.dataset.type;
+        // هل توجد الكلمة ضمن التصنيف المناسب؟
+        if(userClassifications[type + 's'].includes(word)){
+          wordEl.classList.add('correct');
+          wordEl.classList.remove('wrong');
+          correctCount++;
+        } else {
+          wordEl.classList.add('wrong');
+          wordEl.classList.remove('correct');
+        }
+      });
+
+      const percentage = (correctCount / exerciseWords.length) * 100;
+      let resultsClass = 'results-needs-practice';
+      let message = 'Keep practicing! / استمر في التدرب!';
+
+      if(percentage >= 80){
+        resultsClass = 'results-excellent';
+        message = 'Excellent work! / عمل ممتاز!';
+      } else if(percentage >= 60){
+        resultsClass = 'results-good';
+        message = 'Good job! / عمل جيد!';
+      }
+
+      classificationResults.className = `results ${resultsClass}`;
+      classificationResults.innerHTML = `
+        <h3>${message}</h3>
+        <p>Score: ${correctCount} / ${exerciseWords.length} (${percentage.toFixed(0)}%)</p>
+        <p>النتيجة: ${correctCount} / ${exerciseWords.length} (${percentage.toFixed(0)}%)</p>
+      `;
+      classificationResults.classList.remove('hidden');
+
+      checkBtn.classList.add('hidden');
+      tryAgainBtn.classList.remove('hidden');
+    }
+
+    function resetClassification() {
+      exerciseSubmitted = false;
+      classificationResults.classList.add('hidden');
+      checkBtn.classList.remove('hidden');
+      tryAgainBtn.classList.add('hidden');
+      userClassifications = { adjectives: [], adverbs: [] };
+
+      wordOptions.innerHTML = '';
+      loadExerciseWords();
+
+      // إرجاع الكلمات إلى المنطقه الاصلية
+      adjectiveZone.querySelectorAll('.word-option').forEach(node => wordOptions.appendChild(node));
+      adverbZone.querySelectorAll('.word-option').forEach(node => wordOptions.appendChild(node));
+    }
+
+    // دعم السحب والإفلات عبر لوحة المفاتيح (focus + بتركيب مفتاح Enter/Space)
+    let keyboardDragging = null;
+
+    function keyboardDragDrop(e) {
+      if(exerciseSubmitted) return;
+      const el = e.currentTarget;
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        if(keyboardDragging === el){
+          // إسقاط العنصر في المنطقة التي فيها التركيز أو إرجاعه إلى الحاوية الأصلية
+          const focused = document.activeElement;
+          if(focused && focused.classList.contains('drop-zone')){
+            focused.appendChild(el);
+            const word = el.dataset.word;
+            userClassifications.adjectives = userClassifications.adjectives.filter(w => w !== word);
+            userClassifications.adverbs = userClassifications.adverbs.filter(w => w !== word);
+            if(focused.classList.contains('adjective-zone')){
+              userClassifications.adjectives.push(word);
+            } else if(focused.classList.contains('adverb-zone')){
+              userClassifications.adverbs.push(word);
+            }
+          } else {
+            // إرجاع للكلمة إلى الحاوية الأصلية (wordOptions)
+            userClassifications.adjectives = userClassifications.adjectives.filter(w => w !== el.dataset.word);
+            userClassifications.adverbs = userClassifications.adverbs.filter(w => w !== el.dataset.word);
+            if(!wordOptions.contains(el)) wordOptions.appendChild(el);
+          }
+          keyboardDragging = null;
+          el.style.outline = '';
+        } else {
+          if(keyboardDragging) {
+            keyboardDragging.style.outline = '';
+          }
+          keyboardDragging = el;
+          el.style.outline = '3px solid #2563eb';
+          el.focus();
+        }
+      }
+      if(e.key === 'Escape' && keyboardDragging){
+        keyboardDragging.style.outline = '';
+        keyboardDragging = null;
+      }
+    }
+
+    adjectiveZone.addEventListener('dragover', allowDrop);
+    adjectiveZone.addEventListener('drop', drop);
+    adjectiveZone.addEventListener('dragleave', resetDropZonesStyle);
+
+    adverbZone.addEventListener('dragover', allowDrop);
+    adverbZone.addEventListener('drop', drop);
+    adverbZone.addEventListener('dragleave', resetDropZonesStyle);
+
+    checkBtn.addEventListener('click', checkClassification);
+    tryAgainBtn.addEventListener('click', resetClassification);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadWords();
+      loadExerciseWords();
+    });
+  </script>
+</body>
+</html>

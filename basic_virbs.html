@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Basic Verbs - الأفعال الأساسية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Inter&display=swap" rel="stylesheet" />
+<style>
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f9fafb;
+    color: #222e3e;
+    line-height: 1.7;
+    padding: 1rem;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e0e7ff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    user-select: none;
+  }
+  .
+  h1 {
+    font-family: 'Cairo', serif;
+    font-weight: 900;
+    font-size: 2.3rem;
+    color: #1e293b;
+  }
+  .subtitle {
+    color: #475569;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+  .progress-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.05);
+  }
+  .progress-card h3 {
+    font-family: 'Cairo', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: #2563eb;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 0.5rem;
+    background: #dbeafe;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: #34d399;
+    width: 0;
+    transition: width 0.5s ease;
+  }
+  #progressText {
+    margin-top: 0.65rem;
+    font-weight: 600;
+    color: #334155;
+    font-family: 'Inter', sans-serif;
+    text-align: right;
+  }
+  .verb-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 1.5rem;
+  }
+  .verb-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1.3rem;
+    box-shadow: 0 6px 15px rgb(79 172 254 / 0.15);
+    transition: box-shadow 0.3s ease, transform 0.25s ease;
+    user-select: none;
+  }
+  .verb-card:hover, .verb-card:focus-within {
+    box-shadow: 0 14px 30px rgb(34 105 255 / 0.3);
+    transform: translateY(-6px);
+    outline: none;
+  }
+  .verb-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .verb-title {
+    font-family: 'Cairo', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #2563eb;
+  }
+  .pronunciation {
+    font-family: 'Inter', sans-serif;
+    background: #e0e7ff;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.3rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+  }
+  .play-btn {
+    margin-left: 0.5rem;
+    background: #34d399;
+    border: none;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    color: white;
+    cursor: pointer;
+    font-weight: 900;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  .play-btn:hover, .play-btn:focus {
+    background: #22c55e;
+    outline: none;
+  }
+  .meaning {
+    font-family: 'Inter', sans-serif;
+    color: #475569;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .examples {
+    font-family: 'Inter', sans-serif;
+  }
+  .examples h4 {
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 0.75rem;
+  }
+  .example {
+    background: #f0f9ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .example-en {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #1e293b;
+  }
+  .example-ar {
+    font-size: 0.9rem;
+    color: #475569;
+  }
+
+  .quiz-section {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 2rem 1.8rem;
+    box-shadow: 0 5px 18px rgb(37 99 235 / 0.15);
+    margin-top: 3rem;
+    user-select: none;
+  }
+  .quiz-title {
+    font-family: 'Cairo', serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    color: #2563eb;
+  }
+  .question {
+    border: 1.5px solid #dbeafe;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: #f9fafb;
+  }
+  .question-text {
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #1e293b;
+    font-family: 'Inter', sans-serif;
+  }
+  .options {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .option {
+    background: white;
+    border: 2.5px solid #cbd5e1;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+    user-select: none;
+  }
+  .option:hover:not(.correct):not(.wrong), .option:focus-visible:not(.correct):not(.wrong) {
+    border-color: #2563eb;
+    background-color: #e0e7ff;
+    outline-offset: 3px;
+    outline: none;
+  }
+  .option.selected {
+    border-color: #2563eb;
+    background-color: #bfdbfe;
+  }
+  .option.correct {
+    background-color: #34d399;
+    border-color: #059669;
+    color: white;
+    cursor: default;
+    box-shadow: 0 0 8px #34d399aa;
+  }
+  .option.wrong {
+    background-color: #ef4444;
+    border-color: #b91c1c;
+    color: white;
+    cursor: default;
+    box-shadow: 0 0 8px #ef4444aa;
+  }
+  .quiz-results {
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 1.2rem 1rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    user-select: none;
+  }
+  .results-excellent {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+  .results-good {
+    background-color: #fef3c7;
+    color: #78350f;
+  }
+  .results-needs-practice {
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+  .btn {
+    display: inline-block;
+    background-color:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    padding: 0.75rem 1.75rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    margin: 1rem auto 0 auto;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+  .btn:hover:not(:disabled), .btn:focus-visible:not(:disabled) {
+    background-color: #1e40af;
+    outline-offset: 4px;
+    outline: 3px solid #2563ebbb;
+  }
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .hidden {
+    display: none !important;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+     
+      <h1> الأفعال الأساسية</h1>
+      <p class="subtitle">Basic Verbs</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="progress-card" aria-label="Progress bar">
+        <h3>Progress / التقدم</h3>
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p id="progressText" aria-live="polite" aria-atomic="true">0% Complete</p>
+      </section>
+
+      <section class="verb-grid" id="verbGrid" aria-label="Basic verbs list">
+        <!-- Verbs dynamically inserted -->
+      </section>
+
+      <section class="quiz-section" aria-label="Quiz section">
+        <h2 class="quiz-title">Quick Quiz / اختبار سريع</h2>
+        <div id="quizContainer" aria-live="polite" aria-atomic="true">
+          <!-- Quiz questions dynamically inserted -->
+        </div>
+        <div id="quizResults" class="quiz-results hidden" role="alert"></div>
+        <button id="submitQuiz" class="btn" onclick="submitQuiz()" disabled>Submit Quiz</button>
+        <button id="retryQuiz" class="btn hidden" onclick="retryQuiz()">Try Again</button>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const verbs = [
+      {verb:"be", pronunciation:"/biː/", meaning:"يكون", examples:[
+        {en:"I am a student.", ar:"أنا طالب."},
+        {en:"She is happy.", ar:"هي سعيدة."}]},
+      {verb:"have", pronunciation:"/hæv/", meaning:"يملك", examples:[
+        {en:"I have a car.", ar:"أملك سيارة."},
+        {en:"They have two children.", ar:"لديهم طفلان."}]},
+      {verb:"do", pronunciation:"/duː/", meaning:"يفعل", examples:[
+        {en:"I do my homework.", ar:"أعمل واجبي المنزلي."},
+        {en:"What do you do?", ar:"ماذا تعمل؟"}]},
+      {verb:"go", pronunciation:"/ɡoʊ/", meaning:"يذهب", examples:[
+        {en:"I go to school.", ar:"أذهب إلى المدرسة."},
+        {en:"Let's go home.", ar:"دعنا نذهب إلى البيت."}]},
+      {verb:"come", pronunciation:"/kʌm/", meaning:"يأتي", examples:[
+        {en:"Come here, please.", ar:"تعال هنا، من فضلك."},
+        {en:"I come from Egypt.", ar:"أنا من مصر."}]},
+      {verb:"see", pronunciation:"/siː/", meaning:"يرى", examples:[
+        {en:"I see the moon.", ar:"أرى القمر."},
+        {en:"Can you see that?", ar:"هل يمكنك رؤية ذلك؟"}]},
+      {verb:"take", pronunciation:"/teɪk/", meaning:"يأخذ", examples:[
+        {en:"Take this book.", ar:"خذ هذا الكتاب."},
+        {en:"I take the bus.", ar:"أركب الحافلة."}]},
+      {verb:"make", pronunciation:"/meɪk/", meaning:"يصنع", examples:[
+        {en:"I make coffee.", ar:"أصنع القهوة."},
+        {en:"Make a wish.", ar:"تمنَّ أمنية."}]}
+    ];
+
+    const quizQuestions = [
+      {
+        question: "What does 'have' mean in Arabic?",
+        questionAr: "ما معنى 'have' بالعربية؟",
+        options: ["يكون", "يملك", "يذهب", "يفعل"],
+        correct: 1
+      },
+      {
+        question: "Choose the correct sentence:",
+        questionAr: "اختر الجملة الصحيحة:",
+        options: ["I go to school", "I goes to school", "I going to school", "I goed to school"],
+        correct: 0
+      },
+      {
+        question: "What is the pronunciation of 'see'?",
+        questionAr: "ما هو نطق 'see'؟",
+        options: ["/sɪ/", "/siː/", "/seɪ/", "/saɪ/"],
+        correct: 1
+      }
+    ];
+
+    let currentAnswers = [];
+    let quizSubmitted = false;
+
+    function loadVerbs() {
+      const verbGrid = document.getElementById('verbGrid');
+      verbGrid.innerHTML = '';
+      verbs.forEach(verbData => {
+        const card = document.createElement('article');
+        card.className = 'verb-card';
+        card.tabIndex = 0;
+        card.innerHTML =
+          `<div class="verb-header">
+            <h3 class="verb-title">${verbData.verb}</h3>
+            <div>
+              <span class="pronunciation" aria-label="Pronunciation">${verbData.pronunciation}</span>
+              <button class="play-btn" aria-label="Play pronunciation of ${verbData.verb}" onclick="playPronunciation('${verbData.verb}')">▶</button>
+            </div>
+          </div>
+          <p class="meaning">${verbData.meaning}</p>
+          <div class="examples">
+            <h4>Examples / أمثلة:</h4>
+            ${verbData.examples.map(ex => `
+              <div class="example">
+                <div class="example-en">${ex.en}</div>
+                <div class="example-ar">${ex.ar}</div>
+              </div>`).join('')}
+          </div>`;
+        verbGrid.appendChild(card);
+      });
+    }
+
+    function loadQuiz() {
+      const quizContainer = document.getElementById('quizContainer');
+      quizContainer.innerHTML = '';
+      currentAnswers = new Array(quizQuestions.length).fill(null);
+      quizSubmitted = false;
+      quizQuestions.forEach((q, idx) => {
+        const qDiv = document.createElement('section');
+        qDiv.className = 'question';
+        qDiv.setAttribute('aria-label', `Question ${idx + 1}`);
+        qDiv.innerHTML =
+          `<div class="question-text">
+            <strong>Question ${idx + 1}:</strong> ${q.question}<br><small style="color:#64748b;">${q.questionAr}</small>
+          </div>
+          <div class="options" role="list">` +
+          q.options.map((opt, i) => `
+            <div class="option" role="button" tabindex="0" aria-pressed="false" onclick="selectOption(${idx},${i})" onkeydown="optionKeydown(event, ${idx}, ${i})">${opt}</div>
+          `).join('') +
+          `</div>`;
+        quizContainer.appendChild(qDiv);
+      });
+      document.getElementById('submitQuiz').disabled = true;
+      document.getElementById('quizResults').classList.add('hidden');
+      document.getElementById('retryQuiz').classList.add('hidden');
+      document.getElementById('submitQuiz').classList.remove('hidden');
+    }
+
+    function selectOption(questionIndex, optionIndex) {
+      if (quizSubmitted) return;
+      const questionDiv = document.querySelectorAll('.question')[questionIndex];
+      const options = questionDiv.querySelectorAll('.option');
+      options.forEach((opt, i) => {
+        opt.classList.remove('selected');
+        opt.setAttribute('aria-pressed', 'false');
+      });
+      options[optionIndex].classList.add('selected');
+      options[optionIndex].setAttribute('aria-pressed', 'true');
+      currentAnswers[questionIndex] = optionIndex;
+
+      document.getElementById('submitQuiz').disabled = currentAnswers.includes(null);
+    }
+    function optionKeydown(e, questionIndex, optionIndex) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        selectOption(questionIndex, optionIndex);
+      }
+    }
+
+    function submitQuiz() {
+      quizSubmitted = true;
+      let correctCount = 0;
+      quizQuestions.forEach((q, idx) => {
+        const questionDiv = document.querySelectorAll('.question')[idx];
+        const options = questionDiv.querySelectorAll('.option');
+        options.forEach((opt, i) => {
+          opt.classList.remove('wrong','correct','selected');
+          opt.setAttribute('aria-pressed', 'false');
+          opt.style.pointerEvents = 'none';
+          if (i === q.correct) opt.classList.add('correct');
+          else if (currentAnswers[idx] === i) opt.classList.add('wrong');
+        });
+        if (currentAnswers[idx] === q.correct) correctCount++;
+      });
+      let resultsDiv = document.getElementById('quizResults');
+      let percent = Math.round((correctCount / quizQuestions.length) * 100);
+      let resultsClass = 'results-needs-practice';
+      let msg = 'Keep practicing! / استمر في التدرب!';
+
+      if (percent >= 80) {
+        resultsClass = 'results-excellent';
+        msg = 'Excellent work! / عمل ممتاز!';
+      } else if (percent >= 60) {
+        resultsClass = 'results-good';
+        msg = 'Good job! / عمل جيد!';
+      }
+      resultsDiv.textContent = '';
+      resultsDiv.className = 'quiz-results ' + resultsClass;
+      resultsDiv.innerHTML = `
+        <h3>${msg}</h3>
+        <p>Score: ${correctCount}/${quizQuestions.length} (${percent}%)</p>
+        <p>النتيجة: ${correctCount}/${quizQuestions.length} (${percent}%)</p>
+      `;
+      resultsDiv.classList.remove('hidden');
+      document.getElementById('submitQuiz').classList.add('hidden');
+      document.getElementById('retryQuiz').classList.remove('hidden');
+      updateProgress(percent);
+    }
+
+    function retryQuiz() {
+      loadQuiz();
+      updateProgress(0);
+    }
+
+    function playPronunciation(word) {
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(word);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.8;
+        speechSynthesis.speak(utterance);
+      }
+    }
+
+    function updateProgress(value) {
+      const fill = document.getElementById('progressFill');
+      const text = document.getElementById('progressText');
+      fill.style.width = value + '%';
+      fill.parentElement.setAttribute('aria-valuenow', value.toString());
+      text.textContent = value + '% Complete';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadVerbs();
+      loadQuiz();
+      updateProgress(0);
+    });
+  </script>
+</body>
+</html>
