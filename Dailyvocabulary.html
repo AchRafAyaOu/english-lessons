@@ -1,10 +1,326 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Essential Daily Vocabulary - English Learning</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Inter&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+  <div class="container" role="main">
+    <header class="header" aria-label="Page header">
+      <h1>Essential Daily Vocabulary</h1>
+      <div class="subtitle">المفردات اليومية الأساسية</div>
+    </header>
+
+    <section class="content" aria-label="Vocabulary content and quiz">
+
+      <div class="search-container" role="search">
+        <input type="search" id="searchBox" class="search-box" placeholder="Search vocabulary... ابحث عن المفردات" aria-label="Search vocabulary" />
+      </div>
+
+      <section class="stats" aria-label="Learning statistics">
+        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
+          <div class="stat-number">50</div>
+          <div class="stat-label">Total Words</div>
+        </div>
+        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
+          <div class="stat-number" id="studiedCount">0</div>
+          <div class="stat-label">Studied</div>
+        </div>
+        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
+          <div class="stat-number" id="correctAnswers">0</div>
+          <div class="stat-label">Correct</div>
+        </div>
+        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
+          <div class="stat-number" id="accuracy">0%</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+      </section>
+
+      <section class="vocab-category" aria-label="Family and relationships vocabulary">
+        <div class="category-header">
+          <h2>Family & Relationships</h2>
+          <div class="category-subtitle">الأسرة والعلاقات</div>
+        </div>
+        <div class="vocab-grid" role="list" aria-label="Family and relationships words">
+          <article class="vocab-card" data-word="family" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Family</div>
+            <div class="vocab-pronunciation">/ˈfæməli/</div>
+            <div class="vocab-translation">عائلة</div>
+            <div class="vocab-example">
+              <div class="example-en">"I love spending time with my family."</div>
+              <div class="example-ar">أحب قضاء الوقت مع عائلتي.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="mother" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Mother</div>
+            <div class="vocab-pronunciation">/ˈmʌðər/</div>
+            <div class="vocab-translation">أم</div>
+            <div class="vocab-example">
+              <div class="example-en">"My mother is a teacher."</div>
+              <div class="example-ar">أمي معلمة.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="father" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Father</div>
+            <div class="vocab-pronunciation">/ˈfɑːðər/</div>
+            <div class="vocab-translation">أب</div>
+            <div class="vocab-example">
+              <div class="example-en">"My father works in a bank."</div>
+              <div class="example-ar">أبي يعمل في بنك.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="brother" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Brother</div>
+            <div class="vocab-pronunciation">/ˈbrʌðər/</div>
+            <div class="vocab-translation">أخ</div>
+            <div class="vocab-example">
+              <div class="example-en">"I have one older brother."</div>
+              <div class="example-ar">لدي أخ أكبر واحد.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="sister" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Sister</div>
+            <div class="vocab-pronunciation">/ˈsɪstər/</div>
+            <div class="vocab-translation">أخت</div>
+            <div class="vocab-example">
+              <div class="example-en">"My sister is studying medicine."</div>
+              <div class="example-ar">أختي تدرس الطب.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="friend" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Friend</div>
+            <div class="vocab-pronunciation">/frend/</div>
+            <div class="vocab-translation">صديق</div>
+            <div class="vocab-example">
+              <div class="example-en">"She is my best friend."</div>
+              <div class="example-ar">هي أعز صديقاتي.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="vocab-category" aria-label="Daily activities vocabulary">
+        <div class="category-header">
+          <h2>Daily Activities</h2>
+          <div class="category-subtitle">الأنشطة اليومية</div>
+        </div>
+        <div class="vocab-grid" role="list" aria-label="Daily activities words">
+          <article class="vocab-card" data-word="work" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Work</div>
+            <div class="vocab-pronunciation">/wɜːrk/</div>
+            <div class="vocab-translation">عمل</div>
+            <div class="vocab-example">
+              <div class="example-en">"I work from 9 AM to 5 PM."</div>
+              <div class="example-ar">أعمل من الساعة 9 صباحاً إلى 5 مساءً.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="study" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Study</div>
+            <div class="vocab-pronunciation">/ˈstʌdi/</div>
+            <div class="vocab-translation">دراسة</div>
+            <div class="vocab-example">
+              <div class="example-en">"I study English every day."</div>
+              <div class="example-ar">أدرس الإنجليزية كل يوم.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="eat" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Eat</div>
+            <div class="vocab-pronunciation">/iːt/</div>
+            <div class="vocab-translation">يأكل</div>
+            <div class="vocab-example">
+              <div class="example-en">"We eat dinner at 7 PM."</div>
+              <div class="example-ar">نتناول العشاء في السابعة مساءً.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="sleep" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Sleep</div>
+            <div class="vocab-pronunciation">/sliːp/</div>
+            <div class="vocab-translation">ينام</div>
+            <div class="vocab-example">
+              <div class="example-en">"I sleep 8 hours every night."</div>
+              <div class="example-ar">أنام 8 ساعات كل ليلة.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="read" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Read</div>
+            <div class="vocab-pronunciation">/riːd/</div>
+            <div class="vocab-translation">يقرأ</div>
+            <div class="vocab-example">
+              <div class="example-en">"She reads the newspaper every morning."</div>
+              <div class="example-ar">هي تقرأ الجريدة كل صباح.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="watch" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Watch</div>
+            <div class="vocab-pronunciation">/wɑːtʃ/</div>
+            <div class="vocab-translation">يشاهد</div>
+            <div class="vocab-example">
+              <div class="example-en">"They watch TV in the evening."</div>
+              <div class="example-ar">هم يشاهدون التلفاز في المساء.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="vocab-category" aria-label="Food and drinks vocabulary">
+        <div class="category-header">
+          <h2>Food & Drinks</h2>
+          <div class="category-subtitle">الطعام والمشروبات</div>
+        </div>
+        <div class="vocab-grid" role="list" aria-label="Food and drinks words">
+          <article class="vocab-card" data-word="food" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Food</div>
+            <div class="vocab-pronunciation">/fuːd/</div>
+            <div class="vocab-translation">طعام</div>
+            <div class="vocab-example">
+              <div class="example-en">"This food is delicious."</div>
+              <div class="example-ar">هذا الطعام لذيذ.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="water" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Water</div>
+            <div class="vocab-pronunciation">/ˈwɔːtər/</div>
+            <div class="vocab-translation">ماء</div>
+            <div class="vocab-example">
+              <div class="example-en">"I drink a lot of water."</div>
+              <div class="example-ar">أشرب الكثير من الماء.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="coffee" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Coffee</div>
+            <div class="vocab-pronunciation">/ˈkɔːfi/</div>
+            <div class="vocab-translation">قهوة</div>
+            <div class="vocab-example">
+              <div class="example-en">"I like my coffee black."</div>
+              <div class="example-ar">أحب قهوتي سادة.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="bread" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Bread</div>
+            <div class="vocab-pronunciation">/bred/</div>
+            <div class="vocab-translation">خبز</div>
+            <div class="vocab-example">
+              <div class="example-en">"We buy fresh bread every morning."</div>
+              <div class="example-ar">نشتري الخبز الطازج كل صباح.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="fruit" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Fruit</div>
+            <div class="vocab-pronunciation">/fruːt/</div>
+            <div class="vocab-translation">فاكهة</div>
+            <div class="vocab-example">
+              <div class="example-en">"Fruit is good for your health."</div>
+              <div class="example-ar">الفاكهة مفيدة لصحتك.</div>
+            </div>
+          </article>
+
+          <article class="vocab-card" data-word="vegetable" role="listitem" tabindex="0">
+            <div class="vocab-level">Basic</div>
+            <div class="vocab-word">Vegetable</div>
+            <div class="vocab-pronunciation">/ˈvedʒtəbəl/</div>
+            <div class="vocab-translation">خضار</div>
+            <div class="vocab-example">
+              <div class="example-en">"We eat vegetables with every meal."</div>
+              <div class="example-ar">نأكل الخضار مع كل وجبة.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="quiz-section" aria-label="Interactive vocabulary quiz">
+        <h3>Test Your Knowledge | اختبر معرفتك</h3>
+        <p>Choose the correct Arabic translation for each English word.</p>
+        <p style="direction: rtl; margin-top: 10px;">اختر الترجمة العربية الصحيحة لكل كلمة إنجليزية.</p>
+
+        <div class="quiz-container" aria-live="polite" aria-atomic="true">
+          <div class="quiz-card active" role="group" aria-label="Quiz question 1">
+            <div class="quiz-word">Family</div>
+            <div class="quiz-options" role="list">
+              <button class="quiz-option" data-correct="true" role="listitem" tabindex="0" type="button">عائلة</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">صديق</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">عمل</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">طعام</button>
+            </div>
+          </div>
+
+          <div class="quiz-card" role="group" aria-label="Quiz question 2">
+            <div class="quiz-word">Water</div>
+            <div class="quiz-options" role="list">
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">قهوة</button>
+              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">ماء</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">خبز</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">فاكهة</button>
+            </div>
+          </div>
+
+          <div class="quiz-card" role="group" aria-label="Quiz question 3">
+            <div class="quiz-word">Study</div>
+            <div class="quiz-options" role="list">
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">ينام</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">يأكل</button>
+              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">يدرس</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">يشاهد</button>
+            </div>
+          </div>
+
+          <div class="quiz-card" role="group" aria-label="Quiz question 4">
+            <div class="quiz-word">Friend</div>
+            <div class="quiz-options" role="list">
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">أخ</button>
+              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">صديق</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">أب</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">أم</button>
+            </div>
+          </div>
+
+          <div class="quiz-card" role="group" aria-label="Quiz question 5">
+            <div class="quiz-word">Coffee</div>
+            <div class="quiz-options" role="list">
+              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">قهوة</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">ماء</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">خضار</button>
+              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">خبز</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-controls" role="region" aria-label="Quiz navigation controls">
+          <button class="btn" id="prevBtn" type="button" disabled>Previous</button>
+          <button class="btn" id="nextBtn" type="button">Next</button>
+          <button class="btn hidden" id="restartBtn" type="button">Restart Quiz</button>
+        </div>
+
+        <div id="quizResult" aria-live="assertive" role="alert" tabindex="0"></div>
+      </section>
+    </section>
+  </div>
 <style>
   * {
     margin: 0;
@@ -451,329 +767,6 @@
     }
   }
 </style>
-</head>
-<body>
-  <div class="container" role="main">
-    <header class="header" aria-label="Page header">
-      <h1>Essential Daily Vocabulary</h1>
-      <div class="subtitle">المفردات اليومية الأساسية</div>
-    </header>
-
-    <section class="content" aria-label="Vocabulary content and quiz">
-
-      <div class="search-container" role="search">
-        <input type="search" id="searchBox" class="search-box" placeholder="Search vocabulary... ابحث عن المفردات" aria-label="Search vocabulary" />
-      </div>
-
-      <section class="stats" aria-label="Learning statistics">
-        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
-          <div class="stat-number">50</div>
-          <div class="stat-label">Total Words</div>
-        </div>
-        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
-          <div class="stat-number" id="studiedCount">0</div>
-          <div class="stat-label">Studied</div>
-        </div>
-        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
-          <div class="stat-number" id="correctAnswers">0</div>
-          <div class="stat-label">Correct</div>
-        </div>
-        <div class="stat-card" role="region" aria-live="polite" aria-atomic="true">
-          <div class="stat-number" id="accuracy">0%</div>
-          <div class="stat-label">Accuracy</div>
-        </div>
-      </section>
-
-      <section class="vocab-category" aria-label="Family and relationships vocabulary">
-        <div class="category-header">
-          <h2>Family & Relationships</h2>
-          <div class="category-subtitle">الأسرة والعلاقات</div>
-        </div>
-        <div class="vocab-grid" role="list" aria-label="Family and relationships words">
-          <article class="vocab-card" data-word="family" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Family</div>
-            <div class="vocab-pronunciation">/ˈfæməli/</div>
-            <div class="vocab-translation">عائلة</div>
-            <div class="vocab-example">
-              <div class="example-en">"I love spending time with my family."</div>
-              <div class="example-ar">أحب قضاء الوقت مع عائلتي.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="mother" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Mother</div>
-            <div class="vocab-pronunciation">/ˈmʌðər/</div>
-            <div class="vocab-translation">أم</div>
-            <div class="vocab-example">
-              <div class="example-en">"My mother is a teacher."</div>
-              <div class="example-ar">أمي معلمة.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="father" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Father</div>
-            <div class="vocab-pronunciation">/ˈfɑːðər/</div>
-            <div class="vocab-translation">أب</div>
-            <div class="vocab-example">
-              <div class="example-en">"My father works in a bank."</div>
-              <div class="example-ar">أبي يعمل في بنك.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="brother" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Brother</div>
-            <div class="vocab-pronunciation">/ˈbrʌðər/</div>
-            <div class="vocab-translation">أخ</div>
-            <div class="vocab-example">
-              <div class="example-en">"I have one older brother."</div>
-              <div class="example-ar">لدي أخ أكبر واحد.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="sister" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Sister</div>
-            <div class="vocab-pronunciation">/ˈsɪstər/</div>
-            <div class="vocab-translation">أخت</div>
-            <div class="vocab-example">
-              <div class="example-en">"My sister is studying medicine."</div>
-              <div class="example-ar">أختي تدرس الطب.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="friend" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Friend</div>
-            <div class="vocab-pronunciation">/frend/</div>
-            <div class="vocab-translation">صديق</div>
-            <div class="vocab-example">
-              <div class="example-en">"She is my best friend."</div>
-              <div class="example-ar">هي أعز صديقاتي.</div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="vocab-category" aria-label="Daily activities vocabulary">
-        <div class="category-header">
-          <h2>Daily Activities</h2>
-          <div class="category-subtitle">الأنشطة اليومية</div>
-        </div>
-        <div class="vocab-grid" role="list" aria-label="Daily activities words">
-          <article class="vocab-card" data-word="work" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Work</div>
-            <div class="vocab-pronunciation">/wɜːrk/</div>
-            <div class="vocab-translation">عمل</div>
-            <div class="vocab-example">
-              <div class="example-en">"I work from 9 AM to 5 PM."</div>
-              <div class="example-ar">أعمل من الساعة 9 صباحاً إلى 5 مساءً.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="study" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Study</div>
-            <div class="vocab-pronunciation">/ˈstʌdi/</div>
-            <div class="vocab-translation">دراسة</div>
-            <div class="vocab-example">
-              <div class="example-en">"I study English every day."</div>
-              <div class="example-ar">أدرس الإنجليزية كل يوم.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="eat" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Eat</div>
-            <div class="vocab-pronunciation">/iːt/</div>
-            <div class="vocab-translation">يأكل</div>
-            <div class="vocab-example">
-              <div class="example-en">"We eat dinner at 7 PM."</div>
-              <div class="example-ar">نتناول العشاء في السابعة مساءً.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="sleep" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Sleep</div>
-            <div class="vocab-pronunciation">/sliːp/</div>
-            <div class="vocab-translation">ينام</div>
-            <div class="vocab-example">
-              <div class="example-en">"I sleep 8 hours every night."</div>
-              <div class="example-ar">أنام 8 ساعات كل ليلة.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="read" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Read</div>
-            <div class="vocab-pronunciation">/riːd/</div>
-            <div class="vocab-translation">يقرأ</div>
-            <div class="vocab-example">
-              <div class="example-en">"She reads the newspaper every morning."</div>
-              <div class="example-ar">هي تقرأ الجريدة كل صباح.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="watch" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Watch</div>
-            <div class="vocab-pronunciation">/wɑːtʃ/</div>
-            <div class="vocab-translation">يشاهد</div>
-            <div class="vocab-example">
-              <div class="example-en">"They watch TV in the evening."</div>
-              <div class="example-ar">هم يشاهدون التلفاز في المساء.</div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="vocab-category" aria-label="Food and drinks vocabulary">
-        <div class="category-header">
-          <h2>Food & Drinks</h2>
-          <div class="category-subtitle">الطعام والمشروبات</div>
-        </div>
-        <div class="vocab-grid" role="list" aria-label="Food and drinks words">
-          <article class="vocab-card" data-word="food" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Food</div>
-            <div class="vocab-pronunciation">/fuːd/</div>
-            <div class="vocab-translation">طعام</div>
-            <div class="vocab-example">
-              <div class="example-en">"This food is delicious."</div>
-              <div class="example-ar">هذا الطعام لذيذ.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="water" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Water</div>
-            <div class="vocab-pronunciation">/ˈwɔːtər/</div>
-            <div class="vocab-translation">ماء</div>
-            <div class="vocab-example">
-              <div class="example-en">"I drink a lot of water."</div>
-              <div class="example-ar">أشرب الكثير من الماء.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="coffee" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Coffee</div>
-            <div class="vocab-pronunciation">/ˈkɔːfi/</div>
-            <div class="vocab-translation">قهوة</div>
-            <div class="vocab-example">
-              <div class="example-en">"I like my coffee black."</div>
-              <div class="example-ar">أحب قهوتي سادة.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="bread" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Bread</div>
-            <div class="vocab-pronunciation">/bred/</div>
-            <div class="vocab-translation">خبز</div>
-            <div class="vocab-example">
-              <div class="example-en">"We buy fresh bread every morning."</div>
-              <div class="example-ar">نشتري الخبز الطازج كل صباح.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="fruit" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Fruit</div>
-            <div class="vocab-pronunciation">/fruːt/</div>
-            <div class="vocab-translation">فاكهة</div>
-            <div class="vocab-example">
-              <div class="example-en">"Fruit is good for your health."</div>
-              <div class="example-ar">الفاكهة مفيدة لصحتك.</div>
-            </div>
-          </article>
-
-          <article class="vocab-card" data-word="vegetable" role="listitem" tabindex="0">
-            <div class="vocab-level">Basic</div>
-            <div class="vocab-word">Vegetable</div>
-            <div class="vocab-pronunciation">/ˈvedʒtəbəl/</div>
-            <div class="vocab-translation">خضار</div>
-            <div class="vocab-example">
-              <div class="example-en">"We eat vegetables with every meal."</div>
-              <div class="example-ar">نأكل الخضار مع كل وجبة.</div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="quiz-section" aria-label="Interactive vocabulary quiz">
-        <h3>Test Your Knowledge | اختبر معرفتك</h3>
-        <p>Choose the correct Arabic translation for each English word.</p>
-        <p style="direction: rtl; margin-top: 10px;">اختر الترجمة العربية الصحيحة لكل كلمة إنجليزية.</p>
-
-        <div class="quiz-container" aria-live="polite" aria-atomic="true">
-          <div class="quiz-card active" role="group" aria-label="Quiz question 1">
-            <div class="quiz-word">Family</div>
-            <div class="quiz-options" role="list">
-              <button class="quiz-option" data-correct="true" role="listitem" tabindex="0" type="button">عائلة</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">صديق</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">عمل</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">طعام</button>
-            </div>
-          </div>
-
-          <div class="quiz-card" role="group" aria-label="Quiz question 2">
-            <div class="quiz-word">Water</div>
-            <div class="quiz-options" role="list">
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">قهوة</button>
-              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">ماء</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">خبز</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">فاكهة</button>
-            </div>
-          </div>
-
-          <div class="quiz-card" role="group" aria-label="Quiz question 3">
-            <div class="quiz-word">Study</div>
-            <div class="quiz-options" role="list">
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">ينام</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">يأكل</button>
-              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">يدرس</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">يشاهد</button>
-            </div>
-          </div>
-
-          <div class="quiz-card" role="group" aria-label="Quiz question 4">
-            <div class="quiz-word">Friend</div>
-            <div class="quiz-options" role="list">
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">أخ</button>
-              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">صديق</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">أب</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">أم</button>
-            </div>
-          </div>
-
-          <div class="quiz-card" role="group" aria-label="Quiz question 5">
-            <div class="quiz-word">Coffee</div>
-            <div class="quiz-options" role="list">
-              <button class="quiz-option" data-correct="true" role="listitem" tabindex="-1" type="button">قهوة</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">ماء</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">خضار</button>
-              <button class="quiz-option" data-correct="false" role="listitem" tabindex="-1" type="button">خبز</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="quiz-controls" role="region" aria-label="Quiz navigation controls">
-          <button class="btn" id="prevBtn" type="button" disabled>Previous</button>
-          <button class="btn" id="nextBtn" type="button">Next</button>
-          <button class="btn hidden" id="restartBtn" type="button">Restart Quiz</button>
-        </div>
-
-        <div id="quizResult" aria-live="assertive" role="alert" tabindex="0"></div>
-      </section>
-    </section>
-  </div>
-
 <script>
   const searchBox = document.getElementById('searchBox');
   const vocabCards = document.querySelectorAll('.vocab-card');
