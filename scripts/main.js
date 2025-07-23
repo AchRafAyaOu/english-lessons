@@ -1714,6 +1714,16 @@
         imageObserver.observe(img);
       });
     }
+window.addEventListener('load', function() {
+  document.querySelector('.main-container').classList.add('loaded');
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.main-container').classList.add('loaded');
+  document.getElementById('loadingOverlay').classList.remove('active');
+});
+
 
     // Service Worker Registration (for better performance)
     if ('serviceWorker' in navigator) {
