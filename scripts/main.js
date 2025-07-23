@@ -1,20 +1,21 @@
     //<![CDATA[
     // Lesson URLs mapping
     const lessonUrls = {
-      'lesson1': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-01-alphabet-numbers.html',
-      'lesson2': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-02-greetings.html',
-      'lesson3': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-03-family-home.html',
-      'lesson4': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-04-colors-shapes.html',
-      'lesson5': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-05-time-date.html',
-      'lesson6': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-06-advanced-conversation.html',
-      'lesson7': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/basic_virbs.html',
-      'lesson8': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/Auxliary_verb.html',
-      'lesson9': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/Question_words.html',
-      'lesson10': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/adjective.html'
-    };
+  'lesson1': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/alphabet.html',
+  'lesson2': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/greetings.html',
+  'lesson3': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/family-home.html',
+  'lesson4': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/colors-shapes.html',
+  'lesson5': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/time-date.html',
+  'lesson6': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/advanced-conversation.html',
+  'lesson7': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/basic_virbs.html',
+  'lesson8': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Auxliary_verb.html',
+  'lesson9': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Question_words.html',
+  'lesson10': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/adjective.html',
+  'lesson11': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Dailyvocabulary.html'
+};
 
     // About URL
-    const aboutUrl = 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/aboutme.html';
+    const aboutUrl = 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/aboutme.html';
 
     // Global variables
     let loadedLessons = new Set();
@@ -863,20 +864,21 @@
     }
     //]]>
     const lessonUrls = {
-      'lesson1': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-01-alphabet-numbers.html',
-      'lesson2': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-02-greetings.html',
-      'lesson3': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-03-family-home.html',
-      'lesson4': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-04-colors-shapes.html',
-      'lesson5': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-05-time-date.html',
-      'lesson6': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/lesson-06-advanced-conversation.html',
-      'lesson7': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/basic_virbs.html',
-      'lesson8': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/Auxliary_verb.html',
-      'lesson9': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/Question_words.html',
-      'lesson10': 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/adjective.html'
+  'lesson1': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/alphabet.html',
+  'lesson2': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/greetings.html',
+  'lesson3': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/family-home.html',
+  'lesson4': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/colors-shapes.html',
+  'lesson5': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/time-date.html',
+  'lesson6': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/advanced-conversation.html',
+  'lesson7': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/basic_virbs.html',
+  'lesson8': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Auxliary_verb.html',
+  'lesson9': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Question_words.html',
+  'lesson10': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/adjective.html',
+  'lesson11': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Dailyvocabulary.html',
     };
 
     // About URL
-    const aboutUrl = 'https://raw.githubusercontent.com/AchRafAyaOu/english-lessons/refs/heads/main/aboutme.html';
+    const aboutUrl = 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/aboutme.html';
 
     // Global variables
     let loadedLessons = new Set();
