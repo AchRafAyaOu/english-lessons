@@ -1,5 +1,4 @@
     //<![CDATA[
-    // Lesson URLs mapping
     const lessonUrls = {
   'lesson1': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/alphabet.html',
   'lesson2': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/greetings.html',
@@ -11,7 +10,16 @@
   'lesson8': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Auxliary_verb.html',
   'lesson9': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Question_words.html',
   'lesson10': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/adjective.html',
-  'lesson11': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Dailyvocabulary.html'
+  'lesson11': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Dailyvocabulary.html',
+  
+  // الدروس الجديدة
+  'lesson12': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Reported_Speech.html',
+  'lesson13': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Present_Perfect_Simple.html',
+  'lesson14': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Phrasal_Verbs.html',
+  'lesson15': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Past_simple_vs.html',
+  'lesson16': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Passive_Voice.html',
+  'lesson17': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Modal_verbs.html',
+  'lesson18': 'https://cdn.jsdelivr.net/gh/AchRafAyaOu/english-lessons@main/lessons/Future_times.html'
 };
 
     // About URL
@@ -25,20 +33,34 @@
     let touchStartY = null;
     let currentTheme = 'default';
 
-    // Lesson order
-    const lessonOrder = ['lesson1', 'lesson2', 'lesson3', 'lesson4', 'lesson5', 'lesson6', 'lesson7', 'lesson8', 'lesson9', 'lesson10'];
+    const lessonOrder = [
+  'lesson1', 'lesson2', 'lesson3', 'lesson4', 'lesson5', 'lesson6', 'lesson7', 'lesson8', 'lesson9', 'lesson10',
+  'lesson11',
+  'lesson12', 'lesson13', 'lesson14', 'lesson15', 'lesson16', 'lesson17', 'lesson18'
+];
     const lessonTitles = {
-      'lesson1': 'الدرس الأول: الأبجدية والأرقام',
-      'lesson2': 'الدرس الثاني: التحيات',
-      'lesson3': 'الدرس الثالث: العائلة والمنزل',
-      'lesson4': 'الدرس الرابع: الألوان والأشكال',
-      'lesson5': 'الدرس الخامس: الوقت والتاريخ',
-      'lesson6': 'الدرس السادس: المحادثة المتقدمة',
-      'lesson7': 'الدرس السابع: الأفعال الأساسية',
-      'lesson8': 'الدرس الثامن: الأفعال المساعدة',
-      'lesson9': 'الدرس التاسع: كلمات الاستفهام',
-      'lesson10': 'الدرس العاشر: الصفات والظروف'
-    };
+  'lesson1': 'الدرس الأول: الأبجدية والأرقام',
+  'lesson2': 'الدرس الثاني: التحيات',
+  'lesson3': 'الدرس الثالث: العائلة والمنزل',
+  'lesson4': 'الدرس الرابع: الألوان والأشكال',
+  'lesson5': 'الدرس الخامس: الوقت والتاريخ',
+  'lesson6': 'الدرس السادس: المحادثة المتقدمة',
+  'lesson7': 'الدرس السابع: الأفعال الأساسية',
+  'lesson8': 'الدرس الثامن: الأفعال المساعدة',
+  'lesson9': 'الدرس التاسع: كلمات الاستفهام',
+  'lesson10': 'الدرس العاشر: الصفات والظروف',
+  'lesson11': 'الدرس الحادي عشر: المفردات اليومية',
+  
+  // عناوين الدروس الجديدة
+  'lesson12': 'الكلام المنقول - Reported Speech',
+  'lesson13': 'المضارع التام البسيط والمستمر',
+  'lesson14': 'الأفعال المركبة: استكشاف الأفعال المركبة الشائعة',
+  'lesson15': 'الماضي البسيط مقابل الماضي المستمر',
+  'lesson16': 'المبني للمجهول: فهم بنيته واستخدامه',
+  'lesson17': 'الأفعال الناقصة',
+  'lesson18': 'أزمنة المستقبل والمضارع المستمر'
+};
+
 
     // Lesson data for search
     const lessonData = [
