@@ -1,0 +1,786 @@
+<style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    html:focus-within { scroll-behavior: smooth; }
+    body {
+      font-family: "Tajawal", "Noto Sans Arabic", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      color: var(--text);
+      background: linear-gradient(135deg, var(--bg), var(--bg-soft));
+      transition: background-color .3s ease, color .3s ease;
+    }
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #1e293b;
+      --panel: #1e293b;
+      --panel-2: #334155;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: rgba(255,255,255,.15);
+      --accent: #3b82f6;
+      --accent-2: #60a5fa;
+      --success: #22c55e;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow: 0 8px 24px rgba(0,0,0,.2);
+      --shadow-soft: 0 4px 12px rgba(0,0,0,.15);
+      --ring: 0 0 0 3px rgba(59,130,246,.3);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f1f5f9;
+        --bg-soft: #ffffff;
+        --panel: #ffffff;
+        --panel-2: #f8fafc;
+        --text: #1e293b;
+        --muted: #64748b;
+        --border: rgba(0,0,0,.1);
+        --accent: #2563eb;
+        --accent-2: #3b82f6;
+        --shadow: 0 8px 24px rgba(0,0,0,.1);
+        --shadow-soft: 0 4px 12px rgba(0,0,0,.08);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+    .container { max-width: 1100px; margin: 32px auto; padding: 16px; }
+    .header {
+      position: relative;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      isolation: isolate;
+    }
+    .header::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(600px 300px at 100% 0, rgba(255,255,255,.15), transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .header h1 {
+      margin: 0 0 12px;
+      font-size: clamp(24px, 5vw, 40px);
+      font-weight: 900;
+      text-shadow: 0 2px 4px rgba(0,0,0,.2);
+    }
+    .header p {
+      margin: 0;
+      font-size: clamp(16px, 2.5vw, 20px);
+      opacity: .9;
+    }
+    .progress-wrap {
+      display: grid;
+      gap: 12px;
+      max-width: 500px;
+      margin: 16px auto;
+    }
+    .progress-track {
+      height: 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.3);
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #4ade80, #22c55e);
+      border-radius: 999px;
+      transition: width .5s ease;
+    }
+    .progress-text {
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+    }
+    .content { margin-top: 32px; display: grid; gap: 24px; padding: 24px; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+    }
+    .panel h2 {
+      margin: 0 0 16px;
+      font-size: clamp(20px, 4vw, 28px);
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+    .panel h3 {
+      margin: 24px 0 12px;
+      font-size: clamp(18px, 3.5vw, 24px);
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin: 16px 0;
+    }
+    .card {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: var(--accent-2);
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59,130,246,.15);
+      color: var(--accent-2);
+      border: 1px solid rgba(59,130,246,.3);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    .eg {
+      background: rgba(34,197,94,.1);
+      border: 1px solid rgba(34,197,94,.3);
+      color: var(--success);
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      margin: 12px 0;
+    }
+    .eg .en {
+      font-weight: 700;
+      color: #16a34a;
+    }
+    .eg .ar {
+      color: var(--muted);
+      font-style: italic;
+    }
+    .note {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 12px;
+      align-items: start;
+      background: rgba(59,130,246,.1);
+      border: 1px dashed rgba(59,130,246,.4);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      margin-top: 12px;
+    }
+    .note .ico {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(59,130,246,.15);
+      color: var(--accent-2);
+      border: 1px solid rgba(59,130,246,.3);
+      font-weight: 900;
+    }
+    .exercise { display: grid; gap: 16px; }
+    .q {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      transition: background .2s ease;
+    }
+    .q strong { color: var(--accent-2); }
+    .opts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .opt {
+      user-select: none;
+      text-align: center;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 14px;
+      background: var(--panel);
+      color: var(--text);
+      border: 2px solid var(--border);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+      cursor: pointer;
+    }
+    .opt:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-2);
+      box-shadow: var(--shadow-soft);
+    }
+    .opt:focus-visible {
+      outline: none;
+      box-shadow: var(--ring);
+    }
+    .opt.correct {
+      background: rgba(34,197,94,.2);
+      border-color: var(--success);
+      color: #d1fae5;
+      animation: pulse .3s ease;
+    }
+    .opt.wrong {
+      background: rgba(239,68,68,.2);
+      border-color: var(--danger);
+      color: #fecaca;
+      animation: shake .3s ease;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-4px); }
+      75% { transform: translateX(4px); }
+    }
+    .feedback {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--muted);
+      transition: opacity .3s ease;
+    }
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      position: sticky;
+      top: 16px;
+      background: var(--panel);
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-soft);
+      z-index: 10;
+    }
+    .btn {
+      background: var(--accent);
+      border: none;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform .2s ease, background .2s ease;
+      cursor: pointer;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--accent-2);
+    }
+    .btn:focus-visible {
+      outline: none;
+      box-shadow: var(--ring);
+    }
+    .badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(34,197,94,.2);
+      border: 1px solid rgba(34,197,94,.4);
+      color: #d1fae5;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .timer {
+      background: rgba(59,130,246,.2);
+      border-color: rgba(59,130,246,.4);
+      color: #dbeafe;
+    }
+    .success {
+      display: none;
+      text-align: center;
+      padding: 16px;
+      margin-top: 16px;
+      border-radius: var(--radius-sm);
+      background: rgba(34,197,94,.15);
+      border: 1px solid rgba(34,197,94,.4);
+      color: #d1fae5;
+    }
+    .success.show { display: block; }
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent);
+      color: #fff;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      display: none;
+      z-index: 20;
+    }
+    .back-to-top.show { display: block; }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      padding: 12px;
+      background: var(--panel);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-soft);
+    }
+    .nav-links a {
+      color: var(--accent-2);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      transition: background .2s ease;
+    }
+    .nav-links a:hover {
+      background: rgba(59,130,246,.15);
+    }
+    @media (max-width: 768px) {
+      .container { margin: 16px; padding: 12px; }
+      .header { padding: 24px 16px; }
+      .header h1 { font-size: clamp(20px, 4vw, 32px); }
+      .content { padding: 16px; }
+      .panel { padding: 16px; }
+      .opts { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .back-to-top { bottom: 16px; right: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="header" role="banner" aria-label="Lesson header">
+      <h1>🏗️ التركيب الأساسي للجملة</h1>
+      <p>أساسيات بناء جمل إنجليزية واضحة ومفهومة</p>
+      <div class="progress-wrap">
+        <div class="progress-track"><div class="progress-fill" id="progressBar"></div></div>
+        <p class="progress-text">التقدم: <span id="progressText">0%</span></p>
+      </div>
+    </header>
+
+    <nav class="nav-links" aria-label="Section navigation">
+      <a href="#core">النمط الأساسي</a>
+      <a href="#types">أنواع الجمل</a>
+      <a href="#expansion">توسيع الجمل</a>
+      <a href="#mistakes">الأخطاء الشائعة</a>
+      <a href="#practice">تمارين</a>
+    </nav>
+
+    <section class="content" aria-label="Main content">
+      <section class="panel" id="core">
+        <h2>📋 النمط الأساسي</h2>
+        <p class="lead">تتبع معظم الجمل الواضحة نمطًا بسيطًا وقابلًا للقراءة.</p>
+        <div class="eg">
+          <div class="en">Subject + Verb + Object (S + V + O)</div>
+          <div class="ar">فاعل + فعل + مفعول به</div>
+        </div>
+        <div class="grid" role="list">
+          <article class="card" role="listitem">
+            <span class="chip">الفاعل</span>
+            <p><strong>من/ماذا يقوم بالفعل.</strong><br>من يقوم بالفعل أو يُشكّل محور الحديث.</p>
+            <div class="eg">
+              <div class="en">The cat • I • Students</div>
+              <div class="ar">القطة • أنا • الطلاب</div>
+            </div>
+          </article>
+          <article class="card" role="listitem">
+            <span class="chip">الفعل</span>
+            <p><strong>الفعل أو الحالة.</strong><br>الفعل الذي يحدث أو حالة المشهد.</p>
+            <div class="eg">
+              <div class="en">run • eat • study • is/are</div>
+              <div class="ar">يجري • يأكل • يدرس • يكون</div>
+            </div>
+          </article>
+          <article class="card" role="listitem">
+            <span class="chip">المفعول به</span>
+            <p><strong>يستقبل الفعل.</strong><br>يستقبل الفعل أو يتأثر به.</p>
+            <div class="eg">
+              <div class="en">the mouse • pizza • English</div>
+              <div class="ar">الفأر • البيتزا • الإنجليزية</div>
+            </div>
+          </article>
+        </div>
+        <h3>أمثلة كاملة</h3>
+        <div class="eg"><div class="en">The cat runs quickly.</div><div class="ar">القطة تجري بسرعة.</div></div>
+        <div class="eg"><div class="en">I eat pizza every Friday.</div><div class="ar">آكل البيتزا كل جمعة.</div></div>
+        <div class="eg"><div class="en">Students study English at school.</div><div class="ar">الطلاب يدرسون الإنجليزية في المدرسة.</div></div>
+        <div class="eg"><div class="en">The teacher explains the lesson.</div><div class="ar">المعلم يشرح الدرس.</div></div>
+        <div class="eg"><div class="en">Sara writes an email every morning.</div><div class="ar">سارة تكتب بريدًا إلكترونيًا كل صباح.</div></div>
+        <div class="note" aria-live="polite">
+          <div class="ico">💡</div>
+          <div>اجعل الفاعل قصيرًا، استخدم أفعالًا حيوية، وأضف التفاصيل بعد النمط الأساسي (فاعل + فعل + مفعول) للوضوح.<br>✨ اجعل الفاعل واضحًا ومختصرًا.</div>
+        </div>
+      </section>
+
+      <section class="panel" id="types">
+        <h2>🔄 أنواع الجمل</h2>
+        <div class="grid">
+          <article class="card">
+            <span class="chip">الجمل الخبرية</span>
+            <p>تعبر عن حقائق أو آراء.<br>جمل تخبر عن حقيقة أو رأي.</p>
+            <div class="eg"><div class="en">It is raining today.</div><div class="ar">إنها تمطر اليوم.</div></div>
+            <div class="eg"><div class="en">She loves chocolate.</div><div class="ar">هي تحب الشوكولاتة.</div></div>
+          </article>
+          <article class="card">
+            <span class="chip">الجمل الاستفهامية</span>
+            <p>تطرح أسئلة.<br>صيغة سؤال أو استفسار.</p>
+            <div class="eg"><div class="en">Are you coming?</div><div class="ar">هل أنت قادم؟</div></div>
+            <div class="eg"><div class="en">What time is it?</div><div class="ar">كم الساعة؟</div></div>
+          </article>
+          <article class="card">
+            <span class="chip">الجمل الأمرية</span>
+            <p>تعطي أوامر أو طلبات.<br>أمر أو طلب.</p>
+            <div class="eg"><div class="en">Close the door.</div><div class="ar">أغلق الباب.</div></div>
+            <div class="eg"><div class="en">Please sit down.</div><div class="ar">من فضلك اجلس.</div></div>
+          </article>
+          <article class="card">
+            <span class="chip">الجمل التعجبية</span>
+            <p>تعبر عن مشاعر قوية.<br>تعبر عن مشاعر قوية أو تعجب.</p>
+            <div class="eg"><div class="en">What a beautiful day!</div><div class="ar">يا له من يوم جميل!</div></div>
+            <div class="eg"><div class="en">How amazing!</div><div class="ar">يا للروعة!</div></div>
+          </article>
+        </div>
+        <h3>الجمل المركبة</h3>
+        <p class="lead">اربط جملتين مستقلتين بروابط لتدفق أفضل.</p>
+        <div class="eg"><div class="en">I wanted to go, but it was raining.</div><div class="ar">كنت أريد الذهاب، لكن كان الجو ممطرًا.</div></div>
+        <div class="eg"><div class="en">She studies hard, and she passes her exams.</div><div class="ar">هي تدرس بجد، وتنجح في امتحاناتها.</div></div>
+        <div class="eg"><div class="en">Tom cooked dinner, so his wife set the table.</div><div class="ar">طبخ توم العشاء، لذا رتبت زوجته الطاولة.</div></div>
+        <h3>الأزمنة في العمل</h3>
+        <div class="grid">
+          <article class="card"><span class="chip">المضارع البسيط</span><div class="eg"><div class="en">He works every day.</div><div class="ar">هو يعمل كل يوم.</div></div></article>
+          <article class="card"><span class="chip">الماضي البسيط</span><div class="eg"><div class="en">She visited the museum yesterday.</div><div class="ar">زارت المتحف أمس.</div></div></article>
+          <article class="card"><span class="chip">المستقبل البسيط</span><div class="eg"><div class="en">They will travel tomorrow.</div><div class="ar">سيسافرون غدًا.</div></div></article>
+          <article class="card"><span class="chip">المضارع المستمر</span><div class="eg"><div class="en">I am reading now.</div><div class="ar">أنا أقرأ الآن.</div></div></article>
+        </div>
+        <h3>الجمل الشرطية</h3>
+        <div class="grid">
+          <article class="card"><span class="chip">الشرطية الصفرية</span><div class="eg"><div class="en">If you heat ice, it melts.</div><div class="ar">إذا سخّنت الثلج فإنه يذوب.</div></div></article>
+          <article class="card"><span class="chip">الشرطية الأولى</span><div class="eg"><div class="en">If it rains, we will stay home.</div><div class="ar">إذا أمطرت، سنبقى في المنزل.</div></div></article>
+          <article class="card"><span class="chip">الشرطية الثانية</span><div class="eg"><div class="en">If I were rich, I would travel.</div><div class="ar">لو كنت غنيًا، لسافرت.</div></div></article>
+          <article class="card"><span class="chip">الشرطية الثالثة</span><div class="eg"><div class="en">If you had studied, you would have passed.</div><div class="ar">لو كنت درست، لكنت نجحت.</div></div></article>
+        </div>
+        <div class="note">
+          <div class="ico">🧩</div>
+          <div>استخدم فاعلًا قصيرًا، اختر أفعالًا دقيقة، وضع الظروف بالقرب من الأفعال التي تصفها لتحسين الفهم.<br>🎯 اجعل الجمل واضحة ومركزة.</div>
+        </div>
+      </section>
+
+      <section class="panel" id="expansion">
+        <h2>📐 توسيع الجمل</h2>
+        <p class="lead">أضف تفاصيل لجعل الجمل أكثر ثراءً وإثارة للاهتمام.</p>
+        <div class="grid">
+          <article class="card">
+            <span class="chip">استخدام الصفات</span>
+            <p>الصفات تصف الأسماء.<br>تضيف وصفًا للأسماء.</p>
+            <div class="eg"><div class="en">She has a big house.</div><div class="ar">لديها منزل كبير.</div></div>
+          </article>
+          <article class="card">
+            <span class="chip">إضافة الظروف</span>
+            <p>الظروف تصف الأفعال.<br>تضيف وصفًا للأفعال.</p>
+            <div class="eg"><div class="en">He speaks slowly.</div><div class="ar">هو يتكلم ببطء.</div></div>
+          </article>
+          <article class="card">
+            <span class="chip">عبارات الجر</span>
+            <p>تضيف معلومات عن الوقت، المكان، أو الكيفية.<br>معلومات إضافية.</p>
+            <div class="eg"><div class="en">The cat sleeps on the sofa.</div><div class="ar">القطة تنام على الأريكة.</div></div>
+            <div class="eg"><div class="en">We went to the park in the afternoon.</div><div class="ar">ذهبنا إلى الحديقة بعد الظهر.</div></div>
+          </article>
+        </div>
+        <div class="note">
+          <div class="ico">🔎</div>
+          <div>وسّع الجمل تدريجيًا: الأساس + صفة/ظرف + عبارة جر.<br>⭐ قم بإضافة التفاصيل خطوة بخطوة.</div>
+        </div>
+      </section>
+
+      <section class="panel" id="mistakes">
+        <h2>🚨 الأخطاء الشائعة</h2>
+        <div class="grid">
+          <article class="card">
+            <span class="chip">غياب الفاعل</span>
+            <div class="eg"><div class="en">Wrong: Runs fast.</div><div class="ar">خاطئة: يجري بسرعة.</div></div>
+            <div class="eg"><div class="en">Correct: He runs fast.</div><div class="ar">الصحيحة: هو يجري بسرعة.</div></div>
+          </article>
+          <article class="card">
+            <span class="chip">تطابق الفاعل والفعل</span>
+            <div class="eg"><div class="en">Wrong: She walk to school.</div><div class="ar">خاطئة: هي يمشي إلى المدرسة.</div></div>
+            <div class="eg"><div class="en">Correct: She walks to school.</div><div class="ar">الصحيحة: هي تمشي إلى المدرسة.</div></div>
+          </article>
+          <article class="card">
+            <span class="chip">ترتيب الكلمات (الأسئلة)</span>
+            <div class="eg"><div class="en">Wrong: You are coming?</div><div class="ar">خاطئة: أنت قادم؟</div></div>
+            <div class="eg"><div class="en">Correct: Are you coming?</div><div class="ar">الصحيحة: هل أنت قادم؟</div></div>
+          </article>
+        </div>
+        <div class="note">
+          <div class="ico">❗</div>
+          <div>تحقق مرتين من تطابق الفاعل والفعل واكتمال الجملة.<br>🔄 تأكد من سلامة التركيب.</div>
+        </div>
+      </section>
+
+      <section class="panel" id="practice">
+        <h2>🎯 التمارين</h2>
+        <div class="exercise" role="list">
+          <div class="q" role="listitem" data-answer="declarative" data-explain="جملة خبرية تحتوي على فاعل + فعل مساعد + فعل منتهي بـ ing.">
+            <p><strong>١.</strong> الطلاب يدرسون لامتحاناتهم.</p>
+            <div class="opts">
+              <button class="opt" aria-label="استفهامية">استفهامية</button>
+              <button class="opt" aria-label="خبرية">خبرية</button>
+              <button class="opt" aria-label="أمرية">أمرية</button>
+              <button class="opt" aria-label="تعجبية">تعجبية</button>
+            </div>
+            <div class="feedback" role="status"></div>
+          </div>
+          <div class="q" role="listitem" data-answer="question word + auxiliary + subject + verb" data-explain="كلمة استفهام + فعل مساعد + فاعل + فعل رئيسي.">
+            <p><strong>٢.</strong> أين وضعت مفاتيحي؟</p>
+            <div class="opts">
+              <button class="opt" aria-label="فاعل + فعل + مفعول به">فاعل + فعل + مفعول به</button>
+              <button class="opt" aria-label="كلمة استفهام + فعل مساعد + فاعل + فعل">كلمة استفهام + فعل مساعد + فاعل + فعل</button>
+              <button class="opt" aria-label="فعل + مفعول به">فعل + مفعول به</button>
+              <button class="opt" aria-label="فاعل + فعل">فاعل + فعل</button>
+            </div>
+            <div class="feedback" role="status"></div>
+          </div>
+          <div class="q" role="listitem" data-answer="imperative" data-explain="الفعل الأساسي أولاً، مع فاعل ضمني (أنت).">
+            <p><strong>٣.</strong> من فضلك ساعدني في هذه المشكلة.</p>
+            <div class="opts">
+              <button class="opt" aria-label="خبرية">خبرية</button>
+              <button class="opt" aria-label="استفهامية">استفهامية</button>
+              <button class="opt" aria-label="أمرية">أمرية</button>
+              <button class="opt" aria-label="تعجبية">تعجبية</button>
+            </div>
+            <div class="feedback" role="status"></div>
+          </div>
+          <div class="q" role="listitem" data-answer="exclamatory" data-explain="صيغة تعجب تبدأ بـ what/how.">
+            <p><strong>٤.</strong> يا لها من مفاجأة رائعة!</p>
+            <div class="opts">
+              <button class="opt" aria-label="خبرية">خبرية</button>
+              <button class="opt" aria-label="استفهامية">استفهامية</button>
+              <button class="opt" aria-label="أمرية">أمرية</button>
+              <button class="opt" aria-label="تعجبية">تعجبية</button>
+            </div>
+            <div class="feedback" role="status"></div>
+          </div>
+          <div class="q" role="listitem" data-answer="the cat" data-explain="الفاعل هو من يقوم بالفعل.">
+            <p><strong>٥.</strong> في "القطة تنام على الأريكة"، ما هو الفاعل؟</p>
+            <div class="opts">
+              <button class="opt" aria-label="القطة">القطة</button>
+              <button class="opt" aria-label="تنام">تنام</button>
+              <button class="opt" aria-label="على الأريكة">على الأريكة</button>
+              <button class="opt" aria-label="الأريكة">الأريكة</button>
+            </div>
+            <div class="feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="toolbar">
+          <button class="btn" id="resetBtn" aria-label="إعادة التمرين">إعادة</button>
+          <button class="btn" id="showBtn" aria-label="إظهار الإجابات">إظهار الإجابات</button>
+          <button class="btn" id="explainBtn" aria-label="إخفاء الشرح">إخفاء الشرح</button>
+          <span class="badge" id="score" aria-live="polite">0 / 5</span>
+          <span class="badge timer" id="timer" aria-live="polite">⏱ 00:00</span>
+        </div>
+        <div class="success" id="successBox" role="status" aria-live="polite">
+          <h3>🎉 عمل ممتاز!</h3>
+          <p>لقد أتقنت التركيب الأساسي للجمل ويمكنك التعرف على أنواع الجمل وأطرها.</p>
+        </div>
+      </section>
+    </section>
+    <button class="back-to-top" id="backToTop" aria-label="العودة إلى الأعلى">↑</button>
+  </main>
+
+  <script>
+    const questions = [...document.querySelectorAll('.q')];
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+    const scoreEl = document.getElementById('score');
+    const successBox = document.getElementById('successBox');
+    const resetBtn = document.getElementById('resetBtn');
+    const showBtn = document.getElementById('showBtn');
+    const explainBtn = document.getElementById('explainBtn');
+    const timerEl = document.getElementById('timer');
+    const backToTop = document.getElementById('backToTop');
+
+    let answered = 0;
+    let correct = 0;
+    let showExplanations = true;
+    let seconds = 0;
+    let timerId = null;
+
+    function startTimer() {
+      if (timerId) return;
+      timerId = setInterval(() => {
+        seconds++;
+        timerEl.textContent = `⏱ ${formatTime(seconds)}`;
+      }, 1000);
+    }
+    function stopTimer() {
+      clearInterval(timerId);
+      timerId = null;
+    }
+    function resetTimer() {
+      stopTimer();
+      seconds = 0;
+      timerEl.textContent = '⏱ 00:00';
+    }
+    function formatTime(s) {
+      const m = String(Math.floor(s / 60)).padStart(2, '0');
+      const ss = String(s % 60).padStart(2, '0');
+      return `${m}:${ss}`;
+    }
+
+    questions.forEach(q => {
+      q.querySelectorAll('.opt').forEach(opt => {
+        opt.setAttribute('role', 'button');
+        opt.setAttribute('tabindex', '0');
+        opt.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            opt.click();
+          }
+        });
+        opt.addEventListener('click', () => {
+          startTimer();
+          handleAnswer(q, opt);
+        });
+      });
+    });
+
+    function handleAnswer(q, chosen) {
+      const answer = (q.dataset.answer || '').trim().toLowerCase();
+      const explain = q.dataset.explain || '';
+      const feedback = q.querySelector('.feedback');
+      const all = q.querySelectorAll('.opt');
+
+      if (!q.dataset.answered) {
+        q.dataset.answered = '1';
+        answered++;
+      }
+
+      const normalize = s => s.replace(/\s+/g, ' ').trim().toLowerCase();
+      const selected = normalize(chosen.textContent);
+      all.forEach(o => o.classList.remove('correct', 'wrong'));
+      const wasCorrect = q.dataset.wasCorrect === '1';
+      const nowCorrect = normalize(answer) === selected;
+
+      if (nowCorrect) {
+        chosen.classList.add('correct');
+        if (!wasCorrect) {
+          correct++;
+          q.dataset.wasCorrect = '1';
+        }
+        feedback.textContent = showExplanations ? `✅ صحيح — ${explain}` : '✅ صحيح';
+      } else {
+        chosen.classList.add('wrong');
+        if (wasCorrect) {
+          correct--;
+          q.dataset.wasCorrect = '0';
+        }
+        feedback.textContent = showExplanations ? `❌ غير صحيح — ${explain}` : '❌ غير صحيح';
+      }
+
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const total = questions.length;
+      const pct = Math.round((answered / total) * 100);
+      progressBar.style.width = `${pct}%`;
+      progressText.textContent = `${pct}%`;
+      scoreEl.textContent = `${correct} / ${total}`;
+      if (correct === total && total > 0) {
+        successBox.classList.add('show');
+        stopTimer();
+      } else {
+        successBox.classList.remove('show');
+      }
+    }
+
+    resetBtn.addEventListener('click', () => {
+      questions.forEach(q => {
+        delete q.dataset.answered;
+        delete q.dataset.wasCorrect;
+        q.querySelectorAll('.opt').forEach(o => o.classList.remove('correct', 'wrong'));
+        const fb = q.querySelector('.feedback');
+        if (fb) fb.textContent = '';
+      });
+      answered = 0;
+      correct = 0;
+      progressBar.style.width = '0%';
+      progressText.textContent = '0%';
+      scoreEl.textContent = `0 / ${questions.length}`;
+      successBox.classList.remove('show');
+      resetTimer();
+    });
+
+    showBtn.addEventListener('click', () => {
+      questions.forEach(q => {
+        const answer = (q.dataset.answer || '').trim().toLowerCase();
+        const explain = q.dataset.explain || '';
+        const opts = [...q.querySelectorAll('.opt')];
+        const normalize = s => s.replace(/\s+/g, ' ').trim().toLowerCase();
+        const correctOpt = opts.find(o => normalize(o.textContent) === normalize(answer));
+        if (!q.dataset.answered) {
+          q.dataset.answered = '1';
+          answered++;
+        }
+        if (q.dataset.wasCorrect !== '1') {
+          q.dataset.wasCorrect = '1';
+          correct++;
+        }
+        opts.forEach(o => o.classList.remove('correct', 'wrong'));
+        if (correctOpt) correctOpt.classList.add('correct');
+        const fb = q.querySelector('.feedback');
+        fb.textContent = showExplanations ? `✅ الإجابة الصحيحة — ${explain}` : '✅ الإجابة الصحيحة';
+      });
+      updateProgress();
+    });
+
+    explainBtn.addEventListener('click', () => {
+      showExplanations = !showExplanations;
+      explainBtn.textContent = showExplanations ? 'إخفاء الشرح' : 'إظهار الشرح';
+      questions.forEach(q => {
+        const fb = q.querySelector('.feedback');
+        if (!fb || !fb.textContent) return;
+        const explain = q.dataset.explain || '';
+        if (fb.textContent.includes('✅')) {
+          fb.textContent = showExplanations ? `✅ صحيح — ${explain}` : '✅ صحيح';
+        } else if (fb.textContent.includes('❌')) {
+          fb.textContent = showExplanations ? `❌ غير صحيح — ${explain}` : '❌ غير صحيح';
+        } else if (fb.textContent.includes('الإجابة الصحيحة')) {
+          fb.textContent = showExplanations ? `✅ الإجابة الصحيحة — ${explain}` : '✅ الإجابة الصحيحة';
+        }
+      });
+    });
+
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('show', window.scrollY > 300);
+    });
+
+    (function init() {
+      progressBar.style.width = '0%';
+      progressText.textContent = '0%';
+      scoreEl.textContent = `0 / ${questions.length}`;
+      explainBtn.textContent = 'إخفاء الشرح';
+      timerEl.textContent = '⏱ 00:00';
+    })();
+  </script>
+</body>
+</html>
