@@ -1,0 +1,666 @@
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔗 Linking Words</h1>
+            <p>كلمات الربط في الجمل</p>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <p style="margin-top: 10px; color: white;">Progress: <span id="progressText">0%</span></p>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Introduction Section -->
+            <div class="section">
+                <h2>🎯 What are Linking Words? - ما هي كلمات الربط؟</h2>
+                <p><strong>Linking words (also called connectors or transitions) help connect ideas, sentences, and paragraphs to make your English more fluent and natural.</strong></p>
+                <p><strong>كلمات الربط (تُسمى أيضاً الروابط أو الانتقالات) تساعد في ربط الأفكار والجمل والفقرات لتجعل إنجليزيتك أكثر طلاقة وطبيعية.</strong></p>
+                
+                <div class="sentence-builder">
+                    <h3>📝 Sentence Building Example:</h3>
+                    
+                    <div class="sentence-parts">
+                        <div class="sentence-part">I was tired</div>
+                        <div class="linking-word">however</div>
+                        <div class="sentence-part">I continued studying</div>
+                    </div>
+                    
+                    <div class="example">
+                        <div class="example-english">Result: "I was tired; however, I continued studying."</div>
+                        <div class="example-arabic">النتيجة: "كنت متعباً، لكن واصلت الدراسة."</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Types of Linking Words -->
+            <div class="section">
+                <h2>📚 Types of Linking Words - أنواع كلمات الربط</h2>
+                
+                <div class="linking-grid">
+                    <div class="linking-card addition-card">
+                        <div class="card-title addition-title">Addition - الإضافة</div>
+                        <p><strong>To add information - لإضافة معلومات</strong></p>
+                        <ul class="word-list">
+                            <li class="word-item">
+                                <span class="word-english">Furthermore</span>
+                                <span class="word-arabic">علاوة على ذلك</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Moreover</span>
+                                <span class="word-arabic">بالإضافة إلى ذلك</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">In addition</span>
+                                <span class="word-arabic">إضافة إلى</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Also</span>
+                                <span class="word-arabic">أيضاً</span>
+                            </li>
+                        </ul>
+                        <div class="example">
+                            <div class="example-english">I love reading. Furthermore, I enjoy writing stories.</div>
+                            <div class="example-arabic">أحب القراءة. علاوة على ذلك، أستمتع بكتابة القصص.</div>
+                        </div>
+                    </div>
+
+                    <div class="linking-card contrast-card">
+                        <div class="card-title contrast-title">Contrast - التضاد</div>
+                        <p><strong>To show opposite ideas - لإظهار الأفكار المتضادة</strong></p>
+                        <ul class="word-list">
+                            <li class="word-item">
+                                <span class="word-english">However</span>
+                                <span class="word-arabic">مع ذلك</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Nevertheless</span>
+                                <span class="word-arabic">رغم ذلك</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">On the other hand</span>
+                                <span class="word-arabic">من ناحية أخرى</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">But</span>
+                                <span class="word-arabic">لكن</span>
+                            </li>
+                        </ul>
+                        <div class="example">
+                            <div class="example-english">The weather was bad. However, we had a great time.</div>
+                            <div class="example-arabic">كان الطقس سيئاً. مع ذلك، قضينا وقتاً رائعاً.</div>
+                        </div>
+                    </div>
+
+                    <div class="linking-card result-card">
+                        <div class="card-title result-title">Result - النتيجة</div>
+                        <p><strong>To show cause and effect - لإظهار السبب والنتيجة</strong></p>
+                        <ul class="word-list">
+                            <li class="word-item">
+                                <span class="word-english">Therefore</span>
+                                <span class="word-arabic">لذلك</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Consequently</span>
+                                <span class="word-arabic">وبالتالي</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">As a result</span>
+                                <span class="word-arabic">نتيجة لذلك</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">So</span>
+                                <span class="word-arabic">لذا</span>
+                            </li>
+                        </ul>
+                        <div class="example">
+                            <div class="example-english">It rained heavily. Therefore, the match was cancelled.</div>
+                            <div class="example-arabic">أمطرت بغزارة. لذلك، أُلغيت المباراة.</div>
+                        </div>
+                    </div>
+
+                    <div class="linking-card time-card">
+                        <div class="card-title time-title">Sequence - التسلسل</div>
+                        <p><strong>To show time order - لإظهار الترتيب الزمني</strong></p>
+                        <ul class="word-list">
+                            <li class="word-item">
+                                <span class="word-english">First / Firstly</span>
+                                <span class="word-arabic">أولاً</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Then / Next</span>
+                                <span class="word-arabic">ثم / بعد ذلك</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Finally</span>
+                                <span class="word-arabic">وأخيراً</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Meanwhile</span>
+                                <span class="word-arabic">في غضون ذلك</span>
+                            </li>
+                        </ul>
+                        <div class="example">
+                            <div class="example-english">First, I studied. Then, I took a break. Finally, I went to bed.</div>
+                            <div class="example-arabic">أولاً، درست. ثم، أخذت استراحة. وأخيراً، ذهبت للنوم.</div>
+                        </div>
+                    </div>
+
+                    <div class="linking-card example-card">
+                        <div class="card-title example-title">Examples - الأمثلة</div>
+                        <p><strong>To give examples - لإعطاء الأمثلة</strong></p>
+                        <ul class="word-list">
+                            <li class="word-item">
+                                <span class="word-english">For example</span>
+                                <span class="word-arabic">على سبيل المثال</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">For instance</span>
+                                <span class="word-arabic">كمثال على ذلك</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Such as</span>
+                                <span class="word-arabic">مثل</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Including</span>
+                                <span class="word-arabic">بما في ذلك</span>
+                            </li>
+                        </ul>
+                        <div class="example">
+                            <div class="example-english">I enjoy sports. For example, I play tennis and football.</div>
+                            <div class="example-arabic">أستمتع بالرياضة. على سبيل المثال، ألعب التنس وكرة القدم.</div>
+                        </div>
+                    </div>
+
+                    <div class="linking-card condition-card">
+                        <div class="card-title condition-title">Condition - الشرط</div>
+                        <p><strong>To show conditions - لإظهار الشروط</strong></p>
+                        <ul class="word-list">
+                            <li class="word-item">
+                                <span class="word-english">If</span>
+                                <span class="word-arabic">إذا</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Unless</span>
+                                <span class="word-arabic">إلا إذا</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">Provided that</span>
+                                <span class="word-arabic">بشرط أن</span>
+                            </li>
+                            <li class="word-item">
+                                <span class="word-english">In case</span>
+                                <span class="word-arabic">في حالة</span>
+                            </li>
+                        </ul>
+                        <div class="example">
+                            <div class="example-english">I'll come to the party if I finish my work.</div>
+                            <div class="example-arabic">سآتي للحفلة إذا انتهيت من عملي.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Usage Tips -->
+            <div class="section">
+                <h2>💡 Usage Tips - نصائح للاستخدام</h2>
+                
+                <div class="usage-tip">
+                    <h4>1. Punctuation with linking words - علامات الترقيم مع كلمات الربط:</h4>
+                    <div class="example">
+                        <div class="example-english">Formal: I was tired. However, I continued working.</div>
+                        <div class="example-arabic">رسمي: كنت متعباً. مع ذلك، واصلت العمل.</div>
+                    </div>
+                    <div class="example">
+                        <div class="example-english">Semi-formal: I was tired; however, I continued working.</div>
+                        <div class="example-arabic">شبه رسمي: كنت متعباً؛ مع ذلك، واصلت العمل.</div>
+                    </div>
+                </div>
+
+                <div class="usage-tip">
+                    <h4>2. Position in sentences - الموقع في الجمل:</h4>
+                    <div class="example">
+                        <div class="example-english">Beginning: Furthermore, this method is cost-effective.</div>
+                        <div class="example-arabic">البداية: علاوة على ذلك، هذه الطريقة اقتصادية.</div>
+                    </div>
+                    <div class="example">
+                        <div class="example-english">Middle: This method, furthermore, is cost-effective.</div>
+                        <div class="example-arabic">الوسط: هذه الطريقة، علاوة على ذلك، اقتصادية.</div>
+                    </div>
+                </div>
+
+                <div class="usage-tip">
+                    <h4>3. Don't overuse them - لا تفرط في استخدامها:</h4>
+                    <p>Use linking words naturally. Too many can make your writing sound artificial.</p>
+                    <p>استخدم كلمات الربط بشكل طبيعي. الكثير منها يمكن أن يجعل كتابتك تبدو مصطنعة.</p>
+                </div>
+            </div>
+
+            <!-- Practice Exercise -->
+            <div class="exercise">
+                <h4>🎯 Practice Exercise - تمرين تطبيقي</h4>
+                <p>Choose the best linking word for each sentence:</p>
+
+                <div class="question">
+                    <p><strong>1. I love chocolate. _____, I'm trying to eat healthier.</strong></p>
+                    <div class="options">
+                        <div class="option" onclick="checkAnswer(this, false)">Furthermore</div>
+                        <div class="option" onclick="checkAnswer(this, true)">However</div>
+                        <div class="option" onclick="checkAnswer(this, false)">Therefore</div>
+                        <div class="option" onclick="checkAnswer(this, false)">For example</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>2. The exam was difficult. _____, many students failed.</strong></p>
+                    <div class="options">
+                        <div class="option" onclick="checkAnswer(this, false)">However</div>
+                        <div class="option" onclick="checkAnswer(this, false)">Moreover</div>
+                        <div class="option" onclick="checkAnswer(this, true)">Therefore</div>
+                        <div class="option" onclick="checkAnswer(this, false)">Finally</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>3. This restaurant serves great food. _____, the service is excellent.</strong></p>
+                    <div class="options">
+                        <div class="option" onclick="checkAnswer(this, true)">Moreover</div>
+                        <div class="option" onclick="checkAnswer(this, false)">However</div>
+                        <div class="option" onclick="checkAnswer(this, false)">Therefore</div>
+                        <div class="option" onclick="checkAnswer(this, false)">Unless</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>4. There are many ways to stay fit. _____, you can go jogging or swimming.</strong></p>
+                    <div class="options">
+                        <div class="option" onclick="checkAnswer(this, false)">However</div>
+                        <div class="option" onclick="checkAnswer(this, true)">For example</div>
+                        <div class="option" onclick="checkAnswer(this, false)">Therefore</div>
+                        <div class="option" onclick="checkAnswer(this, false)">Nevertheless</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>5. _____, we need to buy groceries. Then, we can start cooking.</strong></p>
+                    <div class="options">
+                        <div class="option" onclick="checkAnswer(this, true)">First</div>
+                        <div class="option" onclick="checkAnswer(this, false)">However</div>
+                        <div class="option" onclick="checkAnswer(this, false)">Therefore</div>
+                        <div class="option" onclick="checkAnswer(this, false)">For instance</div>
+                    </div>
+                </div>
+
+                <div class="success-message" id="successMessage">
+                    <h3>🎉 Excellent Work!</h3>
+                    <p>You've mastered linking words! Your English writing and speaking will now sound much more natural and fluent.</p>
+                    <p><strong>عمل ممتاز! لقد أتقنت كلمات الربط! كتابتك ومحادثتك بالإنجليزية ستبدو الآن أكثر طبيعية وطلاقة.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #ff9a9e;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h3 {
+            color: #34495e;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+        
+        .linking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 25px 0;
+        }
+        
+        .linking-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            border: 3px solid;
+            transition: transform 0.3s ease;
+        }
+        
+        .addition-card { border-color: #4caf50; }
+        .contrast-card { border-color: #ff5722; }
+        .result-card { border-color: #2196f3; }
+        .time-card { border-color: #ff9800; }
+        .example-card { border-color: #9c27b0; }
+        .condition-card { border-color: #607d8b; }
+        
+        .linking-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 25px;
+            color: white;
+        }
+        
+        .addition-title { background: #4caf50; }
+        .contrast-title { background: #ff5722; }
+        .result-title { background: #2196f3; }
+        .time-title { background: #ff9800; }
+        .example-title { background: #9c27b0; }
+        .condition-title { background: #607d8b; }
+        
+        .word-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .word-item {
+            background: #f8f9fa;
+            padding: 12px;
+            margin: 8px 0;
+            border-left: 4px solid #28a745;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .word-english {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .word-arabic {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .example {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .example-english {
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 5px;
+        }
+        
+        .example-arabic {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .usage-tip {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .usage-tip h4 {
+            color: #1565c0;
+            margin-bottom: 10px;
+        }
+        
+        .sentence-builder {
+            background: #fff3e0;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 2px solid #ff9800;
+        }
+        
+        .sentence-parts {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 15px;
+            align-items: center;
+            margin: 15px 0;
+        }
+        
+        .sentence-part {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #ddd;
+        }
+        
+        .linking-word {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .exercise {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #9c27b0;
+        }
+        
+        .exercise h4 {
+            color: #6a1b9a;
+            margin-bottom: 15px;
+        }
+        
+        .question {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .option {
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #fafafa;
+            text-align: center;
+        }
+        
+        .option:hover {
+            border-color: #ff9a9e;
+            background: #fce4ec;
+        }
+        
+        .option.correct {
+            border-color: #4caf50;
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        
+        .option.incorrect {
+            border-color: #f44336;
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .progress-container {
+            background: white;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff9a9e, #fecfef);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        .success-message {
+            background: #e8f5e8;
+            color: #2e7d32;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .linking-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sentence-parts {
+                grid-template-columns: 1fr;
+            }
+            
+            .options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        let correctAnswers = 0;
+        const totalQuestions = 5;
+
+        function checkAnswer(element, isCorrect) {
+            const options = element.parentNode.querySelectorAll('.option');
+            options.forEach(option => {
+                option.style.pointerEvents = 'none';
+                if (option === element) {
+                    if (isCorrect) {
+                        option.classList.add('correct');
+                        correctAnswers++;
+                    } else {
+                        option.classList.add('incorrect');
+                    }
+                } else if (option.onclick.toString().includes('true')) {
+                    option.classList.add('correct');
+                }
+            });
+            
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const progress = (correctAnswers / totalQuestions) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('progressText').textContent = Math.round(progress) + '%';
+            
+            if (correctAnswers === totalQuestions) {
+                document.getElementById('successMessage').style.display = 'block';
+            }
+        }
+
+        // Initialize progress bar
+        window.onload = function() {
+            updateProgress();
+        };
+    </script>
+</body>
