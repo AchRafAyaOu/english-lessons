@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Tip — Enhanced Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="lang-switch" id="langSwitch" role="button" aria-label="Language Switch"></div>
+  <div id="tip" class="tip-card" role="region" aria-live="polite" aria-label="Daily Tip">
+    <i class="icon fas" id="tip-icon" aria-hidden="true"></i>
+    <div class="content">
+      <div class="type" id="tip-type">جاري التحميل...</div>
+      <div class="text" id="tip-text"></div>
+      <div class="example" id="tip-example" style="display: none;"></div>
+      <div class="quiz-section" id="quiz-section" style="display: none;">
+        <div class="quiz-question" id="quiz-question"></div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div class="quiz-feedback" id="quiz-feedback"></div>
+      </div>
+      <div class="meta" id="tip-stats"></div>
+      <div class="controls">
+        <button class="btn" id="prev" aria-label="التلميح السابق"><i class="fas fa-chevron-right"></i></button>
+        <button class="btn" id="next" aria-label="التلميح التالي"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn" id="quiz-btn" aria-label="اختبار المعرفة">اختبار</button>
+<button class="btn" id="more-btn" aria-label="عرض المزيد">عرض المزيد</button>
+        <button class="link" id="more" style="display: none;" aria-label="اقرأ المزيد">اقرأ المزيد</button>
+      </div>
+      <div class="streak" id="streak"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
