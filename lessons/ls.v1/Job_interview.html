@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>الإنجليزية في مقابلات العمل</title>
+<meta name="description" content="دروس عملية للإجابة على أسئلة مقابلات العمل وبناء سيرة ذاتية ورسائل متابعة باللغة الإنجليزية مع تمارين تفاعلية.">
+<meta name="color-scheme" content="light dark" />
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{height:100%}
+  html:focus-within{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:"Cairo","Tajawal","Noto Sans Arabic",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    line-height:1.8;
+    font-size:16px;
+    font-weight:400;
+    color:var(--text);
+    background:
+      radial-gradient(1200px 600px at 0% -10%, rgba(59,130,246,.08), transparent 60%),
+      radial-gradient(1200px 600px at 100% 110%, rgba(139,92,246,.08), transparent 60%),
+      linear-gradient(135deg, var(--bg), var(--bg-soft));
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    text-rendering:optimizeLegibility;
+    transition:background-color .3s ease,color .3s ease;
+  }
+
+  :root{
+    --bg:#f8fafc;
+    --bg-soft:#ffffff;
+    --panel:#ffffff;
+    --panel-2:#f1f5f9;
+    --text:#0f172a;
+    --text-strong:#1e293b;
+    --muted:#475569;
+    --border:rgba(0,0,0,.08);
+    --accent:#3b82f6;
+    --accent-2:#8b5cf6;
+    --success:#10b981;
+    --danger:#ef4444;
+    --warning:#f59e0b;
+    --radius:12px;
+    --shadow:0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+    --shadow-soft:0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    --ring:0 0 0 3px rgba(59,130,246,.1);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f172a;
+      --bg-soft:#1e293b;
+      --panel:#1e293b;
+      --panel-2:#334155;
+      --text:#f1f5f9;
+      --text-strong:#f8fafc;
+      --muted:#94a3b8;
+      --border:rgba(255,255,255,.1);
+      --accent:#60a5fa;
+      --accent-2:#a78bfa;
+      --shadow:0 10px 15px -3px rgba(0,0,0,.2), 0 4px 6px -2px rgba(0,0,0,.05);
+      --shadow-soft:0 4px 6px -1px rgba(0,0,0,.2), 0 2px 4px -1px rgba(0,0,0,.06);
+      --ring:0 0 0 3px rgba(59,130,246,.2);
+    }
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+  }
+
+  .container{
+    max-width:1200px;
+    margin:0 auto;
+    padding: clamp(16px, 3vw, 24px);
+  }
+
+  .header{
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color:#ffffff;
+    border-radius: var(--radius);
+    padding: clamp(24px, 4vw, 32px) clamp(16px, 2vw, 24px);
+    box-shadow: var(--shadow);
+    text-align:center;
+    position:relative; overflow:hidden; isolation:isolate;
+    margin-bottom:32px;
+  }
+  .header::after{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(520px 200px at 100% 0, rgba(255,255,255,.15), transparent 50%),
+      radial-gradient(360px 160px at 0 100%, rgba(255,255,255,.1), transparent 60%);
+    pointer-events:none;
+  }
+  h1{margin:0 0 8px; font-size: clamp(24px, 5vw, 40px); font-weight:700; text-shadow:0 1px 2px rgba(0,0,0,.1); line-height:1.2}
+  .subtitle{margin:0; opacity:.95; font-size:1.1em}
+
+  .progress{
+    margin-top:16px; display:grid; gap:8px; max-width:520px; margin-inline:auto;
+  }
+  .track{height:8px; background:rgba(255,255,255,.3); border-radius:999px; overflow:hidden}
+  .fill{height:100%; width:0%; background:linear-gradient(90deg,#34d399,#10b981); transition:width .4s ease; border-radius:999px}
+
+  .section{
+    background: linear-gradient(180deg, rgba(59,130,246,.04), transparent 60%), var(--panel);
+    border:1px solid var(--border);
+    border-radius: var(--radius);
+    padding: clamp(20px, 2.5vw, 28px);
+    margin-bottom:24px;
+    box-shadow: var(--shadow-soft);
+  }
+  .section h2{
+    margin:0 0 12px; font-size: clamp(20px, 3.5vw, 28px);
+    color:var(--text-strong); letter-spacing:0; font-weight:600;
+  }
+  .lead{color:var(--muted); margin:12px 0 16px; font-size:1em}
+
+  .grid{
+    display:grid; gap:16px;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  }
+  .card{
+    background: var(--panel-2);
+    border:1px solid var(--border);
+    border-radius: var(--radius);
+    padding:16px;
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .card:hover{transform:translateY(-2px); box-shadow:var(--shadow); border-color:rgba(59,130,246,.2)}
+  .title-chip{
+    display:inline-flex; align-items:center; gap:6px;
+    padding:6px 12px; border-radius:999px; font-weight:600; font-size:13px;
+    color:var(--text-strong); background:rgba(59,130,246,.1); border:1px solid rgba(59,130,246,.2);
+    margin-bottom:12px;
+  }
+
+  .box{
+    background: rgba(0,0,0,.02);
+    border:1px solid var(--border);
+    border-radius:10px; padding:12px; margin:8px 0;
+  }
+
+  .good{
+    background: rgba(16,185,129,.08);
+    border:1px solid rgba(16,185,129,.2);
+    border-radius:10px; padding:12px; color:var(--text-strong);
+    direction:ltr; text-align:left; font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+  }
+  .warn{
+    background: rgba(245,158,11,.08);
+    border:1px solid rgba(245,158,11,.25);
+    border-radius:10px; padding:12px; color:var(--text-strong);
+  }
+  .bad{
+    background: rgba(239,68,68,.08);
+    border:1px solid rgba(239,68,68,.25);
+    border-radius:10px; padding:12px; color:var(--text-strong);
+  }
+
+  .table-wrap{overflow:auto; border:1px solid var(--border); border-radius:10px; margin:12px 0}
+  table{width:100%; border-collapse:collapse; min-width:640px}
+  th,td{padding:12px 14px; border-top:1px solid var(--border); text-align:right}
+  thead th{background: rgba(59,130,246,.08); color:var(--text-strong); font-weight:600}
+
+  .exercise{display:grid; gap:16px; margin-top:16px}
+  .q{background:var(--panel-2); border:1px solid var(--border); border-radius: var(--radius); padding:16px}
+  .q strong{color:var(--text-strong)}
+  .opts{display:grid; grid-template-columns: repeat(2, minmax(200px,1fr)); gap:12px; margin-top:12px}
+  .opt{
+    user-select:none; text-align:center; padding:12px 14px; border-radius:10px; font-weight:500; letter-spacing:0.5px;
+    background: rgba(0,0,0,.02);
+    color:var(--text); border:1px solid var(--border);
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; outline:none;
+    cursor:pointer;
+    font-size:15px;
+  }
+  .opt:hover{transform:translateY(-1px); border-color:var(--accent); box-shadow:var(--shadow-soft)}
+  .opt:focus-visible{box-shadow:var(--ring), var(--shadow-soft); outline:none}
+  .opt.correct{background:rgba(16,185,129,.1); border-color:rgba(16,185,129,.3); color:var(--text-strong)}
+  .opt.wrong{background:rgba(239,68,68,.1); border-color:rgba(239,68,68,.3); color:var(--text-strong)}
+  .feedback{margin-top:8px; color:var(--muted); font-size:15px; padding:8px; background:rgba(0,0,0,.02); border-radius:6px}
+
+  .toolbar{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:16px; padding:12px; background:var(--panel-2); border-radius: var(--radius); border:1px solid var(--border)}
+  .btn{
+    background: rgba(0,0,0,.02);
+    border:1px solid var(--border);
+    color:var(--text); padding:10px 16px; border-radius:8px; font-weight:500; letter-spacing:0.5px;
+    transition:transform .2s ease, border-color .2s ease, background .2s ease; cursor:pointer;
+    font-size:14px;
+  }
+  .btn:hover{transform:translateY(-1px); border-color:var(--accent); background:rgba(59,130,246,.05)}
+  .btn:focus-visible{box-shadow:var(--ring); outline:none}
+  .badge{
+    display:inline-block; padding:6px 12px; border-radius:999px;
+    background: rgba(16,185,129,.1); border:1px solid rgba(16,185,129,.2); color:var(--text-strong); font-size:13px; font-weight:600;
+  }
+  .success{display:none; text-align:center; padding:16px; margin-top:16px; border-radius: var(--radius);
+    background:rgba(16,185,129,.08); border:1px solid rgba(16,185,129,.2); color:var(--text-strong)}
+  .success.show{display:block; animation:fadeIn .3s ease}
+
+  .back-btn{
+    display:inline-block; margin-top:24px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color:#ffffff; padding:12px 24px; border-radius:999px; text-decoration:none; font-weight:600;
+    border:1px solid transparent;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .back-btn:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
+
+  @keyframes fadeIn{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)}}
+  @media (max-width:768px){
+    .opts{grid-template-columns:1fr}
+    .header{padding:24px 16px}
+    .container{padding:16px}
+    .grid{grid-template-columns:1fr}
+    table{min-width:auto}
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="header" role="banner">
+      <h1>💼 الإنجليزية في مقابلات العمل</h1>
+      <p class="subtitle">أجب بثقة، طوّر سيرتك الذاتية، وأتقن رسائل المتابعة — مع تمارين تفاعلية</p>
+      <div class="progress" aria-hidden="true">
+        <div class="track"><div class="fill" id="progressFill"></div></div>
+        <p style="margin:0">التقدم: <span id="progressText">0%</span></p>
+      </div>
+    </header>
+
+    <section class="section" id="common-qs">
+      <h2>🎯 الأسئلة الأكثر شيوعًا وإجاباتها</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="title-chip">Tell me about yourself</div>
+          <div class="box">
+            <ol style="margin:0; padding-inline-start:20px">
+              <li><strong>الحاضر:</strong> وضعك الحالي</li>
+              <li><strong>الماضي:</strong> خبراتك السابقة</li>
+              <li><strong>المستقبل:</strong> أهدافك مع الشركة</li>
+            </ol>
+          </div>
+          <div class="good" dir="ltr">
+            "I'm currently a software developer with 3 years of experience in web development...
+            I'm looking for an opportunity to grow my skills in a larger organization like yours."
+          </div>
+          <div class="bad">❌ تجنب إجابات عامة جدًا أو غير واثقة.</div>
+        </article>
+
+        <article class="card">
+          <div class="title-chip">What are your strengths?</div>
+          <div class="good" dir="ltr">
+            "One of my key strengths is problem-solving... implemented a fix that improved performance by 60%."
+          </div>
+          <div class="box">
+            <ul style="margin:0; padding-inline-start:20px">
+              <li>اختر قوة مرتبطة بالوظيفة</li>
+              <li>قدّم مثالًا محددًا بأرقام</li>
+              <li>اربطها بمتطلبات الدور</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="title-chip">What is your biggest weakness?</div>
+          <div class="warn">اختر ضعفًا حقيقيًا + كيف تعمل على تحسينه</div>
+          <div class="good" dir="ltr">
+            "I sometimes struggle with delegating tasks... I've been working on this by trusting my team and providing clear guidelines."
+          </div>
+          <div class="bad">❌ لا تقل: "ليس لدي نقاط ضعف" أو "مثالي للغاية" دون خطة تحسين.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="phrases">
+      <h2>💬 عبارات مفيدة للمقابلة</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="title-chip">إظهار الاهتمام</div>
+          <div class="box" dir="ltr">"I'm very excited about this opportunity because..."</div>
+          <div class="box" dir="ltr">"What particularly interests me about this role is..."</div>
+          <div class="box" dir="ltr">"I'm drawn to this company because of its reputation for..."</div>
+        </article>
+        <article class="card">
+          <div class="title-chip">وصف الخبرات</div>
+          <div class="box" dir="ltr">"In my previous role, I was responsible for..."</div>
+          <div class="box" dir="ltr">"I successfully managed/led/developed..."</div>
+          <div class="box" dir="ltr">"This experience taught me the importance of..."</div>
+        </article>
+        <article class="card">
+          <div class="title-chip">أسئلة ختامية</div>
+          <div class="box" dir="ltr">"What does a typical day look like in this position?"</div>
+          <div class="box" dir="ltr">"What are the main challenges facing the team right now?"</div>
+          <div class="box" dir="ltr">"What opportunities are there for professional development?"</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="cv">
+      <h2>📄 كتابة السيرة الذاتية (CV/Resume)</h2>
+      <p class="lead">نموذج مختصر قابل للتعديل:</p>
+      <div class="table-wrap">
+        <table aria-label="نموذج أقسام السيرة الذاتية">
+          <thead><tr><th>القسم</th><th>مثال إنجليزي</th><th>ملاحظات</th></tr></thead>
+          <tbody>
+            <tr><td>الملخص</td><td dir="ltr">Experienced software developer with 5+ years...</td><td>3-4 جمل مركّزة.</td></tr>
+            <tr><td>الخبرة</td><td dir="ltr">Senior Developer — Led a team of 4...</td><td>نتائج بأرقام.</td></tr>
+            <tr><td>التعليم</td><td dir="ltr">BSc in Computer Science — KSU</td><td>السنة والمؤسسة.</td></tr>
+            <tr><td>المهارات</td><td dir="ltr">JS, React, Node, SQL</td><td>مصنّفة ومرتبة.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="title-chip">نموذج جاهز</div>
+        <div class="good" dir="ltr" style="font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif">
+          John Ahmed Al‑Smith — Software Developer | john.ahmed@email.com | +966 12 345 6789<br>
+          SUMMARY: Experienced software developer with 5+ years in web development...<br>
+          EXPERIENCE: Senior Software Developer — ABC Tech (2020‑Present)...<br>
+          EDUCATION: BSc Computer Science — KSU (2019)<br>
+          SKILLS: JavaScript, Python, React, Django, MySQL
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="presence">
+      <h2>🎭 لغة الجسد والحضور</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="title-chip">نصائح سريعة</div>
+          <ul class="box" style="margin:0; padding-inline-start:20px">
+            <li>مصافحة واثقة</li>
+            <li>تواصل بصري معتدل</li>
+            <li>جلوس مستقيم ومريح</li>
+            <li>صوت واضح ومسموع</li>
+            <li>ابتسامة طبيعية</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="title-chip">ما يجب تجنّبه</div>
+          <ul class="box" style="margin:0; padding-inline-start:20px">
+            <li>مقاطعة المحاور</li>
+            <li>الإطالة غير الضرورية</li>
+            <li>لغة جسد متوترة (اهتزاز القدم/القلم)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="hard-qs">
+      <h2>❓ الأسئلة الصعبة وكيفية التعامل معها</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="title-chip">Why did you leave your last job?</div>
+          <div class="good" dir="ltr">
+            "I learned a lot in my previous role... I'm looking for new challenges and opportunities to grow."
+          </div>
+          <div class="bad">❌ تجنّب انتقاد الشركة السابقة أو الزملاء.</div>
+        </article>
+        <article class="card">
+          <div class="title-chip">Where do you see yourself in 5 years?</div>
+          <div class="good" dir="ltr">
+            "I see myself taking on more leadership responsibilities while deepening my technical skills..."
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="followup">
+      <h2>📧 رسالة متابعة بعد المقابلة</h2>
+      <div class="good" dir="ltr">
+        Subject: Thank you for the interview - [Your Name]<br><br>
+        Dear [Interviewer's Name],<br><br>
+        Thank you for taking the time to meet with me yesterday to discuss the [Position Title] role...
+      </div>
+    </section>
+
+    <section class="section" id="quiz">
+      <h2>🧪 اختبارات سريعة</h2>
+      <p class="lead">اختر الإجابة الصحيحة. اضغط لإظهار الإجابة أو إعادة المحاولة.</p>
+
+      <div class="exercise" role="list">
+        <div class="q" role="listitem" data-answer="present-past-future" data-explain="ابدأ بوضعك الحالي، ثم خبراتك السابقة، ثم هدفك القادم.">
+          <p><strong>1.</strong> ما التسلسل الأنسب للإجابة عن “Tell me about yourself”؟</p>
+          <div class="opts">
+            <button class="opt">Past → Future → Present</button>
+            <button class="opt">Present → Past → Future</button>
+            <button class="opt">Future → Present → Past</button>
+            <button class="opt">Past → Present → Future</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="q" data-answer="measurable-example" data-explain="اذكر إنجازًا قابلًا للقياس مثل نسبة/عدد/زمن.">
+          <p><strong>2.</strong> أفضل طريقة لعرض قوة “حل المشكلات”؟</p>
+          <div class="opts">
+            <button class="opt">ذكر أنها قوة عامة فقط</button>
+            <button class="opt">قصة طويلة دون نتائج</button>
+            <button class="opt">مثال قابل للقياس بنتائج</button>
+            <button class="opt">التركيز على الفريق فقط</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="q" data-answer="positive-reason" data-explain="أجب بإيجابية: نمو، تحديات، ملاءمة الدور الجديد.">
+          <p><strong>3.</strong> ما الطريقة الإيجابية للإجابة عن “Why did you leave your last job?”</p>
+          <div class="opts">
+            <button class="opt">انتقاد المدير السابق</button>
+            <button class="opt">عدم ذكر سبب</button>
+            <button class="opt">التحدث عن الراتب فقط</button>
+            <button class="opt">التركيز على التطور والفرص</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="q" data-answer="delegation-improvement" data-explain="اذكر الضعف + خطة التحسين/ما تعلّمته.">
+          <p><strong>4.</strong> صياغة مناسبة لذكر “Weakness”؟</p>
+          <div class="opts">
+            <button class="opt">لا أملك أي نقاط ضعف</button>
+            <button class="opt">أذكر ضعفًا شديدًا بلا حل</button>
+            <button class="opt">أذكر ضعف التفويض وكيفية تحسينه</button>
+            <button class="opt">أنا مثالي والسلام</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="q" data-answer="ask-questions" data-explain="اختتم بأسئلة ذكية تُظهر الاهتمام والدافعية.">
+          <p><strong>5.</strong> ما أفضل ما تفعله في نهاية المقابلة؟</p>
+          <div class="opts">
+            <button class="opt">تغادر فورًا</button>
+            <button class="opt">لا أسئلة لدي</button>
+            <button class="opt">تطرح أسئلة ذكية عن الدور</button>
+            <button class="opt">تطلب الراتب فورًا</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <button class="btn" id="resetBtn">إعادة</button>
+        <button class="btn" id="showBtn">إظهار الإجابات</button>
+        <button class="btn" id="explainBtn">إخفاء الشرح</button>
+        <span class="badge" id="score">0 / 5</span>
+        <span class="badge" id="timer" style="background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.2);color:var(--text-strong)">⏱ 00:00</span>
+      </div>
+
+      <div class="success" id="successBox" role="status" aria-live="polite">
+        <h3>🎉 ممتاز!</h3>
+        <p>أنهيت الاختبار بنجاح. واصل التمرن لتحسين إجاباتك.</p>
+      </div>
+    </section>
+
+    <a href="/" class="back-btn">🏠 العودة للصفحة الرئيسية</a>
+  </div>
+
+<script>
+  const questions = [...document.querySelectorAll('.q')];
+  const progressFill = document.getElementById('progressFill');
+  const progressText = document.getElementById('progressText');
+  const scoreEl = document.getElementById('score');
+  const successBox = document.getElementById('successBox');
+  const resetBtn = document.getElementById('resetBtn');
+  const showBtn = document.getElementById('showBtn');
+  const explainBtn = document.getElementById('explainBtn');
+  const timerEl = document.getElementById('timer');
+
+  let answered = 0, correct = 0, showExplanations = true;
+  let seconds = 0, timerId = null;
+
+  function normalizeKey(text){
+    const t = text.toLowerCase().trim();
+    if (t.includes('present') && t.includes('past') && t.includes('future')) return 'present-past-future';
+    if (t.includes('measurable') || t.includes('نتائج') || t.includes('قابل')) return 'measurable-example';
+    if (t.includes('تطور') || t.includes('فرص') || t.includes('growth')) return 'positive-reason';
+    if (t.includes('تفويض') || t.includes('deleg')) return 'delegation-improvement';
+    if (t.includes('أسئلة') || t.includes('questions')) return 'ask-questions';
+    return t;
+  }
+
+  function startTimer(){ if(timerId) return; timerId = setInterval(()=>{ seconds++; timerEl.textContent = '⏱ ' + formatTime(seconds); }, 1000); }
+  function stopTimer(){ clearInterval(timerId); timerId = null; }
+  function resetTimer(){ stopTimer(); seconds = 0; timerEl.textContent = '⏱ 00:00'; }
+  function formatTime(s){ const m = String(Math.floor(s/60)).padStart(2,'0'); const ss = String(s%60).padStart(2,'0'); return `${m}:${ss}`; }
+
+  questions.forEach(q=>{
+    q.querySelectorAll('.opt').forEach(opt=>{
+      opt.setAttribute('role','button');
+      opt.setAttribute('tabindex','0');
+      opt.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); opt.click(); }});
+      opt.addEventListener('click', ()=>{ startTimer(); handleAnswer(q, opt); });
+    });
+  });
+
+  function handleAnswer(q, chosen){
+    const answer = (q.dataset.answer||'').trim().toLowerCase();
+    const explain = q.dataset.explain||'';
+    const feedback = q.querySelector('.feedback');
+    const all = q.querySelectorAll('.opt');
+
+    if(!q.dataset.answered){ q.dataset.answered='1'; answered++; }
+
+    all.forEach(o=>o.classList.remove('correct','wrong'));
+
+    const selectedKey = normalizeKey(chosen.textContent);
+    const isCorrect = selectedKey === answer;
+
+    const wasCorrect = q.dataset.wasCorrect === '1';
+    if(isCorrect){
+      chosen.classList.add('correct');
+      if(!wasCorrect){ correct++; q.dataset.wasCorrect = '1'; }
+      feedback.innerHTML = showExplanations ? '✅ صحيح — ' + explain : '✅ صحيح';
+    }else{
+      chosen.classList.add('wrong');
+      if(wasCorrect){ correct--; q.dataset.wasCorrect = '0'; }
+      feedback.innerHTML = showExplanations ? '❌ غير صحيح — ' + explain : '❌ غير صحيح';
+    }
+    updateProgress();
+  }
+
+  function updateProgress(){
+    const total = questions.length;
+    const pct = Math.round((answered / total) * 100);
+    progressFill.style.width = pct + '%';
+    progressText.textContent = pct + '%';
+    scoreEl.textContent = `${correct} / ${total}`;
+    if(correct === total && total>0){
+      successBox.classList.add('show');
+      stopTimer();
+    }else{
+      successBox.classList.remove('show');
+    }
+  }
+
+  resetBtn.addEventListener('click', ()=>{
+    questions.forEach(q=>{
+      delete q.dataset.answered;
+      delete q.dataset.wasCorrect;
+      q.querySelectorAll('.opt').forEach(o=>o.classList.remove('correct','wrong'));
+      const fb = q.querySelector('.feedback'); if(fb) fb.textContent = '';
+    });
+    answered = 0; correct = 0;
+    progressFill.style.width = '0%';
+    progressText.textContent = '0%';
+    scoreEl.textContent = `0 / ${questions.length}`;
+    successBox.classList.remove('show');
+    resetTimer();
+  });
+
+  showBtn.addEventListener('click', ()=>{
+    questions.forEach(q=>{
+      const ans = (q.dataset.answer||'').trim().toLowerCase();
+      const explain = q.dataset.explain||'';
+      const opts = [...q.querySelectorAll('.opt')];
+      const correctOpt = opts.find(o=> normalizeKey(o.textContent) === ans);
+      if(!q.dataset.answered){ q.dataset.answered='1'; answered++; }
+      if(q.dataset.wasCorrect!=='1'){ q.dataset.wasCorrect='1'; correct++; }
+      opts.forEach(o=>o.classList.remove('correct','wrong'));
+      if(correctOpt) correctOpt.classList.add('correct');
+      const fb = q.querySelector('.feedback');
+      fb.innerHTML = showExplanations ? '✅ الإجابة الصحيحة — ' + explain : '✅ الإجابة الصحيحة';
+    });
+    updateProgress();
+  });
+
+  explainBtn.addEventListener('click', ()=>{
+    showExplanations = !showExplanations;
+    explainBtn.textContent = showExplanations ? 'إخفاء الشرح' : 'إظهار الشرح';
+    questions.forEach(q=>{
+      const fb = q.querySelector('.feedback');
+      if(!fb || !fb.textContent) return;
+      const explain = q.dataset.explain || '';
+      if(fb.textContent.includes('✅')){
+        fb.textContent = showExplanations ? '✅ صحيح — ' + explain : '✅ صحيح';
+      }else if(fb.textContent.includes('❌')){
+        fb.textContent = showExplanations ? '❌ غير صحيح — ' + explain : '❌ غير صحيح';
+      }
+    });
+  });
+
+  (function init(){
+    progressFill.style.width = '0%';
+    progressText.textContent = '0%';
+    scoreEl.textContent = `0 / ${questions.length}`;
+    explainBtn.textContent = 'إخفاء الشرح';
+    timerEl.textContent = '⏱ 00:00';
+  })();
+</script>
+</body>
+</html>
