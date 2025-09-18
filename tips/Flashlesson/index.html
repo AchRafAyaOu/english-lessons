@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تعليم اللغة الإنجليزية — بطاقة الدروس المطوّرة</title>
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="top-nav" aria-label="التنقل العلوي">
+  <span class="nav-item active" data-tab="lessons">الدروس</span>
+  <span class="nav-item" data-tab="quizzes">الاختبارات</span>
+  <span class="nav-item" data-tab="practice">تمارين</span>
+  <div class="spacer"></div>
+  <button class="theme-toggle" id="themeBtn" aria-pressed="false">الوضع الفاتح/الداكن</button>
+</nav>
+
+<div class="container">
+  <!-- الشريط الجانبي -->
+  <aside class="sidebar" aria-label="الشريط الجانبي">
+    <h2>درس 2: كلمات وجمل</h2>
+    <p>مفردات أساسية وجمل قصيرة مع ترجمتها. تدّرب تفاعليًا وتتبّع تقدمك. الآن مع دروس موسعة تشمل الأرقام، الألوان، والعائلة.</p>
+
+    <div class="btns">
+      <button class="btn" id="startBtn">ابدأ الدرس</button>
+      <button class="btn secondary" id="translateBtn">إظهار/إخفاء الترجمة</button>
+      <button class="btn secondary" id="flashBtn">بطاقات تعليمية</button>
+    </div>
+
+    <!-- سؤال تفاعلي محسن -->
+    <div class="mini-card" id="quizCard" aria-live="polite">
+      <div class="title-bar color-yellow">ما معنى كلمة "Apple"؟</div>
+      <p>اختر الإجابة الصحيحة:</p>
+      <div class="options" id="quiz-options">
+        <label class="option-item"><input type="radio" name="q1" value="1"> تفاحة</label>
+        <label class="option-item"><input type="radio" name="q1" value="2"> سيارة</label>
+        <label class="option-item"><input type="radio" name="q1" value="3"> كتاب</label>
+        <label class="option-item"><input type="radio" name="q1" value="4"> قلم</label>
+      </div>
+      <button class="check-btn" id="checkBtn">تحقق من الإجابة</button>
+      <div id="quizFeedback" class="feedback" style="display:none"></div>
+    </div>
+
+    <!-- ترجمة -->
+    <div id="translation-section" class="mini-card" style="display:none;">
+      <div class="title-bar color-blue">الترجمة</div>
+      <p>"Apple" تعني "تفاحة".</p>
+    </div>
+
+    <button class="sidebar-footer-btn" id="reviewBtn">اختبار ومراجعة سريعة</button>
+
+    <div class="progress">
+      <div class="track"><div class="fill" id="progressFill"></div></div>
+      <div class="toolbar">
+        <span class="badge" id="scoreBadge">0 / 0</span>
+        <span style="margin-inline-start:auto" id="timer">⏱ 00:00</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- منطقة الدروس -->
+  <section>
+    <div class="lessons-wrapper" id="lessons-container" aria-live="polite">
+      <!-- سيتم توليد الدروس هنا -->
+    </div>
+
+    <div class="hint">
+      نصيحة: استخدم زر بطاقات التعلم بالأعلى لمراجعة سريعة وتكرار متباعد للمفردات. الدروس الموسعة تشمل المزيد من المحتوى لتعزيز التعلم. </p> -للترجمة المرجو الضغط على خانة إظهار/إخفاء الترجمة بالأعلى
+    </div>
+  </section>
+</div>
+
+<!-- نافذة منبثقة للبطاقات التعليمية -->
+<div class="modal-backdrop" id="modal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modalTitle">بطاقات تعليمية</h3>
+      <button class="close" id="closeModal">إغلاق</button>
+    </div>
+    <div id="flashContent" style="margin-top:10px">
+      <!-- بطاقة واحدة في كل مرة -->
+    </div>
+    <div class="toolbar" style="margin-top:10px">
+      <button class="btn" id="prevCard">السابق</button>
+      <button class="btn" id="flipCard">قلب البطاقة</button>
+      <button class="btn" id="nextCard">التالي</button>
+    </div>
+    <div class="table-wrap" style="margin-top:12px">
+      <table aria-label="مفردات الدرس">
+        <thead><tr><th>English</th><th>Arabic</th><th>نوع</th></tr></thead>
+        <tbody id="vocabTable"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="lessons-data.js"></script>
+<script src="flashcards.js"></script>
+<script src="quizzes.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
