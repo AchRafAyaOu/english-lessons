@@ -1,846 +1,1248 @@
-<div class="lesson-content">
-  <div class="lesson-header">
-    <h1 class="lesson-title">الدرس الثالث: العائلة والبيت</h1>
-    <p class="lesson-description">تعلم أسماء أفراد العائلة وأجزاء البيت مع أمثلة عملية من الحياة اليومية</p>
-  </div>
-
-  <div class="lesson-sections">
-    <!-- قسم العائلة -->
-    <div class="lesson-section">
-      <h2 class="section-title">
-        <i class="fas fa-users"></i>
-        أفراد العائلة
-      </h2>
-      
-      <div class="family-tree">
-        <div class="family-level grandparents">
-          <div class="family-card" onclick="playFamilySound('grandfather')">
-            <div class="family-icon">👴</div>
-            <div class="family-english">Grandfather</div>
-            <div class="family-pronunciation">/ˈɡrændˌfɑːðər/</div>
-            <div class="family-arabic">جد</div>
-            <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-          </div>
-          
-          <div class="family-card" onclick="playFamilySound('grandmother')">
-            <div class="family-icon">👵</div>
-            <div class="family-english">Grandmother</div>
-            <div class="family-pronunciation">/ˈɡrændˌmʌðər/</div>
-            <div class="family-arabic">جدة</div>
-            <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-          </div>
-        </div>
-        
-        <div class="family-level parents">
-          <div class="family-card" onclick="playFamilySound('father')">
-            <div class="family-icon">👨</div>
-            <div class="family-english">Father</div>
-            <div class="family-pronunciation">/ˈfɑːðər/</div>
-            <div class="family-arabic">أب</div>
-            <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-          </div>
-          
-          <div class="family-card" onclick="playFamilySound('mother')">
-            <div class="family-icon">👩</div>
-            <div class="family-english">Mother</div>
-            <div class="family-pronunciation">/ˈmʌðər/</div>
-            <div class="family-arabic">أم</div>
-            <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-          </div>
-        </div>
-        
-        <div class="family-level children">
-          <div class="family-card" onclick="playFamilySound('brother')">
-            <div class="family-icon">👦</div>
-            <div class="family-english">Brother</div>
-            <div class="family-pronunciation">/ˈbrʌðər/</div>
-            <div class="family-arabic">أخ</div>
-            <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-          </div>
-          
-          <div class="family-card" onclick="playFamilySound('sister')">
-            <div class="family-icon">👧</div>
-            <div class="family-english">Sister</div>
-            <div class="family-pronunciation">/ˈsɪstər/</div>
-            <div class="family-arabic">أخت</div>
-            <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- قسم البيت -->
-    <div class="lesson-section">
-      <h2 class="section-title">
-        <i class="fas fa-home"></i>
-        أجزاء البيت
-      </h2>
-      
-      <div class="house-container">
-        <div class="house-visual">
-          <div class="house-part roof" onclick="playHouseSound('roof')">
-            <div class="part-label">Roof<br>سقف</div>
-          </div>
-          
-          <div class="house-floor second-floor">
-            <div class="room" onclick="playHouseSound('bedroom')">
-              <div class="room-icon">🛏️</div>
-              <div class="room-name">Bedroom<br>غرفة نوم</div>
-            </div>
-            <div class="room" onclick="playHouseSound('bathroom')">
-              <div class="room-icon">🚿</div>
-              <div class="room-name">Bathroom<br>حمام</div>
-            </div>
-          </div>
-          
-          <div class="house-floor first-floor">
-            <div class="room" onclick="playHouseSound('living-room')">
-              <div class="room-icon">🛋️</div>
-              <div class="room-name">Living Room<br>غرفة معيشة</div>
-            </div>
-            <div class="room" onclick="playHouseSound('kitchen')">
-              <div class="room-icon">🍳</div>
-              <div class="room-name">Kitchen<br>مطبخ</div>
-            </div>
-          </div>
-          
-          <div class="house-part garden" onclick="playHouseSound('garden')">
-            <div class="part-label">Garden<br>حديقة</div>
-          </div>
-        </div>
-        
-        <div class="house-vocabulary">
-          <h3>مفردات إضافية للبيت:</h3>
-          <div class="vocab-grid">
-            <div class="vocab-item" onclick="playHouseSound('door')">
-              <div class="vocab-icon">🚪</div>
-              <div class="vocab-text">
-                <div class="vocab-english">Door</div>
-                <div class="vocab-arabic">باب</div>
-              </div>
-            </div>
-            
-            <div class="vocab-item" onclick="playHouseSound('window')">
-              <div class="vocab-icon">🪟</div>
-              <div class="vocab-text">
-                <div class="vocab-english">Window</div>
-                <div class="vocab-arabic">نافذة</div>
-              </div>
-            </div>
-            
-            <div class="vocab-item" onclick="playHouseSound('table')">
-              <div class="vocab-icon">🪑</div>
-              <div class="vocab-text">
-                <div class="vocab-english">Table</div>
-                <div class="vocab-arabic">طاولة</div>
-              </div>
-            </div>
-            
-            <div class="vocab-item" onclick="playHouseSound('chair')">
-              <div class="vocab-icon">🪑</div>
-              <div class="vocab-text">
-                <div class="vocab-english">Chair</div>
-                <div class="vocab-arabic">كرسي</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- قسم الجمل المفيدة -->
-    <div class="lesson-section">
-      <h2 class="section-title">
-        <i class="fas fa-comment"></i>
-        جمل مفيدة عن العائلة والبيت
-      </h2>
-      
-      <div class="useful-sentences">
-        <div class="sentence-card">
-          <div class="sentence-english">This is my family.</div>
-          <div class="sentence-pronunciation">/ðɪs ɪz maɪ ˈfæməli/</div>
-          <div class="sentence-arabic">هذه عائلتي</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="sentence-card">
-          <div class="sentence-english">I love my mother.</div>
-          <div class="sentence-pronunciation">/aɪ lʌv maɪ ˈmʌðər/</div>
-          <div class="sentence-arabic">أحب أمي</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="sentence-card">
-          <div class="sentence-english">My house is big.</div>
-          <div class="sentence-pronunciation">/maɪ haʊs ɪz bɪɡ/</div>
-          <div class="sentence-arabic">بيتي كبير</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="sentence-card">
-          <div class="sentence-english">Where is the kitchen?</div>
-          <div class="sentence-pronunciation">/wɛr ɪz ðə ˈkɪtʃən/</div>
-          <div class="sentence-arabic">أين المطبخ؟</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- قسم التمارين -->
-    <div class="lesson-section">
-      <h2 class="section-title">
-        <i class="fas fa-pencil-alt"></i>
-        التمارين التفاعلية
-      </h2>
-      
-      <div class="exercise-container">
-        <div class="exercise-item">
-          <h3>تمرين 1: اربط الكلمة بالصورة</h3>
-          <div class="matching-game">
-            <div class="words-column">
-              <div class="word-item draggable" draggable="true" data-word="father">Father</div>
-              <div class="word-item draggable" draggable="true" data-word="mother">Mother</div>
-              <div class="word-item draggable" draggable="true" data-word="kitchen">Kitchen</div>
-              <div class="word-item draggable" draggable="true" data-word="bedroom">Bedroom</div>
-            </div>
-            <div class="images-column">
-              <div class="image-item drop-zone" data-word="father">👨<br>أب</div>
-              <div class="image-item drop-zone" data-word="mother">👩<br>أم</div>
-              <div class="image-item drop-zone" data-word="kitchen">🍳<br>مطبخ</div>
-              <div class="image-item drop-zone" data-word="bedroom">🛏️<br>غرفة نوم</div>
-            </div>
-          </div>
-          <button class="check-matching-btn" onclick="checkMatching()">تحقق من الإجابات</button>
-        </div>
-        
-        <div class="exercise-item">
-          <h3>تمرين 2: اختر الإجابة الصحيحة</h3>
-          <div class="exercise-question">
-            <p>ما معنى كلمة "Sister" بالعربية؟</p>
-            <div class="exercise-options">
-              <button class="option-btn" onclick="checkAnswer(this, false)">أم</button>
-              <button class="option-btn" onclick="checkAnswer(this, true)">أخت</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">جدة</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">عمة</button>
-            </div>
-          </div>
-        </div>
-        
-        <div class="exercise-item">
-          <h3>تمرين 3: أكمل الجملة</h3>
-          <div class="exercise-question">
-            <p>أكمل الجملة: "I live in a _____ house."</p>
-            <div class="exercise-options">
-              <button class="option-btn" onclick="checkAnswer(this, false)">small</button>
-              <button class="option-btn" onclick="checkAnswer(this, true)">big</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">old</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">new</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="lesson-navigation">
-    <button class="nav-btn prev-btn" onclick="previousLesson()">
-      <i class="fas fa-arrow-right"></i>
-      الدرس السابق
-    </button>
-    
-    <button class="nav-btn next-btn" onclick="nextLesson()">
-      الدرس التالي
-      <i class="fas fa-arrow-left"></i>
-    </button>
-  </div>
-</div>
-
-<style>
-.lesson-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: var(--bg-primary);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-lg);
-}
-
-.lesson-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 2px solid var(--border-color);
-}
-
-.lesson-title {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-weight: 800;
-}
-
-.lesson-description {
-  font-size: 1.2rem;
-  color: var(--text-light);
-  line-height: 1.6;
-}
-
-.lesson-section {
-  margin-bottom: 3rem;
-  padding: 2rem;
-  background: var(--bg-secondary);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-light);
-}
-
-.section-title {
-  font-size: 1.8rem;
-  color: var(--text-color);
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.family-tree {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-}
-
-.family-level {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.family-card {
-  background: var(--bg-primary);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  text-align: center;
-  border: 2px solid var(--border-color);
-  transition: var(--transition);
-  cursor: pointer;
-  position: relative;
-  min-width: 200px;
-}
-
-.family-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-color);
-}
-
-.family-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.family-english {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.family-pronunciation {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.family-arabic {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  font-weight: 600;
-}
-
-.house-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-.house-visual {
-  background: linear-gradient(135deg, #87CEEB, #98FB98);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.house-part {
-  padding: 1rem;
-  text-align: center;
-  cursor: pointer;
-  transition: var(--transition);
-  border-radius: var(--border-radius);
-  margin-bottom: 1rem;
-}
-
-.roof {
-  background: linear-gradient(135deg, #8B4513, #A0522D);
-  color: white;
-  font-weight: bold;
-}
-
-.house-floor {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.room {
-  background: var(--bg-primary);
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.room:hover {
-  transform: scale(1.05);
-  border-color: var(--secondary-color);
-  box-shadow: var(--shadow);
-}
-
-.room-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.room-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-color);
-  line-height: 1.4;
-}
-
-.garden {
-  background: linear-gradient(135deg, #228B22, #32CD32);
-  color: white;
-  font-weight: bold;
-}
-
-.house-vocabulary h3 {
-  color: var(--text-color);
-  margin-bottom: 1.5rem;
-  font-size: 1.3rem;
-}
-
-.vocab-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.vocab-item {
-  background: var(--bg-primary);
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
-  padding: 1rem;
-  text-align: center;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.vocab-item:hover {
-  transform: translateY(-3px);
-  border-color: var(--warning-color);
-  box-shadow: var(--shadow);
-}
-
-.vocab-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.vocab-english {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 0.3rem;
-}
-
-.vocab-arabic {
-  font-size: 1rem;
-  color: var(--text-light);
-}
-
-.useful-sentences {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1.5rem;
-}
-
-.sentence-card {
-  background: var(--bg-primary);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  border: 2px solid var(--border-color);
-  transition: var(--transition);
-  position: relative;
-}
-
-.sentence-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--success-color);
-}
-
-.sentence-english {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--success-color);
-  margin-bottom: 0.5rem;
-}
-
-.sentence-pronunciation {
-  font-size: 1rem;
-  color: var(--text-muted);
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.sentence-arabic {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  font-weight: 600;
-}
-
-.audio-btn {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: var(--transition);
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow);
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-.audio-btn:hover {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-lg);
-}
-
-.exercise-container {
-  background: var(--bg-primary);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  margin-top: 2rem;
-}
-
-.exercise-item {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: var(--bg-secondary);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-light);
-}
-
-.exercise-item h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.matching-game {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.words-column, .images-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.word-item {
-  background: var(--bg-primary);
-  border: 2px solid var(--primary-color);
-  border-radius: var(--border-radius);
-  padding: 1rem;
-  text-align: center;
-  cursor: move;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.word-item:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow);
-}
-
-.image-item {
-  background: var(--bg-primary);
-  border: 2px dashed var(--border-color);
-  border-radius: var(--border-radius);
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.5rem;
-  min-height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-.image-item.drag-over {
-  border-color: var(--success-color);
-  background: rgba(46, 204, 113, 0.1);
-}
-
-.image-item.matched {
-  border-color: var(--success-color);
-  background: rgba(46, 204, 113, 0.2);
-}
-
-.check-matching-btn {
-  background: var(--warning-color);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.check-matching-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-}
-
-.exercise-question p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-color);
-}
-
-.exercise-options {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.option-btn {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--border-color);
-  background: var(--bg-primary);
-  color: var(--text-color);
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: var(--transition);
-  min-width: 120px;
-}
-
-.option-btn:hover {
-  border-color: var(--primary-color);
-  background: var(--primary-color);
-  color: white;
-}
-
-.option-btn.correct {
-  background: var(--success-color);
-  border-color: var(--success-color);
-  color: white;
-}
-
-.option-btn.incorrect {
-  background: var(--danger-color);
-  border-color: var(--danger-color);
-  color: white;
-}
-
-.lesson-navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 2px solid var(--border-color);
-}
-
-.nav-btn {
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: var(--border-radius);
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.prev-btn {
-  background: linear-gradient(135deg, var(--text-muted), var(--text-light));
-  color: white;
-}
-
-.next-btn {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  color: white;
-}
-
-.nav-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-@media (max-width: 768px) {
-  .lesson-content {
-    padding: 1rem;
-  }
-  
-  .house-container {
-    grid-template-columns: 1fr;
-  }
-  
-  .family-level {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .useful-sentences {
-    grid-template-columns: 1fr;
-  }
-  
-  .matching-game {
-    grid-template-columns: 1fr;
-  }
-  
-  .exercise-options {
-    flex-direction: column;
-  }
-  
-  .lesson-navigation {
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
-</style>
-
-<script>
-function playFamilySound(member) {
-  console.log('Playing family sound:', member);
-}
-
-function playHouseSound(part) {
-  console.log('Playing house sound:', part);
-}
-
-function checkAnswer(button, isCorrect) {
-  const buttons = button.parentElement.querySelectorAll('.option-btn');
-  
-  buttons.forEach(btn => {
-    btn.disabled = true;
-    if (btn === button) {
-      btn.classList.add(isCorrect ? 'correct' : 'incorrect');
-    } else if (btn.onclick.toString().includes('true')) {
-      btn.classList.add('correct');
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>الدرس الثالث: العائلة والبيت</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1a73e8;
+      --blue-hover: #1765cc;
+      --blue-light: #e8f0fe;
+      --green: #1e8e3e;
+      --green-light: #e6f4ea;
+      --red: #d93025;
+      --red-light: #fce8e6;
+      --yellow: #f9ab00;
+      --yellow-light: #fef7e0;
+      --text: #202124;
+      --text-sec: #5f6368;
+      --text-tri: #80868b;
+      --bg: #f8f9fa;
+      --surface: #ffffff;
+      --border: #dadce0;
+      --border-focus: #1a73e8;
+      --shadow: 0 1px 3px rgba(60,64,67,.12), 0 1px 2px rgba(60,64,67,.08);
+      --shadow-md: 0 1px 6px rgba(60,64,67,.15), 0 2px 4px rgba(60,64,67,.1);
+      --r-sm: 4px;
+      --r: 8px;
+      --r-lg: 12px;
+      --r-xl: 16px;
     }
-  });
-}
 
-function checkMatching() {
-  const dropZones = document.querySelectorAll('.drop-zone');
-  let correctMatches = 0;
-  
-  dropZones.forEach(zone => {
-    const droppedWord = zone.querySelector('.word-item');
-    if (droppedWord && droppedWord.dataset.word === zone.dataset.word) {
-      zone.classList.add('matched');
-      correctMatches++;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      direction: rtl;
+      text-align: right;
+      -webkit-font-smoothing: antialiased;
     }
-  });
-  
-  if (correctMatches === dropZones.length) {
-    alert('ممتاز! جميع الإجابات صحيحة');
-  } else {
-    alert(`${correctMatches} من ${dropZones.length} إجابات صحيحة`);
-  }
-}
 
-// وظائف السحب والإسقاط
-document.addEventListener('DOMContentLoaded', function() {
-  const draggables = document.querySelectorAll('.draggable');
-  const dropZones = document.querySelectorAll('.drop-zone');
-  
-  draggables.forEach(draggable => {
-    draggable.addEventListener('dragstart', function(e) {
-      e.dataTransfer.setData('text/plain', this.dataset.word);
-      this.style.opacity = '0.5';
-    });
-    
-    draggable.addEventListener('dragend', function() {
-      this.style.opacity = '1';
-    });
-  });
-  
-  dropZones.forEach(zone => {
-    zone.addEventListener('dragover', function(e) {
-      e.preventDefault();
-      this.classList.add('drag-over');
-    });
-    
-    zone.addEventListener('dragleave', function() {
-      this.classList.remove('drag-over');
-    });
-    
-    zone.addEventListener('drop', function(e) {
-      e.preventDefault();
-      this.classList.remove('drag-over');
-      
-      const word = e.dataTransfer.getData('text/plain');
-      const draggedElement = document.querySelector(`[data-word="${word}"]`);
-      
-      if (draggedElement && draggedElement.classList.contains('draggable')) {
-        // إزالة العنصر المسحوب من مكانه الأصلي
-        const clone = draggedElement.cloneNode(true);
-        clone.classList.remove('draggable');
-        clone.style.cursor = 'default';
-        
-        // إضافة العنصر إلى منطقة الإسقاط
-        this.appendChild(clone);
-        draggedElement.remove();
+    /* تخطي المحتوى */
+    .skip-link {
+      position: absolute; top: -40px; right: 8px;
+      background: var(--blue); color: #fff; padding: 8px 16px;
+      border-radius: var(--r); text-decoration: none; z-index: 1000;
+      font-size: 14px;
+    }
+    .skip-link:focus { top: 8px; }
+
+    /* شريط التقدم */
+    .progress-bar {
+      position: sticky; top: 0; width: 100%; height: 3px;
+      background: var(--border); z-index: 100;
+    }
+    .progress-fill {
+      height: 100%; width: 0%; background: var(--blue);
+      transition: width .15s linear;
+    }
+
+    /* رسالة التنبيه */
+    .toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+      padding: 12px 24px; border-radius: var(--r-lg); color: #fff;
+      font-size: 14px; font-weight: 500; z-index: 1000;
+      box-shadow: var(--shadow-md); transition: transform .3s ease;
+      white-space: nowrap;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+    .toast.success { background: var(--green); }
+    .toast.error { background: var(--red); }
+
+    /* الحاوية الرئيسية */
+    .container {
+      max-width: 960px; margin: 24px auto; padding: 0 16px;
+    }
+
+    .lesson-card {
+      background: var(--surface); border-radius: var(--r-xl);
+      box-shadow: var(--shadow); overflow: hidden;
+    }
+
+    /* الهيدر */
+    .lesson-header {
+      padding: 48px 40px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .lesson-title {
+      font-size: 28px; font-weight: 700; color: var(--text);
+      margin-bottom: 8px;
+    }
+    .lesson-desc {
+      font-size: 15px; color: var(--text-sec); max-width: 640px;
+    }
+
+    /* الأقسام */
+    .section {
+      padding: 32px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section:last-child { border-bottom: none; }
+
+    .section-title {
+      font-size: 20px; font-weight: 700; color: var(--text);
+      margin-bottom: 8px; display: flex; align-items: center; gap: 10px;
+    }
+    .section-title .icon-wrap {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--blue-light); color: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0;
+    }
+    .section-subtitle {
+      font-size: 15px; color: var(--text-sec); margin-bottom: 20px;
+      padding-right: 46px;
+    }
+
+    .sub-heading {
+      font-size: 15px; font-weight: 600; color: var(--text);
+      margin: 24px 0 12px; padding-right: 2px;
+    }
+    .sub-heading:first-child { margin-top: 0; }
+
+    /* شبكة المفردات */
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    /* كرت المفردة */
+    .vocab-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 16px 12px;
+      text-align: center; cursor: pointer; position: relative;
+      transition: border-color .15s, background .15s, box-shadow .15s;
+      display: flex; flex-direction: column; align-items: center; gap: 2px;
+    }
+    .vocab-card:hover {
+      border-color: var(--blue); background: var(--blue-light);
+      box-shadow: var(--shadow);
+    }
+    .vocab-card:focus {
+      outline: 2px solid var(--border-focus); outline-offset: 1px;
+    }
+    .vocab-card:active { transform: scale(.98); }
+
+    .card-speaker {
+      position: absolute; top: 8px; left: 8px;
+      font-size: 13px; color: var(--text-tri);
+      transition: color .15s;
+    }
+    .vocab-card:hover .card-speaker { color: var(--blue); }
+
+    .card-emoji { font-size: 36px; line-height: 1.2; margin-bottom: 4px; }
+    .card-en {
+      font-size: 15px; font-weight: 600; color: var(--text);
+    }
+    .card-pron {
+      font-size: 11px; color: var(--text-tri);
+      font-family: 'Courier New', monospace; direction: ltr;
+    }
+    .card-ar {
+      font-size: 14px; color: var(--text-sec); font-weight: 500;
+    }
+
+    /* بطاقات الجمل */
+    .sentences-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .sentence-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 16px;
+      cursor: pointer; position: relative;
+      transition: border-color .15s, background .15s, box-shadow .15s;
+    }
+    .sentence-card:hover {
+      border-color: var(--green); background: var(--green-light);
+      box-shadow: var(--shadow);
+    }
+    .sentence-card:focus {
+      outline: 2px solid var(--green); outline-offset: 1px;
+    }
+    .sentence-card .card-speaker { color: var(--text-tri); }
+    .sentence-card:hover .card-speaker { color: var(--green); }
+
+    .sent-en {
+      font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px;
+    }
+    .sent-pron {
+      font-size: 11px; color: var(--text-tri);
+      font-family: 'Courier New', monospace; direction: ltr;
+      margin-bottom: 6px;
+    }
+    .sent-ar { font-size: 14px; color: var(--text-sec); font-weight: 500; }
+
+    /* كتلة المحادثة */
+    .conversation {
+      background: var(--blue-light); border-radius: var(--r-lg);
+      padding: 20px 24px; margin-top: 20px;
+      border-right: 3px solid var(--blue);
+    }
+    .conversation-title {
+      font-size: 14px; font-weight: 600; color: var(--blue);
+      margin-bottom: 12px; display: flex; align-items: center; gap: 6px;
+    }
+    .conversation p {
+      font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.8;
+    }
+    .conversation p strong { color: var(--blue); }
+    .conversation .translation {
+      font-size: 13px; color: var(--text-sec); margin-top: 8px;
+      padding-top: 8px; border-top: 1px solid rgba(26,115,232,.15);
+    }
+
+    /* التمارين */
+    .exercise { margin-bottom: 28px; }
+    .exercise:last-child { margin-bottom: 0; }
+
+    .exercise-title {
+      font-size: 15px; font-weight: 600; color: var(--text);
+      margin-bottom: 4px; display: flex; align-items: center; gap: 8px;
+    }
+    .exercise-num {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--blue); color: #fff; font-size: 13px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-weight: 600;
+    }
+    .exercise-desc {
+      font-size: 14px; color: var(--text-sec); margin-bottom: 16px;
+      padding-right: 32px;
+    }
+
+    /* السحب والإفلات */
+    .match-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    }
+    .match-col { display: flex; flex-direction: column; gap: 8px; }
+    .match-label {
+      font-size: 12px; font-weight: 600; color: var(--text-tri);
+      text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px;
+    }
+
+    .match-word {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 10px 16px;
+      text-align: center; font-size: 14px; font-weight: 600;
+      cursor: grab; transition: border-color .15s, box-shadow .15s;
+      user-select: none;
+    }
+    .match-word:hover { border-color: var(--blue); box-shadow: var(--shadow); }
+    .match-word.dragging { opacity: .4; }
+
+    .match-zone {
+      background: var(--surface); border: 2px dashed var(--border);
+      border-radius: var(--r); padding: 10px 16px;
+      text-align: center; min-height: 60px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; transition: border-color .15s, background .15s;
+      font-size: 14px; position: relative;
+    }
+    .match-zone.drag-over {
+      border-color: var(--blue); background: var(--blue-light);
+    }
+    .match-zone.matched {
+      border-color: var(--green); border-style: solid;
+      background: var(--green-light);
+    }
+    .match-zone .zone-icon { font-size: 20px; }
+    .match-zone .zone-label { font-size: 13px; color: var(--text-sec); }
+
+    .match-zone .placed-word {
+      background: var(--blue-light); border: 1px solid var(--blue);
+      border-radius: var(--r-sm); padding: 4px 12px;
+      font-size: 13px; font-weight: 600; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .match-zone .remove-placed {
+      background: none; border: none; color: var(--text-tri);
+      cursor: pointer; font-size: 14px; padding: 0 2px;
+      line-height: 1;
+    }
+    .match-zone .remove-placed:hover { color: var(--red); }
+
+    .check-btn {
+      margin-top: 16px; padding: 10px 24px;
+      background: var(--blue); color: #fff; border: none;
+      border-radius: var(--r); font-size: 14px; font-weight: 600;
+      font-family: inherit; cursor: pointer;
+      transition: background .15s, box-shadow .15s;
+    }
+    .check-btn:hover { background: var(--blue-hover); box-shadow: var(--shadow-md); }
+
+    /* خيارات الاختيار */
+    .options-wrap {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      padding-right: 32px;
+    }
+    .opt-btn {
+      padding: 10px 20px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--r);
+      font-size: 14px; font-weight: 500; font-family: inherit;
+      color: var(--text); cursor: pointer;
+      transition: border-color .15s, background .15s, color .15s;
+    }
+    .opt-btn:hover:not(:disabled) {
+      border-color: var(--blue); background: var(--blue-light); color: var(--blue);
+    }
+    .opt-btn.correct {
+      border-color: var(--green); background: var(--green-light); color: var(--green);
+    }
+    .opt-btn.incorrect {
+      border-color: var(--red); background: var(--red-light); color: var(--red);
+    }
+    .opt-btn:disabled { cursor: default; }
+
+    /* الأكورديون */
+    .accordion { border-bottom: 1px solid var(--border); }
+    .accordion:last-child { border-bottom: none; }
+
+    .accordion-trigger {
+      width: 100%; padding: 20px 40px; background: none; border: none;
+      font-family: inherit; font-size: 16px; font-weight: 600;
+      color: var(--text); cursor: pointer; text-align: right;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background .15s;
+    }
+    .accordion-trigger:hover { background: rgba(0,0,0,.02); }
+    .accordion-trigger:focus { outline: 2px solid var(--border-focus); outline-offset: -2px; }
+
+    .accordion-trigger .acc-left {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .accordion-trigger .acc-left .icon-wrap {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--yellow-light); color: var(--yellow);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; flex-shrink: 0;
+    }
+
+    .accordion-chevron {
+      font-size: 12px; color: var(--text-tri);
+      transition: transform .2s ease;
+    }
+    details[open] .accordion-chevron { transform: rotate(180deg); }
+
+    .accordion-body {
+      padding: 0 40px 28px;
+      animation: fadeIn .2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* تمرين نصي */
+    .text-exercise { margin-bottom: 24px; }
+    .text-exercise:last-child { margin-bottom: 0; }
+    .text-exercise h4 {
+      font-size: 14px; font-weight: 600; color: var(--text);
+      margin-bottom: 8px;
+    }
+    .text-exercise p {
+      font-size: 14px; color: var(--text-sec); margin-bottom: 4px;
+    }
+    .answer-box {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 12px 16px;
+      font-size: 14px; color: var(--text); margin: 8px 0;
+    }
+    .answer-box strong { color: var(--blue); }
+
+    /* زر التنقل */
+    .nav-footer {
+      padding: 24px 40px;
+      display: flex; justify-content: flex-start;
+    }
+    .nav-btn {
+      padding: 10px 24px; background: var(--bg);
+      border: 1px solid var(--border); border-radius: var(--r);
+      font-size: 14px; font-weight: 500; font-family: inherit;
+      color: var(--text-sec); cursor: pointer;
+      display: flex; align-items: center; gap: 8px;
+      transition: background .15s, border-color .15s, color .15s;
+    }
+    .nav-btn:hover {
+      background: var(--blue-light); border-color: var(--blue); color: var(--blue);
+    }
+
+    /* تأثير الظهور */
+    .reveal {
+      opacity: 0; transform: translateY(12px);
+      transition: opacity .4s ease, transform .4s ease;
+    }
+    .reveal.visible {
+      opacity: 1; transform: translateY(0);
+    }
+
+    /* الاستجابة */
+    @media (max-width: 768px) {
+      .lesson-header { padding: 32px 20px 24px; }
+      .section { padding: 24px 20px; }
+      .accordion-trigger { padding: 16px 20px; }
+      .accordion-body { padding: 0 20px 24px; }
+      .nav-footer { padding: 20px; }
+      .lesson-title { font-size: 22px; }
+      .section-title { font-size: 18px; }
+      .vocab-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
+      .sentences-grid { grid-template-columns: 1fr; }
+      .match-grid { grid-template-columns: 1fr; gap: 16px; }
+      .options-wrap { padding-right: 0; }
+      .exercise-desc { padding-right: 0; }
+      .section-subtitle { padding-right: 0; }
+      .card-emoji { font-size: 30px; }
+    }
+
+    @media (max-width: 400px) {
+      .vocab-grid { grid-template-columns: repeat(2, 1fr); }
+      .container { margin: 12px auto; padding: 0 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media print {
+      .progress-bar, .nav-footer, .toast { display: none; }
+      .lesson-card { box-shadow: none; border: 1px solid var(--border); }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">تخطي إلى المحتوى</a>
+
+  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <div class="container" id="main">
+    <div class="lesson-card">
+
+      <!-- الهيدر -->
+      <header class="lesson-header">
+        <h1 class="lesson-title">الدرس الثالث: العائلة والبيت</h1>
+        <p class="lesson-desc">تعلّم أسماء أفراد العائلة وأجزاء البيت مع جمل عملية من الحياة اليومية. اضغط على أي كلمة لسماع نطقها.</p>
+      </header>
+
+      <!-- أفراد العائلة -->
+      <section class="section reveal">
+        <h2 class="section-title">
+          <span class="icon-wrap"><i class="fas fa-users"></i></span>
+          أفراد العائلة الأساسية
+        </h2>
+        <p class="section-subtitle">تعلّم أسماء أفراد العائلة المباشرة. اضغط على أي كلمة للاستماع إلى نطقها الصحيح.</p>
+
+        <div class="vocab-grid">
+          <div class="vocab-card" onclick="playSound('grandfather')" tabindex="0" role="button" aria-label="Grandfather - جد">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">👴</span>
+            <span class="card-en">Grandfather</span>
+            <span class="card-pron">/ˈɡrændˌfɑːðər/</span>
+            <span class="card-ar">جد</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('grandmother')" tabindex="0" role="button" aria-label="Grandmother - جدة">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">👵</span>
+            <span class="card-en">Grandmother</span>
+            <span class="card-pron">/ˈɡrændˌmʌðər/</span>
+            <span class="card-ar">جدة</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('father')" tabindex="0" role="button" aria-label="Father - أب">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">👨</span>
+            <span class="card-en">Father</span>
+            <span class="card-pron">/ˈfɑːðər/</span>
+            <span class="card-ar">أب</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('mother')" tabindex="0" role="button" aria-label="Mother - أم">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">👩</span>
+            <span class="card-en">Mother</span>
+            <span class="card-pron">/ˈmʌðər/</span>
+            <span class="card-ar">أم</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('brother')" tabindex="0" role="button" aria-label="Brother - أخ">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">👦</span>
+            <span class="card-en">Brother</span>
+            <span class="card-pron">/ˈbrʌðər/</span>
+            <span class="card-ar">أخ</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('sister')" tabindex="0" role="button" aria-label="Sister - أخت">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">👧</span>
+            <span class="card-en">Sister</span>
+            <span class="card-pron">/ˈsɪstər/</span>
+            <span class="card-ar">أخت</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('son')" tabindex="0" role="button" aria-label="Son - ابن">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">👶</span>
+            <span class="card-en">Son</span>
+            <span class="card-pron">/sʌn/</span>
+            <span class="card-ar">ابن</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('daughter')" tabindex="0" role="button" aria-label="Daughter - ابنة">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">👧‍🦱</span>
+            <span class="card-en">Daughter</span>
+            <span class="card-pron">/ˈdɔːtər/</span>
+            <span class="card-ar">ابنة</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- أجزاء البيت -->
+      <section class="section reveal">
+        <h2 class="section-title">
+          <span class="icon-wrap"><i class="fas fa-home"></i></span>
+          أجزاء البيت والغرف
+        </h2>
+        <p class="section-subtitle">تعرّف على الغرف والأثاث والمفردات المتعلقة بالبيت.</p>
+
+        <h3 class="sub-heading">الغرف وأجزاء البيت</h3>
+        <div class="vocab-grid">
+          <div class="vocab-card" onclick="playSound('roof')" tabindex="0" role="button" aria-label="Roof - سقف">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🏠</span>
+            <span class="card-en">Roof</span>
+            <span class="card-pron">/ruːf/</span>
+            <span class="card-ar">سقف</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('bedroom')" tabindex="0" role="button" aria-label="Bedroom - غرفة نوم">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🛏️</span>
+            <span class="card-en">Bedroom</span>
+            <span class="card-pron">/ˈbedruːm/</span>
+            <span class="card-ar">غرفة نوم</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('bathroom')" tabindex="0" role="button" aria-label="Bathroom - حمام">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🚿</span>
+            <span class="card-en">Bathroom</span>
+            <span class="card-pron">/ˈbæθruːm/</span>
+            <span class="card-ar">حمام</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('living-room')" tabindex="0" role="button" aria-label="Living Room - غرفة معيشة">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🛋️</span>
+            <span class="card-en">Living Room</span>
+            <span class="card-pron">/ˈlɪvɪŋ ruːm/</span>
+            <span class="card-ar">غرفة معيشة</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('kitchen')" tabindex="0" role="button" aria-label="Kitchen - مطبخ">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🍳</span>
+            <span class="card-en">Kitchen</span>
+            <span class="card-pron">/ˈkɪtʃɪn/</span>
+            <span class="card-ar">مطبخ</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('garden')" tabindex="0" role="button" aria-label="Garden - حديقة">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🌿</span>
+            <span class="card-en">Garden</span>
+            <span class="card-pron">/ˈɡɑːrdən/</span>
+            <span class="card-ar">حديقة</span>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">الأثاث والمفردات</h3>
+        <div class="vocab-grid">
+          <div class="vocab-card" onclick="playSound('door')" tabindex="0" role="button" aria-label="Door - باب">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🚪</span>
+            <span class="card-en">Door</span>
+            <span class="card-pron">/dɔːr/</span>
+            <span class="card-ar">باب</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('window')" tabindex="0" role="button" aria-label="Window - نافذة">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🪟</span>
+            <span class="card-en">Window</span>
+            <span class="card-pron">/ˈwɪndoʊ/</span>
+            <span class="card-ar">نافذة</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('table')" tabindex="0" role="button" aria-label="Table - طاولة">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🍽️</span>
+            <span class="card-en">Table</span>
+            <span class="card-pron">/ˈteɪbəl/</span>
+            <span class="card-ar">طاولة</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('chair')" tabindex="0" role="button" aria-label="Chair - كرسي">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🪑</span>
+            <span class="card-en">Chair</span>
+            <span class="card-pron">/tʃer/</span>
+            <span class="card-ar">كرسي</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('bed')" tabindex="0" role="button" aria-label="Bed - سرير">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🛏️</span>
+            <span class="card-en">Bed</span>
+            <span class="card-pron">/bed/</span>
+            <span class="card-ar">سرير</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('lamp')" tabindex="0" role="button" aria-label="Lamp - مصباح">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">💡</span>
+            <span class="card-en">Lamp</span>
+            <span class="card-pron">/læmp/</span>
+            <span class="card-ar">مصباح</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('fridge')" tabindex="0" role="button" aria-label="Fridge - ثلاجة">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🧊</span>
+            <span class="card-en">Fridge</span>
+            <span class="card-pron">/frɪdʒ/</span>
+            <span class="card-ar">ثلاجة</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('mirror')" tabindex="0" role="button" aria-label="Mirror - مرآة">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🪞</span>
+            <span class="card-en">Mirror</span>
+            <span class="card-pron">/ˈmɪrər/</span>
+            <span class="card-ar">مرآة</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('elevator')" tabindex="0" role="button" aria-label="Elevator - مصعد">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🛗</span>
+            <span class="card-en">Elevator</span>
+            <span class="card-pron">/ˈeləˌveɪtər/</span>
+            <span class="card-ar">مصعد</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('pool')" tabindex="0" role="button" aria-label="Swimming Pool - حمام سباحة">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🏊</span>
+            <span class="card-en">Swimming Pool</span>
+            <span class="card-pron">/ˈswɪmɪŋ puːl/</span>
+            <span class="card-ar">حمام سباحة</span>
+          </div>
+          <div class="vocab-card" onclick="playSound('neighbor')" tabindex="0" role="button" aria-label="Neighbor - جار">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <span class="card-emoji">🏘️</span>
+            <span class="card-en">Neighbor</span>
+            <span class="card-pron">/ˈneɪbər/</span>
+            <span class="card-ar">جار</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- الجمل المفيدة -->
+      <section class="section reveal">
+        <h2 class="section-title">
+          <span class="icon-wrap"><i class="fas fa-comment-dots"></i></span>
+          جمل مفيدة ومحادثات يومية
+        </h2>
+        <p class="section-subtitle">جمل تتكرر في الحياة اليومية حول العائلة والبيت. اضغط للاستماع.</p>
+
+        <div class="sentences-grid">
+          <div class="sentence-card" onclick="playSound('siblings')" tabindex="0" role="button" aria-label="I have two siblings">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <p class="sent-en">I have two siblings.</p>
+            <p class="sent-pron">/aɪ hæv tuː ˈsɪblɪŋz/</p>
+            <p class="sent-ar">لدي شقيقان</p>
+          </div>
+          <div class="sentence-card" onclick="playSound('father-doctor')" tabindex="0" role="button" aria-label="My father is a doctor">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <p class="sent-en">My father is a doctor.</p>
+            <p class="sent-pron">/maɪ ˈfɑːðər ɪz ə ˈdɑːktər/</p>
+            <p class="sent-ar">والدي طبيب</p>
+          </div>
+          <div class="sentence-card" onclick="playSound('dinner-together')" tabindex="0" role="button" aria-label="We eat dinner together">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <p class="sent-en">We eat dinner together.</p>
+            <p class="sent-pron">/wi iːt ˈdɪnər təˈɡeðər/</p>
+            <p class="sent-ar">نتناول العشاء معًا</p>
+          </div>
+          <div class="sentence-card" onclick="playSound('cozy-living')" tabindex="0" role="button" aria-label="The living room is cozy">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <p class="sent-en">The living room is cozy.</p>
+            <p class="sent-pron">/ðə ˈlɪvɪŋ ruːm ɪz ˈkoʊzi/</p>
+            <p class="sent-ar">غرفة المعيشة مريحة</p>
+          </div>
+          <div class="sentence-card" onclick="playSound('help-chores')" tabindex="0" role="button" aria-label="I help my parents with chores">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <p class="sent-en">I help my parents with chores.</p>
+            <p class="sent-pron">/aɪ help maɪ ˈpeərənts wɪð ʧɔːrz/</p>
+            <p class="sent-ar">أساعد والدي في الأعمال المنزلية</p>
+          </div>
+          <div class="sentence-card" onclick="playSound('backyard-garden')" tabindex="0" role="button" aria-label="We have a garden in our backyard">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <p class="sent-en">We have a garden in our backyard.</p>
+            <p class="sent-pron">/wi hæv ə ˈɡɑːrdən ɪn aʊər ˈbækjɑːrd/</p>
+            <p class="sent-ar">لدينا حديقة في الفناء الخلفي</p>
+          </div>
+          <div class="sentence-card" onclick="playSound('friendly-neighbor')" tabindex="0" role="button" aria-label="My neighbor is very friendly">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <p class="sent-en">My neighbor is very friendly.</p>
+            <p class="sent-pron">/maɪ ˈneɪbər ɪz ˈveri ˈfrendli/</p>
+            <p class="sent-ar">جاري ودود جدًا</p>
+          </div>
+          <div class="sentence-card" onclick="playSound('daily-elevator')" tabindex="0" role="button" aria-label="We use the elevator every day">
+            <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+            <p class="sent-en">We use the elevator every day.</p>
+            <p class="sent-pron">/wi juːz ði ˈeləˌveɪtər ˈevri deɪ/</p>
+            <p class="sent-ar">نستخدم المصعد كل يوم</p>
+          </div>
+        </div>
+
+        <div class="conversation">
+          <div class="conversation-title"><i class="fas fa-comments"></i> محادثة يومية: في البيت</div>
+          <p><strong>الأم:</strong> "Where is your sister?"</p>
+          <p><strong>الابن:</strong> "She is in her bedroom, studying."</p>
+          <p><strong>الأم:</strong> "Tell her dinner is ready."</p>
+          <p><strong>الابن:</strong> "Okay, mom!"</p>
+          <p class="translation">الأم: "أين أختك؟" — الابن: "إنها في غرفة نومها تدرس." — الأم: "أخبرها أن العشاء جاهز." — الابن: "حسنًا أمي!"</p>
+        </div>
+      </section>
+
+      <!-- التمارين -->
+      <section class="section reveal">
+        <h2 class="section-title">
+          <span class="icon-wrap"><i class="fas fa-pen"></i></span>
+          التمارين التفاعلية
+        </h2>
+        <p class="section-subtitle">اختبر فهمك للمفردات والجمال من خلال هذه التمارين.</p>
+
+        <!-- تمرين 1: الربط -->
+        <div class="exercise">
+          <div class="exercise-title">
+            <span class="exercise-num">1</span>
+            اربط الكلمة بالصورة المناسبة
+          </div>
+          <p class="exercise-desc">اسحب كل كلمة من العمود الأيمن وأفلتها بجانب الصورة المناسبة في العمود الأيسر.</p>
+          <div class="match-grid">
+            <div class="match-col">
+              <div class="match-label">الصور</div>
+              <div class="match-zone" data-word="father">
+                <span class="zone-icon">👨</span><span class="zone-label">أب</span>
+              </div>
+              <div class="match-zone" data-word="mother">
+                <span class="zone-icon">👩</span><span class="zone-label">أم</span>
+              </div>
+              <div class="match-zone" data-word="kitchen">
+                <span class="zone-icon">🍳</span><span class="zone-label">مطبخ</span>
+              </div>
+              <div class="match-zone" data-word="bedroom">
+                <span class="zone-icon">🛏️</span><span class="zone-label">غرفة نوم</span>
+              </div>
+              <div class="match-zone" data-word="neighbor">
+                <span class="zone-icon">🏘️</span><span class="zone-label">جار</span>
+              </div>
+            </div>
+            <div class="match-col">
+              <div class="match-label">الكلمات</div>
+              <div class="match-word draggable" draggable="true" data-word="father">Father</div>
+              <div class="match-word draggable" draggable="true" data-word="mother">Mother</div>
+              <div class="match-word draggable" draggable="true" data-word="kitchen">Kitchen</div>
+              <div class="match-word draggable" draggable="true" data-word="bedroom">Bedroom</div>
+              <div class="match-word draggable" draggable="true" data-word="neighbor">Neighbor</div>
+            </div>
+          </div>
+          <button class="check-btn" onclick="checkMatching()">تحقق من الإجابات</button>
+        </div>
+
+        <!-- تمرين 2 -->
+        <div class="exercise">
+          <div class="exercise-title">
+            <span class="exercise-num">2</span>
+            اختر الإجابة الصحيحة
+          </div>
+          <p class="exercise-desc">ما معنى كلمة "Sister" بالعربية؟</p>
+          <div class="options-wrap">
+            <button class="opt-btn" onclick="checkAnswer(this, false)">أم</button>
+            <button class="opt-btn" onclick="checkAnswer(this, true)">أخت</button>
+            <button class="opt-btn" onclick="checkAnswer(this, false)">جدة</button>
+            <button class="opt-btn" onclick="checkAnswer(this, false)">عمة</button>
+          </div>
+        </div>
+
+        <!-- تمرين 3 -->
+        <div class="exercise">
+          <div class="exercise-title">
+            <span class="exercise-num">3</span>
+            أكمل الجملة
+          </div>
+          <p class="exercise-desc">I live with my _____ in a big house.</p>
+          <div class="options-wrap">
+            <button class="opt-btn" onclick="checkAnswer(this, true)">family</button>
+            <button class="opt-btn" onclick="checkAnswer(this, false)">friends</button>
+            <button class="opt-btn" onclick="checkAnswer(this, false)">teachers</button>
+            <button class="opt-btn" onclick="checkAnswer(this, false)">neighbors</button>
+          </div>
+        </div>
+
+        <!-- تمرين 4 -->
+        <div class="exercise">
+          <div class="exercise-title">
+            <span class="exercise-num">4</span>
+            اختبار الفهم السمعي
+          </div>
+          <p class="exercise-desc">استمع للجملة ثم اختر الترجمة الصحيحة:</p>
+          <div class="options-wrap" style="margin-bottom: 12px;">
+            <button class="opt-btn" onclick="playSound('audio-test')" style="border-color: var(--blue); color: var(--blue); background: var(--blue-light);">
+              <i class="fas fa-play" style="margin-left: 6px; font-size: 12px;"></i> استمع للجملة
+            </button>
+          </div>
+          <div class="options-wrap">
+            <button class="opt-btn" onclick="checkAnswer(this, false)">أختي في المطبخ</button>
+            <button class="opt-btn" onclick="checkAnswer(this, true)">أمي في الحديقة</button>
+            <button class="opt-btn" onclick="checkAnswer(this, false)">أبي في غرفة النوم</button>
+            <button class="opt-btn" onclick="checkAnswer(this, false)">جدي في الحمام</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- العائلة الممتدة -->
+      <details class="accordion reveal">
+        <summary class="accordion-trigger">
+          <span class="acc-left">
+            <span class="icon-wrap"><i class="fas fa-user-friends"></i></span>
+            العائلة الممتدة والأقارب
+          </span>
+          <i class="fas fa-chevron-down accordion-chevron"></i>
+        </summary>
+        <div class="accordion-body">
+          <div class="vocab-grid" style="margin-bottom: 20px;">
+            <div class="vocab-card" onclick="playSound('uncle')" tabindex="0" role="button" aria-label="Uncle - عم">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">👨‍🦰</span>
+              <span class="card-en">Uncle</span>
+              <span class="card-pron">/ˈʌŋkəl/</span>
+              <span class="card-ar">عم</span>
+            </div>
+            <div class="vocab-card" onclick="playSound('aunt')" tabindex="0" role="button" aria-label="Aunt - عمة">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">👩‍🦰</span>
+              <span class="card-en">Aunt</span>
+              <span class="card-pron">/ænt/</span>
+              <span class="card-ar">عمة</span>
+            </div>
+            <div class="vocab-card" onclick="playSound('cousin')" tabindex="0" role="button" aria-label="Cousin - ابن عم">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">🧑</span>
+              <span class="card-en">Cousin</span>
+              <span class="card-pron">/ˈkʌzən/</span>
+              <span class="card-ar">ابن عم</span>
+            </div>
+            <div class="vocab-card" onclick="playSound('nephew')" tabindex="0" role="button" aria-label="Nephew - ابن أخ">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">👦</span>
+              <span class="card-en">Nephew</span>
+              <span class="card-pron">/ˈnefjuː/</span>
+              <span class="card-ar">ابن أخ</span>
+            </div>
+            <div class="vocab-card" onclick="playSound('niece')" tabindex="0" role="button" aria-label="Niece - ابنة أخت">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">👧</span>
+              <span class="card-en">Niece</span>
+              <span class="card-pron">/niːs/</span>
+              <span class="card-ar">ابنة أخت</span>
+            </div>
+          </div>
+          <div class="conversation">
+            <div class="conversation-title"><i class="fas fa-comments"></i> أمثلة ومحادثات</div>
+            <p>"I visit my uncle every weekend." — أنا أزور عمي في كل عطلة نهاية أسبوع.</p>
+            <p>"My niece likes playing in the garden." — ابنة أختي تحب اللعب في الحديقة.</p>
+            <p><strong>"How many cousins do you have?"</strong> — <strong>"I have three cousins."</strong></p>
+            <p class="translation">"كم عدد أبناء عمك؟" — "لدي ثلاثة أبناء عم."</p>
+          </div>
+        </div>
+      </details>
+
+      <!-- أجزاء إضافية -->
+      <details class="accordion reveal">
+        <summary class="accordion-trigger">
+          <span class="acc-left">
+            <span class="icon-wrap"><i class="fas fa-warehouse"></i></span>
+            مرافق ومفردات إضافية في البيت
+          </span>
+          <i class="fas fa-chevron-down accordion-chevron"></i>
+        </summary>
+        <div class="accordion-body">
+          <div class="vocab-grid" style="margin-bottom: 20px;">
+            <div class="vocab-card" onclick="playSound('garage')" tabindex="0" role="button" aria-label="Garage - كراج">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">🚗</span>
+              <span class="card-en">Garage</span>
+              <span class="card-pron">/ɡəˈrɑːʒ/</span>
+              <span class="card-ar">كراج</span>
+            </div>
+            <div class="vocab-card" onclick="playSound('dining-room')" tabindex="0" role="button" aria-label="Dining Room - غرفة طعام">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">🍽️</span>
+              <span class="card-en">Dining Room</span>
+              <span class="card-pron">/ˈdaɪnɪŋ ruːm/</span>
+              <span class="card-ar">غرفة طعام</span>
+            </div>
+            <div class="vocab-card" onclick="playSound('basement')" tabindex="0" role="button" aria-label="Basement - قبو">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">🏠</span>
+              <span class="card-en">Basement</span>
+              <span class="card-pron">/ˈbeɪsmənt/</span>
+              <span class="card-ar">قبو</span>
+            </div>
+            <div class="vocab-card" onclick="playSound('oven')" tabindex="0" role="button" aria-label="Oven - فرن">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">🔥</span>
+              <span class="card-en">Oven</span>
+              <span class="card-pron">/ˈʌvən/</span>
+              <span class="card-ar">فرن</span>
+            </div>
+            <div class="vocab-card" onclick="playSound('balcony')" tabindex="0" role="button" aria-label="Balcony - شرفة">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">🏢</span>
+              <span class="card-en">Balcony</span>
+              <span class="card-pron">/ˈbælkəni/</span>
+              <span class="card-ar">شرفة</span>
+            </div>
+            <div class="vocab-card" onclick="playSound('stairs')" tabindex="0" role="button" aria-label="Stairs - سلم">
+              <span class="card-speaker"><i class="fas fa-volume-up"></i></span>
+              <span class="card-emoji">🪜</span>
+              <span class="card-en">Stairs</span>
+              <span class="card-pron">/sterz/</span>
+              <span class="card-ar">سلم</span>
+            </div>
+          </div>
+          <div class="conversation">
+            <div class="conversation-title"><i class="fas fa-comments"></i> أمثلة للاستخدام اليومي</div>
+            <p>"I put the car in the garage every evening." — أضع السيارة في الكراج كل مساء.</p>
+            <p>"We eat dinner in the dining room." — نأكل العشاء في غرفة الطعام.</p>
+            <p><strong>"Where do you usually study?"</strong> — <strong>"I study in my bedroom or on the balcony."</strong></p>
+            <p class="translation">"أين تدرس عادة؟" — "أدرس في غرفة نومي أو على الشرفة."</p>
+          </div>
+        </div>
+      </details>
+
+      <!-- تمارين إضافية -->
+      <details class="accordion reveal">
+        <summary class="accordion-trigger">
+          <span class="acc-left">
+            <span class="icon-wrap"><i class="fas fa-clipboard-check"></i></span>
+            تمارين تطبيقية ومراجعة شاملة
+          </span>
+          <i class="fas fa-chevron-down accordion-chevron"></i>
+        </summary>
+        <div class="accordion-body">
+          <div class="text-exercise">
+            <h4>تمرين 1: رتب أفراد العائلة حسب الأجيال</h4>
+            <p>رتب الكلمات التالية من الأكبر سِنًا إلى الأصغر:</p>
+            <p style="color: var(--text); font-weight: 500;">Grandfather · Uncle · Brother · Cousin · Son</p>
+            <div class="answer-box"><strong>الإجابة:</strong> Grandfather → Uncle → Brother → Cousin → Son</div>
+          </div>
+
+          <div class="text-exercise">
+            <h4>تمرين 2: وصف البيت</h4>
+            <p>اكتب فقرة قصيرة تصف بيتك باستخدام 8 كلمات على الأقل من الدرس.</p>
+            <div class="conversation" style="margin-top: 8px;">
+              <div class="conversation-title"><i class="fas fa-lightbulb"></i> مثال للكتابة</div>
+              <p>"My house has a big kitchen with a dining table and four chairs. I sleep in my bedroom on the second floor. We have a beautiful garden where my mother grows flowers. Our neighbor is very kind, and we sometimes use the elevator in his building."</p>
+            </div>
+          </div>
+
+          <div class="text-exercise">
+            <h4>تمرين 3: محادثة عائلية</h4>
+            <p>أنشئ محادثة قصيرة بين أفراد العائلة باستخدام 10 كلمات من الدرس.</p>
+            <div class="conversation" style="margin-top: 8px;">
+              <div class="conversation-title"><i class="fas fa-lightbulb"></i> مثال للمحادثة</div>
+              <p><strong>الأب:</strong> "Where is your sister?"</p>
+              <p><strong>الابن:</strong> "She's in the kitchen with grandmother."</p>
+              <p><strong>الأب:</strong> "Tell them dinner is ready in the dining room."</p>
+              <p><strong>الابن:</strong> "Okay, dad. Should I call our neighbor too?"</p>
+              <p><strong>الأب:</strong> "Yes, he's family to us."</p>
+            </div>
+          </div>
+
+          <div class="text-exercise">
+            <h4>تمرين 4: تحدّي الذاكرة</h4>
+            <p>أغلق عينيك واذكر 15 كلمة من الدرس: 5 من العائلة، 5 من الغرف، 5 من الأثاث — دون النظر للأعلى!</p>
+          </div>
+        </div>
+      </details>
+
+      <!-- التنقل -->
+      <div class="nav-footer">
+        <button class="nav-btn" onclick="previousLesson()">
+          <i class="fas fa-file-pdf"></i>
+          عرض ملف درس العائلة والبيت
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // ===== نظام الصوت =====
+    const audioCache = new Map();
+
+    const textMap = {
+      grandfather:'grandfather', grandmother:'grandmother', father:'father',
+      mother:'mother', brother:'brother', sister:'sister', son:'son',
+      daughter:'daughter', uncle:'uncle', aunt:'aunt', cousin:'cousin',
+      nephew:'nephew', niece:'niece', bedroom:'bedroom', bathroom:'bathroom',
+      'living-room':'living room', kitchen:'kitchen', garden:'garden',
+      door:'door', window:'window', table:'table', chair:'chair',
+      bed:'bed', lamp:'lamp', fridge:'fridge', mirror:'mirror',
+      elevator:'elevator', pool:'swimming pool', neighbor:'neighbor',
+      roof:'roof', garage:'garage', 'dining-room':'dining room',
+      basement:'basement', oven:'oven', balcony:'balcony', stairs:'stairs',
+      siblings:'I have two siblings.',
+      'father-doctor':'My father is a doctor.',
+      'dinner-together':'We eat dinner together.',
+      'cozy-living':'The living room is cozy.',
+      'help-chores':'I help my parents with chores.',
+      'backyard-garden':'We have a garden in our backyard.',
+      'friendly-neighbor':'My neighbor is very friendly.',
+      'daily-elevator':'We use the elevator every day.',
+      'audio-test':'My mother is in the garden.'
+    };
+
+    function playSound(key) {
+      // إيقاف أي صوت سابق
+      if ('speechSynthesis' in window) speechSynthesis.cancel();
+      audioCache.forEach(a => { try { a.pause(); a.currentTime = 0; } catch(e){} });
+
+      const text = textMap[key] || key;
+      if (!text) return;
+
+      // محاولة تحميل ملف صوتي محلي أولاً
+      const path = 'sounds/' + key + '.mp3';
+      const audio = new Audio(path);
+      audio.preload = 'none';
+
+      const onReady = () => {
+        audio.play().catch(() => speak(text));
+      };
+      const onFail = () => {
+        speak(text);
+      };
+
+      audio.addEventListener('canplaythrough', onReady, { once: true });
+      audio.addEventListener('error', onFail, { once: true });
+      audio.src = path;
+
+      // مهلة 2 ثانية ثم الانتقال لـ TTS
+      setTimeout(() => {
+        if (audio.readyState < 2) { audio.removeEventListener('canplaythrough', onReady); speak(text); }
+      }, 2000);
+    }
+
+    function speak(text) {
+      if (!('speechSynthesis' in window)) return;
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'en-US';
+      u.rate = 0.8;
+      speechSynthesis.speak(u);
+    }
+
+    // ===== دعم لوحة المفاتيح =====
+    document.addEventListener('keydown', e => {
+      if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('vocab-card')) {
+        e.preventDefault(); e.target.click();
+      }
+      if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('sentence-card')) {
+        e.preventDefault(); e.target.click();
       }
     });
-  });
-});
 
-function previousLesson() {
-  if (window.parent && window.parent.previousLesson) {
-    window.parent.previousLesson();
-  }
-}
+    // ===== شريط التقدم =====
+    function updateProgress() {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? Math.min((scrollTop / docHeight) * 100, 100) : 0;
+      document.getElementById('progressFill').style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
 
-function nextLesson() {
-  if (window.parent && window.parent.nextLesson) {
-    window.parent.nextLesson();
-  }
-}
-</script>
+    // ===== رسائل التنبيه =====
+    let toastTimer;
+    function showToast(msg, type) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.className = 'toast ' + type + ' show';
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    // ===== التمارين =====
+    function checkAnswer(btn, correct) {
+      const wrap = btn.parentElement;
+      wrap.querySelectorAll('.opt-btn').forEach(b => {
+        b.disabled = true;
+        // كشف الإجابة الصحيحة
+        if (b.getAttribute('onclick').includes('true')) b.classList.add('correct');
+      });
+      if (!correct) btn.classList.add('incorrect');
+      showToast(correct ? 'إجابة صحيحة، أحسنت' : 'إجابة خاطئة، حاول مرة أخرى', correct ? 'success' : 'error');
+    }
+
+    function checkMatching() {
+      const zones = document.querySelectorAll('.match-zone');
+      let correct = 0;
+      zones.forEach(z => {
+        const pw = z.querySelector('.placed-word');
+        if (pw && pw.dataset.word === z.dataset.word) {
+          z.classList.add('matched');
+          correct++;
+        }
+      });
+      const total = zones.length;
+      if (correct === total) showToast('ممتاز! جميع الإجابات صحيحة', 'success');
+      else showToast(correct + ' من ' + total + ' صحيحة، أعد المحاولة', 'error');
+    }
+
+    // ===== السحب والإفلات =====
+    let draggedWord = null;
+
+    document.querySelectorAll('.draggable').forEach(el => {
+      el.addEventListener('dragstart', e => {
+        draggedWord = el;
+        el.classList.add('dragging');
+        e.dataTransfer.setData('text/plain', el.dataset.word);
+        e.dataTransfer.effectAllowed = 'move';
+      });
+      el.addEventListener('dragend', () => {
+        el.classList.remove('dragging');
+        draggedWord = null;
+      });
+      // دعم اللمس
+      el.addEventListener('click', () => {
+        if (el.style.display === 'none') return;
+        // إزالة التحديد السابق
+        document.querySelectorAll('.draggable.selected').forEach(d => d.style.outline = '');
+        el.style.outline = '2px solid var(--blue)';
+        el.classList.add('selected');
+        draggedWord = el;
+      });
+    });
+
+    document.querySelectorAll('.match-zone').forEach(zone => {
+      zone.addEventListener('dragover', e => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        zone.classList.add('drag-over');
+      });
+      zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+      zone.addEventListener('drop', e => {
+        e.preventDefault();
+        zone.classList.remove('drag-over');
+        placeWord(zone, e.dataTransfer.getData('text/plain'));
+      });
+      // دعم اللمس: النقر على المنطقة لوضع الكلمة المحددة
+      zone.addEventListener('click', () => {
+        const sel = document.querySelector('.draggable.selected');
+        if (sel && !zone.querySelector('.placed-word')) {
+          placeWord(zone, sel.dataset.word);
+          sel.style.outline = '';
+          sel.classList.remove('selected');
+          draggedWord = null;
+        }
+      });
+    });
+
+    function placeWord(zone, word) {
+      if (zone.querySelector('.placed-word')) return;
+      const src = document.querySelector('.draggable[data-word="' + word + '"]');
+      if (!src) return;
+
+      // إزالة المحتوى الافتراضي
+      zone.innerHTML = '';
+
+      const span = document.createElement('span');
+      span.className = 'placed-word';
+      span.dataset.word = word;
+      span.textContent = word;
+
+      const rm = document.createElement('button');
+      rm.className = 'remove-placed';
+      rm.innerHTML = '&times;';
+      rm.setAttribute('aria-label', 'إزالة');
+      rm.onclick = e => {
+        e.stopPropagation();
+        zone.innerHTML = '<span class="zone-icon">' + getZoneIcon(zone.dataset.word) + '</span><span class="zone-label">' + getZoneLabel(zone.dataset.word) + '</span>';
+        zone.classList.remove('matched');
+        src.style.display = '';
+      };
+
+      span.appendChild(rm);
+      zone.appendChild(span);
+      src.style.display = 'none';
+    }
+
+    function getZoneIcon(w) {
+      const map = { father:'👨', mother:'👩', kitchen:'🍳', bedroom:'🛏️', neighbor:'🏘️' };
+      return map[w] || '';
+    }
+    function getZoneLabel(w) {
+      const map = { father:'أب', mother:'أم', kitchen:'مطبخ', bedroom:'غرفة نوم', neighbor:'جار' };
+      return map[w] || '';
+    }
+
+    // ===== تأثير الظهور عند التمرير =====
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ===== التنقل =====
+    function previousLesson() {
+      if (window.parent && typeof window.parent.previousLesson === 'function') window.parent.previousLesson();
+      else showToast('الدرس السابق غير متوفر', 'error');
+    }
+
+    // ===== تفعيل الصوت على الأجهزة المحمولة =====
+    const unlock = () => {
+      const a = new Audio(); a.play().catch(()=>{}).then(()=>a.pause());
+      document.removeEventListener('touchstart', unlock);
+      document.removeEventListener('click', unlock);
+    };
+    document.addEventListener('touchstart', unlock);
+  </script>
+</body>
+</html>
