@@ -1,1190 +1,1887 @@
-<div class="lesson-content">
-  <div class="lesson-header">
-    <h1 class="lesson-title">الدرس الخامس: الوقت والتاريخ</h1>
-    <p class="lesson-description">تعلم قراءة الوقت والتعبير عن التواريخ والأيام والشهور باللغة الإنجليزية</p>
-  </div>
-
-  <div class="lesson-sections">
-    <!-- قسم الوقت -->
-    <div class="lesson-section">
-      <h2 class="section-title">
-        <i class="fas fa-clock"></i>
-        قراءة الوقت
-      </h2>
-      
-      <div class="time-learning">
-        <div class="clock-container">
-          <div class="digital-clock">
-            <div class="clock-display" id="current-time">12:00</div>
-            <div class="clock-buttons">
-              <button class="time-btn" onclick="setTime(12, 0)">12:00</button>
-              <button class="time-btn" onclick="setTime(3, 15)">3:15</button>
-              <button class="time-btn" onclick="setTime(6, 30)">6:30</button>
-              <button class="time-btn" onclick="setTime(9, 45)">9:45</button>
-            </div>
-          </div>
-          
-          <div class="analog-clock">
-            <div class="clock-face">
-              <div class="hour-hand" id="hour-hand"></div>
-              <div class="minute-hand" id="minute-hand"></div>
-              <div class="center-dot"></div>
-              <div class="clock-numbers">
-                <div class="number" style="--i: 1;">1</div>
-                <div class="number" style="--i: 2;">2</div>
-                <div class="number" style="--i: 3;">3</div>
-                <div class="number" style="--i: 4;">4</div>
-                <div class="number" style="--i: 5;">5</div>
-                <div class="number" style="--i: 6;">6</div>
-                <div class="number" style="--i: 7;">7</div>
-                <div class="number" style="--i: 8;">8</div>
-                <div class="number" style="--i: 9;">9</div>
-                <div class="number" style="--i: 10;">10</div>
-                <div class="number" style="--i: 11;">11</div>
-                <div class="number" style="--i: 12;">12</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="time-expressions">
-          <h3>التعبيرات الزمنية الأساسية</h3>
-          <div class="expressions-grid">
-            <div class="expression-card">
-              <div class="expression-english">It's 3 o'clock</div>
-              <div class="expression-pronunciation">/ɪts θri oʊˈklɑk/</div>
-              <div class="expression-arabic">الساعة الثالثة تماماً</div>
-            </div>
-            
-            <div class="expression-card">
-              <div class="expression-english">It's quarter past 3</div>
-              <div class="expression-pronunciation">/ɪts ˈkwɔrtər pæst θri/</div>
-              <div class="expression-arabic">الساعة الثالثة والربع</div>
-            </div>
-            
-            <div class="expression-card">
-              <div class="expression-english">It's half past 3</div>
-              <div class="expression-pronunciation">/ɪts hæf pæst θri/</div>
-              <div class="expression-arabic">الساعة الثالثة والنصف</div>
-            </div>
-            
-            <div class="expression-card">
-              <div class="expression-english">It's quarter to 4</div>
-              <div class="expression-pronunciation">/ɪts ˈkwɔrtər tuː fɔr/</div>
-              <div class="expression-arabic">الساعة الرابعة إلا الربع</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- قسم الأيام -->
-    <div class="lesson-section">
-      <h2 class="section-title">
-        <i class="fas fa-calendar-week"></i>
-        أيام الأسبوع
-      </h2>
-      
-      <div class="days-grid">
-        <div class="day-card" onclick="playDaySound('monday')">
-          <div class="day-number">1</div>
-          <div class="day-english">Monday</div>
-          <div class="day-pronunciation">/ˈmʌndeɪ/</div>
-          <div class="day-arabic">الإثنين</div>
-          <div class="day-short">Mon</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="day-card" onclick="playDaySound('tuesday')">
-          <div class="day-number">2</div>
-          <div class="day-english">Tuesday</div>
-          <div class="day-pronunciation">/ˈtuzdeɪ/</div>
-          <div class="day-arabic">الثلاثاء</div>
-          <div class="day-short">Tue</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="day-card" onclick="playDaySound('wednesday')">
-          <div class="day-number">3</div>
-          <div class="day-english">Wednesday</div>
-          <div class="day-pronunciation">/ˈwɛnzdeɪ/</div>
-          <div class="day-arabic">الأربعاء</div>
-          <div class="day-short">Wed</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="day-card" onclick="playDaySound('thursday')">
-          <div class="day-number">4</div>
-          <div class="day-english">Thursday</div>
-          <div class="day-pronunciation">/ˈθɝzdeɪ/</div>
-          <div class="day-arabic">الخميس</div>
-          <div class="day-short">Thu</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="day-card" onclick="playDaySound('friday')">
-          <div class="day-number">5</div>
-          <div class="day-english">Friday</div>
-          <div class="day-pronunciation">/ˈfraɪdeɪ/</div>
-          <div class="day-arabic">الجمعة</div>
-          <div class="day-short">Fri</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="day-card" onclick="playDaySound('saturday')">
-          <div class="day-number">6</div>
-          <div class="day-english">Saturday</div>
-          <div class="day-pronunciation">/ˈsætɚdeɪ/</div>
-          <div class="day-arabic">السبت</div>
-          <div class="day-short">Sat</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="day-card" onclick="playDaySound('sunday')">
-          <div class="day-number">7</div>
-          <div class="day-english">Sunday</div>
-          <div class="day-pronunciation">/ˈsʌndeɪ/</div>
-          <div class="day-arabic">الأحد</div>
-          <div class="day-short">Sun</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- قسم الشهور -->
-    <div class="lesson-section">
-      <h2 class="section-title">
-        <i class="fas fa-calendar-alt"></i>
-        شهور السنة
-      </h2>
-      
-      <div class="months-grid">
-        <div class="month-card" onclick="playMonthSound('january')">
-          <div class="month-number">1</div>
-          <div class="month-english">January</div>
-          <div class="month-pronunciation">/ˈdʒænjuˌɛri/</div>
-          <div class="month-arabic">يناير</div>
-          <div class="month-season">Winter ❄️</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('february')">
-          <div class="month-number">2</div>
-          <div class="month-english">February</div>
-          <div class="month-pronunciation">/ˈfɛbruˌɛri/</div>
-          <div class="month-arabic">فبراير</div>
-          <div class="month-season">Winter ❄️</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('march')">
-          <div class="month-number">3</div>
-          <div class="month-english">March</div>
-          <div class="month-pronunciation">/mɑrtʃ/</div>
-          <div class="month-arabic">مارس</div>
-          <div class="month-season">Spring 🌸</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('april')">
-          <div class="month-number">4</div>
-          <div class="month-english">April</div>
-          <div class="month-pronunciation">/ˈeɪprəl/</div>
-          <div class="month-arabic">أبريل</div>
-          <div class="month-season">Spring 🌸</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('may')">
-          <div class="month-number">5</div>
-          <div class="month-english">May</div>
-          <div class="month-pronunciation">/meɪ/</div>
-          <div class="month-arabic">مايو</div>
-          <div class="month-season">Spring 🌸</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('june')">
-          <div class="month-number">6</div>
-          <div class="month-english">June</div>
-          <div class="month-pronunciation">/dʒun/</div>
-          <div class="month-arabic">يونيو</div>
-          <div class="month-season">Summer ☀️</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('july')">
-          <div class="month-number">7</div>
-          <div class="month-english">July</div>
-          <div class="month-pronunciation">/dʒuˈlaɪ/</div>
-          <div class="month-arabic">يوليو</div>
-          <div class="month-season">Summer ☀️</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('august')">
-          <div class="month-number">8</div>
-          <div class="month-english">August</div>
-          <div class="month-pronunciation">/ˈɔgəst/</div>
-          <div class="month-arabic">أغسطس</div>
-          <div class="month-season">Summer ☀️</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('september')">
-          <div class="month-number">9</div>
-          <div class="month-english">September</div>
-          <div class="month-pronunciation">/sɛpˈtɛmbər/</div>
-          <div class="month-arabic">سبتمبر</div>
-          <div class="month-season">Autumn 🍂</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('october')">
-          <div class="month-number">10</div>
-          <div class="month-english">October</div>
-          <div class="month-pronunciation">/ɑkˈtoʊbər/</div>
-          <div class="month-arabic">أكتوبر</div>
-          <div class="month-season">Autumn 🍂</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('november')">
-          <div class="month-number">11</div>
-          <div class="month-english">November</div>
-          <div class="month-pronunciation">/noʊˈvɛmbər/</div>
-          <div class="month-arabic">نوفمبر</div>
-          <div class="month-season">Autumn 🍂</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-        
-        <div class="month-card" onclick="playMonthSound('december')">
-          <div class="month-number">12</div>
-          <div class="month-english">December</div>
-          <div class="month-pronunciation">/dɪˈsɛmbər/</div>
-          <div class="month-arabic">ديسمبر</div>
-          <div class="month-season">Winter ❄️</div>
-          <button class="audio-btn"><i class="fas fa-volume-up"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- قسم الجمل المفيدة -->
-    <div class="lesson-section">
-      <h2 class="section-title">
-        <i class="fas fa-comment"></i>
-        جمل مفيدة عن الوقت والتاريخ
-      </h2>
-      
-      <div class="useful-sentences">
-        <div class="sentence-category">
-          <h3>السؤال عن الوقت</h3>
-          <div class="sentences-list">
-            <div class="sentence-item">
-              <div class="sentence-english">What time is it?</div>
-              <div class="sentence-pronunciation">/wʌt taɪm ɪz ɪt/</div>
-              <div class="sentence-arabic">كم الساعة؟</div>
-            </div>
-            
-            <div class="sentence-item">
-              <div class="sentence-english">What's the time?</div>
-              <div class="sentence-pronunciation">/wʌts ðə taɪm/</div>
-              <div class="sentence-arabic">ما الوقت؟</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="sentence-category">
-          <h3>السؤال عن التاريخ</h3>
-          <div class="sentences-list">
-            <div class="sentence-item">
-              <div class="sentence-english">What day is it today?</div>
-              <div class="sentence-pronunciation">/wʌt deɪ ɪz ɪt təˈdeɪ/</div>
-              <div class="sentence-arabic">ما هو يوم اليوم؟</div>
-            </div>
-            
-            <div class="sentence-item">
-              <div class="sentence-english">What's the date today?</div>
-              <div class="sentence-pronunciation">/wʌts ðə deɪt təˈdeɪ/</div>
-              <div class="sentence-arabic">ما هو تاريخ اليوم؟</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="sentence-category">
-          <h3>التعبير عن المواعيد</h3>
-          <div class="sentences-list">
-            <div class="sentence-item">
-              <div class="sentence-english">I have a meeting at 3 PM</div>
-              <div class="sentence-pronunciation">/aɪ hæv ə ˈmitɪŋ æt θri pi ɛm/</div>
-              <div class="sentence-arabic">لدي اجتماع في الساعة الثالثة مساءً</div>
-            </div>
-            
-            <div class="sentence-item">
-              <div class="sentence-english">See you on Monday</div>
-              <div class="sentence-pronunciation">/si ju ɑn ˈmʌndeɪ/</div>
-              <div class="sentence-arabic">أراك يوم الإثنين</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- قسم التمارين -->
-    <div class="lesson-section">
-      <h2 class="section-title">
-        <i class="fas fa-pencil-alt"></i>
-        التمارين التفاعلية
-      </h2>
-      
-      <div class="exercise-container">
-        <div class="exercise-item">
-          <h3>تمرين 1: اختر الوقت الصحيح</h3>
-          <div class="exercise-question">
-            <div class="time-display-sample">3:30</div>
-            <p>كيف نقرأ هذا الوقت؟</p>
-            <div class="exercise-options">
-              <button class="option-btn" onclick="checkAnswer(this, false)">Three fifteen</button>
-              <button class="option-btn" onclick="checkAnswer(this, true)">Half past three</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">Quarter to four</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">Three forty-five</button>
-            </div>
-          </div>
-        </div>
-        
-        <div class="exercise-item">
-          <h3>تمرين 2: اختر اليوم الصحيح</h3>
-          <div class="exercise-question">
-            <p>ما هو اليوم الثالث من الأسبوع؟</p>
-            <div class="exercise-options">
-              <button class="option-btn" onclick="checkAnswer(this, false)">Monday</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">Tuesday</button>
-              <button class="option-btn" onclick="checkAnswer(this, true)">Wednesday</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">Thursday</button>
-            </div>
-          </div>
-        </div>
-        
-        <div class="exercise-item">
-          <h3>تمرين 3: اربط الشهر بالفصل</h3>
-          <div class="matching-exercise">
-            <div class="matching-columns">
-              <div class="months-column">
-                <div class="match-item" draggable="true" data-match="winter">December</div>
-                <div class="match-item" draggable="true" data-match="spring">April</div>
-                <div class="match-item" draggable="true" data-match="summer">July</div>
-                <div class="match-item" draggable="true" data-match="autumn">October</div>
-              </div>
-              <div class="seasons-column">
-                <div class="match-target" data-match="winter">Winter ❄️</div>
-                <div class="match-target" data-match="spring">Spring 🌸</div>
-                <div class="match-target" data-match="summer">Summer ☀️</div>
-                <div class="match-target" data-match="autumn">Autumn 🍂</div>
-              </div>
-            </div>
-            <button class="check-matching-btn" onclick="checkMatching()">تحقق من الإجابات</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="lesson-navigation">
-    <button class="nav-btn prev-btn" onclick="previousLesson()">
-      <i class="fas fa-arrow-right"></i>
-      الدرس السابق
-    </button>
-    
-    <button class="nav-btn next-btn" onclick="nextLesson()">
-      الدرس التالي
-      <i class="fas fa-arrow-left"></i>
-    </button>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>الدرس الخامس | الوقت والتاريخ بالإنجليزية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
 <style>
-.lesson-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: var(--bg-primary);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-lg);
+/* =========================================
+   DESIGN SYSTEM – Google Blue / Material 3
+========================================= */
+:root {
+  --blue-50:  #e8f0fe;
+  --blue-100: #d2e3fc;
+  --blue-200: #aecbfa;
+  --blue-300: #74a9f5;
+  --blue-400: #4285f4;
+  --blue-500: #1a73e8;
+  --blue-600: #1557b0;
+  --blue-700: #0d47a1;
+
+  --indigo:   #3f51b5;
+  --teal:     #00897b;
+  --amber:    #f9ab00;
+  --red:      #d93025;
+  --green:    #188038;
+
+  --surface:  #ffffff;
+  --bg:       #f8f9fa;
+  --bg2:      #f1f3f4;
+  --border:   #dadce0;
+  --border2:  #e8eaed;
+
+  --text-h:   #202124;
+  --text-b:   #3c4043;
+  --text-s:   #5f6368;
+  --text-m:   #80868b;
+
+  --r-sm:     8px;
+  --r-md:     12px;
+  --r-lg:     16px;
+  --r-xl:     24px;
+  --r-full:   9999px;
+
+  --shadow-1: 0 1px 2px rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+  --shadow-2: 0 1px 2px rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+  --shadow-3: 0 4px 8px 3px rgba(60,64,67,.15), 0 1px 3px rgba(60,64,67,.3);
+
+  --font-en:  'Google Sans', sans-serif;
+  --font-ar:  'Noto Sans Arabic', sans-serif;
+  --font-mono:'Roboto Mono', monospace;
+
+  --transition: .2s cubic-bezier(.4,0,.2,1);
 }
 
-.lesson-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 2px solid var(--border-color);
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text-b);
+  font-family: var(--font-ar);
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-.lesson-title {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-weight: 800;
-}
-
-.lesson-description {
-  font-size: 1.2rem;
-  color: var(--text-light);
-  line-height: 1.6;
-}
-
-.lesson-section {
-  margin-bottom: 3rem;
-  padding: 2rem;
-  background: var(--bg-secondary);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-light);
-}
-
-.section-title {
-  font-size: 1.8rem;
-  color: var(--text-color);
-  margin-bottom: 2rem;
+/* =========================================
+   STICKY HEADER – hides on scroll
+========================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-1);
+  padding: 0 24px;
+  height: 56px;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
+  transition: transform .35s cubic-bezier(.4,0,.2,1), opacity .35s;
 }
 
-.time-learning {
+.site-header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header-logo {
+  width: 36px;
+  height: 36px;
+  background: var(--blue-500);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.header-title {
+  font-family: var(--font-en);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-h);
+  letter-spacing: -.01em;
+  flex: 1;
+}
+
+.header-chip {
+  background: var(--blue-50);
+  color: var(--blue-500);
+  padding: 4px 14px;
+  border-radius: var(--r-full);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-en);
+}
+
+/* =========================================
+   LAYOUT
+========================================= */
+.page-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+/* =========================================
+   HERO
+========================================= */
+.hero {
+  background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-400) 60%, #4dd0e1 100%);
+  border-radius: var(--r-xl);
+  padding: 56px 40px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.3);
+  padding: 6px 20px;
+  border-radius: var(--r-full);
+  font-size: 13px;
+  font-family: var(--font-en);
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: .02em;
+}
+
+.hero h1 {
+  font-family: var(--font-en);
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  margin-bottom: 8px;
+}
+
+.hero h2 {
+  font-family: var(--font-ar);
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 500;
+  opacity: .9;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 15px;
+  opacity: .85;
+  line-height: 1.8;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.2);
+  padding: 10px 20px;
+  border-radius: var(--r-md);
+  text-align: center;
+  min-width: 110px;
+}
+
+.hero-stat-num {
+  font-family: var(--font-en);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+}
+
+.hero-stat-label {
+  font-size: 12px;
+  opacity: .8;
+  display: block;
+  margin-top: 4px;
+}
+
+/* =========================================
+   CARD / SECTION
+========================================= */
+.card {
+  background: var(--surface);
+  border-radius: var(--r-xl);
+  padding: 28px 28px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border2);
+  box-shadow: var(--shadow-1);
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue-500);
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-family: var(--font-ar);
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-title i {
+  width: 40px;
+  height: 40px;
+  background: var(--blue-50);
+  color: var(--blue-500);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   CLOCK
+========================================= */
+.clock-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
   align-items: start;
 }
 
-.clock-container {
+.clock-face-wrap {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  gap: 16px;
 }
 
-.digital-clock {
-  text-align: center;
-}
-
-.clock-display {
-  font-size: 4rem;
-  font-weight: 800;
-  color: var(--primary-color);
-  background: var(--bg-primary);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  border: 3px solid var(--border-color);
-  margin-bottom: 1rem;
-  font-family: 'Courier New', monospace;
-}
-
-.clock-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.time-btn {
-  background: var(--secondary-color);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 1rem;
+.digital-time {
+  font-family: var(--font-mono);
+  font-size: 52px;
   font-weight: 600;
-  transition: var(--transition);
+  color: var(--blue-600);
+  letter-spacing: -.02em;
+  line-height: 1;
 }
 
-.time-btn:hover {
-  background: var(--secondary-dark);
-  transform: translateY(-2px);
-}
-
-.analog-clock {
-  display: flex;
-  justify-content: center;
-}
-
-.clock-face {
-  width: 300px;
-  height: 300px;
-  border: 8px solid var(--border-color);
-  border-radius: 50%;
-  position: relative;
-  background: var(--bg-primary);
-  box-shadow: var(--shadow-lg);
-}
-
-.clock-numbers {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.number {
-  position: absolute;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-color);
-  transform: rotate(calc(var(--i) * 30deg));
-  inset: 20px;
+.digital-label {
+  font-family: var(--font-en);
+  font-size: 15px;
+  color: var(--text-s);
+  font-weight: 500;
+  margin-top: 4px;
+  min-height: 22px;
   text-align: center;
 }
 
-.number::before {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 15px;
-  background: var(--border-color);
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.clock-svg {
+  width: 240px;
+  height: 240px;
 }
 
-.hour-hand, .minute-hand {
-  position: absolute;
-  background: var(--primary-color);
-  border-radius: 10px;
-  transform-origin: bottom center;
-  transition: transform 0.3s ease;
-}
-
-.hour-hand {
-  width: 6px;
-  height: 80px;
-  top: 70px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.minute-hand {
-  width: 4px;
-  height: 120px;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.center-dot {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: var(--accent-color);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.expressions-grid {
+/* time buttons */
+.time-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
-.expression-card {
-  background: var(--bg-primary);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  border: 2px solid var(--border-color);
-  transition: var(--transition);
-  text-align: center;
-}
-
-.expression-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-color);
-}
-
-.expression-english {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.expression-pronunciation {
-  font-size: 1rem;
-  color: var(--text-muted);
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.expression-arabic {
-  font-size: 1.1rem;
-  color: var(--text-color);
+.tbtn {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--blue-600);
+  padding: 10px 6px;
+  border-radius: var(--r-md);
+  font-family: var(--font-mono);
+  font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
+.tbtn:hover {
+  background: var(--blue-50);
+  border-color: var(--blue-300);
+}
+
+.tbtn.rand {
+  background: var(--amber);
+  color: #fff;
+  border-color: var(--amber);
+}
+
+.tbtn.rand:hover { opacity: .9; }
+
+/* quiz */
+.quiz-box {
+  background: var(--bg);
+  border-radius: var(--r-lg);
+  padding: 18px;
+  border: 1px solid var(--border2);
+}
+
+.quiz-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-h);
+  text-align: center;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.quiz-opts { display: grid; gap: 8px; margin-bottom: 12px; }
+
+.qopt {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 11px 14px;
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: right;
+  direction: ltr;
+}
+
+.qopt:hover { border-color: var(--blue-400); background: var(--blue-50); }
+.qopt.sel  { border-color: var(--blue-500); background: var(--blue-50); color: var(--blue-600); }
+.qopt.correct-a { border-color: var(--green); background: #e6f4ea; color: var(--green); }
+.qopt.wrong-a  { border-color: var(--red); background: #fce8e6; color: var(--red); }
+
+.check-btn {
+  width: 100%;
+  padding: 11px;
+  background: var(--blue-500);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.check-btn:hover { background: var(--blue-600); }
+
+/* =========================================
+   EXPRESSION CARDS
+========================================= */
+.expr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.expr-card {
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-lg);
+  padding: 18px 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.expr-card:hover {
+  border-color: var(--blue-300);
+  background: var(--blue-50);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
+
+.expr-en {
+  font-family: var(--font-en);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--blue-600);
+  margin-bottom: 4px;
+}
+
+.expr-pron {
+  font-family: var(--font-en);
+  font-size: 11px;
+  color: var(--text-m);
+  margin-bottom: 8px;
+}
+
+.expr-ar {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-s);
+  margin-bottom: 10px;
+}
+
+.expr-example {
+  font-family: var(--font-en);
+  font-size: 12px;
+  color: var(--text-m);
+  background: var(--surface);
+  border-radius: var(--r-sm);
+  padding: 6px 10px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   DAYS / MONTHS
+========================================= */
 .days-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 1rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
 }
 
 .day-card {
-  background: var(--bg-primary);
-  border-radius: var(--border-radius);
-  padding: 1.5rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-lg);
+  padding: 16px 10px;
   text-align: center;
-  border: 2px solid var(--border-color);
-  transition: var(--transition);
   cursor: pointer;
+  transition: var(--transition);
   position: relative;
-  min-height: 200px;
 }
 
 .day-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-color);
+  border-color: var(--blue-300);
+  background: var(--blue-50);
+  transform: translateY(-2px);
 }
 
-.day-number {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-}
-
-.day-english {
-  font-size: 1.2rem;
+.day-num {
+  font-family: var(--font-en);
+  font-size: 11px;
   font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  color: var(--blue-400);
+  margin-bottom: 6px;
+  letter-spacing: .08em;
 }
 
-.day-pronunciation {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-style: italic;
-  margin-bottom: 0.5rem;
+.day-en {
+  font-family: var(--font-en);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 4px;
 }
 
-.day-arabic {
-  font-size: 1rem;
-  color: var(--text-color);
+.day-short-tag {
+  font-family: var(--font-en);
+  font-size: 10px;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.day-short {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  font-weight: 600;
-  background: var(--bg-secondary);
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
+  background: var(--blue-100);
+  color: var(--blue-600);
+  padding: 2px 8px;
+  border-radius: var(--r-full);
   display: inline-block;
+  margin-bottom: 6px;
+}
+
+.day-ar {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-s);
+  margin-bottom: 4px;
+}
+
+.day-pron-s {
+  font-family: var(--font-en);
+  font-size: 10px;
+  color: var(--text-m);
 }
 
 .months-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
 }
 
 .month-card {
-  background: var(--bg-primary);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-lg);
+  padding: 16px 12px;
   text-align: center;
-  border: 2px solid var(--border-color);
-  transition: var(--transition);
   cursor: pointer;
-  position: relative;
+  transition: var(--transition);
 }
 
 .month-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--secondary-color);
-}
-
-.month-number {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-}
-
-.month-english {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--secondary-color);
-  margin-bottom: 0.5rem;
-}
-
-.month-pronunciation {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
-
-.month-arabic {
-  font-size: 1.1rem;
-  color: var(--text-color);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.month-season {
-  font-size: 1rem;
-  color: var(--text-light);
-  font-weight: 600;
-  background: var(--bg-secondary);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  display: inline-block;
-}
-
-.useful-sentences {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-.sentence-category {
-  background: var(--bg-primary);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  border: 2px solid var(--border-color);
-}
-
-.sentence-category h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.sentences-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.sentence-item {
-  background: var(--bg-secondary);
-  border-radius: var(--border-radius);
-  padding: 1rem;
-  border: 1px solid var(--border-light);
-}
-
-.sentence-english {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--success-color);
-  margin-bottom: 0.5rem;
-}
-
-.sentence-pronunciation {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
-
-.sentence-arabic {
-  font-size: 1rem;
-  color: var(--text-color);
-  font-weight: 600;
-}
-
-.audio-btn {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: var(--transition);
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow);
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-.audio-btn:hover {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-lg);
-}
-
-.exercise-container {
-  background: var(--bg-primary);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  margin-top: 2rem;
-}
-
-.exercise-item {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: var(--bg-secondary);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-light);
-}
-
-.exercise-item h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.exercise-question {
-  text-align: center;
-}
-
-.time-display-sample {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--primary-color);
-  background: var(--bg-primary);
-  padding: 1rem 2rem;
-  border-radius: var(--border-radius);
-  border: 2px solid var(--border-color);
-  margin: 0 auto 1rem;
-  width: fit-content;
-  font-family: 'Courier New', monospace;
-}
-
-.exercise-question p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-color);
-}
-
-.exercise-options {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.option-btn {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--border-color);
-  background: var(--bg-primary);
-  color: var(--text-color);
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: var(--transition);
-  min-width: 150px;
-}
-
-.option-btn:hover {
-  border-color: var(--primary-color);
-  background: var(--primary-color);
-  color: white;
-}
-
-.option-btn.correct {
-  background: var(--success-color);
-  border-color: var(--success-color);
-  color: white;
-}
-
-.option-btn.incorrect {
-  background: var(--danger-color);
-  border-color: var(--danger-color);
-  color: white;
-}
-
-.matching-exercise {
-  margin-top: 1rem;
-}
-
-.matching-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.months-column, .seasons-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.match-item {
-  background: var(--bg-primary);
-  border: 2px solid var(--primary-color);
-  border-radius: var(--border-radius);
-  padding: 1rem;
-  text-align: center;
-  cursor: move;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.match-item:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow);
-}
-
-.match-target {
-  background: var(--bg-primary);
-  border: 2px dashed var(--border-color);
-  border-radius: var(--border-radius);
-  padding: 1rem;
-  text-align: center;
-  font-weight: 600;
-  min-height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-.match-target.drag-over {
-  border-color: var(--success-color);
-  background: rgba(46, 204, 113, 0.1);
-}
-
-.match-target.matched {
-  border-color: var(--success-color);
-  background: rgba(46, 204, 113, 0.2);
-}
-
-.check-matching-btn {
-  background: var(--warning-color);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: var(--transition);
-  display: block;
-  margin: 0 auto;
-}
-
-.check-matching-btn:hover {
+  border-color: var(--blue-300);
+  background: var(--blue-50);
   transform: translateY(-2px);
-  box-shadow: var(--shadow);
 }
 
-.lesson-navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 2px solid var(--border-color);
-}
-
-.nav-btn {
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: var(--border-radius);
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
+.month-num-badge {
+  width: 32px;
+  height: 32px;
+  background: var(--blue-500);
+  color: #fff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 auto 8px;
 }
 
-.prev-btn {
-  background: linear-gradient(135deg, var(--text-muted), var(--text-light));
-  color: white;
+.month-en {
+  font-family: var(--font-en);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 4px;
 }
+
+.month-ar-s {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-s);
+  margin-bottom: 4px;
+}
+
+.month-pron-s {
+  font-family: var(--font-en);
+  font-size: 10px;
+  color: var(--text-m);
+  margin-bottom: 8px;
+}
+
+.season-chip {
+  font-family: var(--font-en);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--r-full);
+  display: inline-block;
+  letter-spacing: .03em;
+}
+
+.season-Winter  { background:#e3f2fd; color:#1565c0; }
+.season-Spring  { background:#f1f8e9; color:#33691e; }
+.season-Summer  { background:#fff8e1; color:#e65100; }
+.season-Autumn  { background:#fbe9e7; color:#bf360c; }
+
+/* =========================================
+   PREPOSITIONS
+========================================= */
+.prep-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.prep-card {
+  border-radius: var(--r-lg);
+  padding: 22px 18px;
+  border: 1px solid var(--border2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.prep-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
+
+.prep-in  { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-color: #a5d6a7; }
+.prep-on  { background: linear-gradient(135deg, #e3f2fd, #e8f0fe); border-color: #90caf9; }
+.prep-at  { background: linear-gradient(135deg, #fff8e1, #fff3e0); border-color: #ffcc80; }
+
+.prep-word-big {
+  font-family: var(--font-en);
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -.02em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.prep-in .prep-word-big  { color: var(--green); }
+.prep-on .prep-word-big  { color: var(--blue-500); }
+.prep-at .prep-word-big  { color: var(--amber); }
+
+.prep-rule {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-s);
+  margin-bottom: 12px;
+}
+
+.prep-examples-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+
+.prep-examples-list li {
+  font-family: var(--font-en);
+  font-size: 13px;
+  color: var(--text-b);
+  background: rgba(255,255,255,.7);
+  border-radius: var(--r-sm);
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prep-examples-list li strong { color: var(--text-h); }
+
+.prep-examples-list li span {
+  font-size: 12px;
+  color: var(--text-m);
+  font-family: var(--font-ar);
+  margin-right: auto;
+}
+
+/* =========================================
+   DATES TABLE
+========================================= */
+.dates-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  direction: ltr;
+}
+
+.dates-table th {
+  background: var(--blue-500);
+  color: #fff;
+  padding: 10px 14px;
+  font-family: var(--font-en);
+  font-weight: 600;
+  text-align: left;
+  font-size: 13px;
+}
+
+.dates-table th:first-child { border-radius: 0 8px 0 0; }
+.dates-table th:last-child  { border-radius: 8px 0 0 0; }
+
+.dates-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border2);
+  font-family: var(--font-en);
+  color: var(--text-b);
+  vertical-align: middle;
+}
+
+.dates-table td:last-child {
+  font-family: var(--font-ar);
+  font-size: 13px;
+  color: var(--text-s);
+  direction: rtl;
+  text-align: right;
+}
+
+.dates-table tr:hover td { background: var(--blue-50); }
+
+/* =========================================
+   NUMBERS GRID
+========================================= */
+.nums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 10px;
+}
+
+.num-card {
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-lg);
+  padding: 14px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.num-card:hover {
+  background: var(--blue-50);
+  border-color: var(--blue-300);
+  transform: scale(1.04);
+}
+
+.num-arabic {
+  font-family: var(--font-en);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--blue-600);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.num-word {
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 3px;
+}
+
+.num-pron {
+  font-family: var(--font-en);
+  font-size: 10px;
+  color: var(--text-m);
+}
+
+/* =========================================
+   ORDINALS TABLE
+========================================= */
+.ord-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.ord-card {
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-md);
+  padding: 12px;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.ord-card:hover { background: var(--blue-50); border-color: var(--blue-300); }
+
+.ord-num { font-family: var(--font-en); font-size: 22px; font-weight: 800; color: var(--blue-500); }
+.ord-word { font-family: var(--font-en); font-size: 13px; font-weight: 600; color: var(--text-h); }
+.ord-ar { font-size: 12px; color: var(--text-s); }
+
+/* =========================================
+   ADVANCED EXPRESSIONS
+========================================= */
+.adv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+.adv-card {
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-lg);
+  padding: 18px;
+  transition: var(--transition);
+}
+
+.adv-card:hover { border-color: var(--blue-300); transform: translateY(-2px); }
+
+.adv-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.adv-card-title i {
+  color: var(--blue-500);
+  font-size: 14px;
+}
+
+.adv-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+
+.adv-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.adv-list li strong {
+  font-family: var(--font-en);
+  color: var(--blue-600);
+  font-weight: 700;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.adv-list li span { color: var(--text-s); font-size: 12px; }
+
+/* =========================================
+   EXERCISE
+========================================= */
+.exercise-wrap {
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  border: 1px solid #a5d6a7;
+  border-radius: var(--r-xl);
+  padding: 28px;
+}
+
+.exercise-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--green);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.exercise-subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-s);
+  margin-bottom: 20px;
+}
+
+.ex-time-display {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--green);
+  text-align: center;
+  margin: 8px 0 20px;
+  letter-spacing: .02em;
+}
+
+.ex-opts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.ex-opt-btn {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  direction: ltr;
+}
+
+.ex-opt-btn:hover { border-color: var(--green); background: #f1f8e9; }
+.ex-opt-btn.correct-a { background: #c8e6c9; border-color: var(--green); color: var(--green); font-weight: 700; }
+.ex-opt-btn.wrong-a   { background: #ffcdd2; border-color: var(--red); color: var(--red); }
 
 .next-btn {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  color: white;
+  display: block;
+  margin: 16px auto 0;
+  padding: 10px 28px;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-full);
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
-.nav-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+.next-btn:hover { background: #145c2f; }
+
+/* =========================================
+   FEEDBACK
+========================================= */
+.feedback {
+  display: none;
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: var(--r-md);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeUp .25s ease;
 }
 
-@media (max-width: 768px) {
-  .lesson-content {
-    padding: 1rem;
-  }
-  
-  .time-learning {
-    grid-template-columns: 1fr;
-  }
-  
-  .days-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .months-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
-  .useful-sentences {
-    grid-template-columns: 1fr;
-  }
-  
-  .matching-columns {
-    grid-template-columns: 1fr;
-  }
-  
-  .exercise-options {
-    flex-direction: column;
-  }
-  
-  .lesson-navigation {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .clock-face {
-    width: 250px;
-    height: 250px;
-  }
-  
-  .hour-hand {
-    height: 60px;
-    top: 65px;
-  }
-  
-  .minute-hand {
-    height: 100px;
-    top: 25px;
-  }
+.feedback.show { display: block; }
+.feedback.ok  { background: #e6f4ea; color: var(--green); border: 1px solid #a8d5b5; }
+.feedback.err { background: #fce8e6; color: var(--red);   border: 1px solid #f5c6c6; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(8px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* =========================================
+   SCORE BAR
+========================================= */
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.score-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--blue-50);
+  color: var(--blue-600);
+  border: 1px solid var(--blue-100);
+  padding: 5px 14px;
+  border-radius: var(--r-full);
+  font-family: var(--font-en);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================
+   TOOLTIP / AUDIO BTN
+========================================= */
+.audio-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--blue-100);
+  color: var(--blue-500);
+  border-radius: 50%;
+  font-size: 11px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-right: 4px;
+}
+
+.audio-icon:hover { background: var(--blue-500); color: #fff; }
+
+/* =========================================
+   PHRASES TABLE
+========================================= */
+.phrases-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.phrases-table th {
+  background: var(--bg2);
+  padding: 10px 14px;
+  text-align: right;
+  color: var(--text-s);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--border);
+}
+
+.phrases-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border2);
+  vertical-align: middle;
+}
+
+.phrases-table tr:hover td { background: var(--blue-50); }
+
+.ph-en { font-family: var(--font-en); font-weight: 600; color: var(--blue-600); font-size: 15px; }
+.ph-pron { font-family: var(--font-en); font-size: 11px; color: var(--text-m); font-style: italic; }
+.ph-ar { font-size: 13px; color: var(--text-s); font-weight: 600; }
+.ph-example { font-family: var(--font-en); font-size: 12px; color: var(--text-m); }
+
+/* =========================================
+   DIVIDER
+========================================= */
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border2);
+  margin: 28px 0;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 800px) {
+  .clock-layout { grid-template-columns: 1fr; }
+  .clock-face-wrap { order: -1; }
+  .prep-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 540px) {
+  .page-wrap { padding: 16px 14px 48px; }
+  .card { padding: 18px 16px; }
+  .hero { padding: 36px 20px; }
+  .time-grid { grid-template-columns: repeat(2, 1fr); }
+  .expr-grid { grid-template-columns: repeat(2, 1fr); }
+  .days-grid { grid-template-columns: repeat(2, 1fr); }
+  .months-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
+</head>
+<body>
+
+<!-- ===================== STICKY HEADER ===================== -->
+<header class="site-header" id="site-header">
+  <div class="header-logo"><i class="fas fa-clock"></i></div>
+  <div class="header-title">الوقت والتاريخ · Time &amp; Date</div>
+  <span class="header-chip">Lesson 5</span>
+</header>
+
+<!-- ===================== PAGE ===================== -->
+<div class="page-wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge"><i class="fas fa-star"></i> Lesson 5 &nbsp;·&nbsp; Time &amp; Date</div>
+  <h1>Time &amp; Date</h1>
+  <h2>الوقت والتاريخ بالإنجليزية</h2>
+  <p>تعلم قراءة الساعة، أيام الأسبوع، شهور السنة، التواريخ، حروف الجر الزمنية، والأرقام الترتيبية مع أمثلة حية وتمارين تفاعلية</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">15</span>
+      <span class="hero-stat-label">صيغة وقت</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">31</span>
+      <span class="hero-stat-label">رقم ترتيبي</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">50+</span>
+      <span class="hero-stat-label">مثال عملي</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">10</span>
+      <span class="hero-stat-label">تمرين تفاعلي</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 1. CLOCK ===================== -->
+<div class="card">
+  <div class="section-label"><i class="fas fa-stopwatch"></i> Interactive Clock</div>
+  <h2 class="card-title"><i class="fas fa-stopwatch"></i>الساعة التفاعلية</h2>
+
+  <div class="score-row">
+    <span class="score-chip" id="sc-attempts"><i class="fas fa-bullseye"></i> 0 / 10</span>
+    <span class="score-chip" id="sc-accuracy"><i class="fas fa-chart-bar"></i> 100%</span>
+  </div>
+
+  <div class="clock-layout">
+    <!-- LEFT: controls + quiz -->
+    <div>
+      <p style="font-size:13px;color:var(--text-m);margin-bottom:10px;">اختر وقتاً أو اضغط عشوائي لبدء الاختبار</p>
+      <div class="time-grid">
+        <button class="tbtn" onclick="setTime(2,0)">2:00</button>
+        <button class="tbtn" onclick="setTime(4,15)">4:15</button>
+        <button class="tbtn" onclick="setTime(7,30)">7:30</button>
+        <button class="tbtn" onclick="setTime(11,45)">11:45</button>
+        <button class="tbtn" onclick="setTime(9,20)">9:20</button>
+        <button class="tbtn" onclick="setTime(3,40)">3:40</button>
+        <button class="tbtn" onclick="setTime(6,0)">6:00</button>
+        <button class="tbtn" onclick="setTime(1,55)">1:55</button>
+        <button class="tbtn rand" onclick="setRandTime()"><i class="fas fa-dice"></i> عشوائي</button>
+      </div>
+
+      <div class="quiz-box" style="margin-top:16px;">
+        <div class="quiz-q" id="quiz-q">اختر وقتاً لبدء السؤال</div>
+        <div class="quiz-opts" id="quiz-opts"></div>
+        <div class="feedback" id="quiz-fb"></div>
+        <button class="check-btn" onclick="checkQuiz()" style="margin-top:8px;">✔ تحقق من الإجابة</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: clock face -->
+    <div class="clock-face-wrap">
+      <div class="digital-time" id="dig-time">12:00</div>
+      <div class="digital-label" id="dig-label">It's twelve o'clock</div>
+
+      <svg viewBox="0 0 260 260" class="clock-svg">
+        <!-- face -->
+        <circle cx="130" cy="130" r="120" fill="white" stroke="#e8eaed" stroke-width="8"/>
+        <!-- ticks -->
+        <g stroke="#bdc1c6" stroke-width="2">
+          <line x1="130" y1="16" x2="130" y2="28"/>
+          <line x1="230" y1="130" x2="242" y2="130"/>
+          <line x1="130" y1="232" x2="130" y2="244"/>
+          <line x1="18" y1="130" x2="30" y2="130"/>
+        </g>
+        <!-- hour numbers -->
+        <text x="130" y="34"  text-anchor="middle" font-size="20" font-weight="700" fill="#3c4043" font-family="Google Sans, sans-serif">12</text>
+        <text x="236" y="138" text-anchor="middle" font-size="20" font-weight="700" fill="#3c4043" font-family="Google Sans, sans-serif">3</text>
+        <text x="130" y="254" text-anchor="middle" font-size="20" font-weight="700" fill="#3c4043" font-family="Google Sans, sans-serif">6</text>
+        <text x="24"  y="138" text-anchor="middle" font-size="20" font-weight="700" fill="#3c4043" font-family="Google Sans, sans-serif">9</text>
+        <!-- minor numbers -->
+        <text x="196" y="52"  text-anchor="middle" font-size="14" fill="#9aa0a6" font-family="Google Sans, sans-serif">1</text>
+        <text x="225" y="80"  text-anchor="middle" font-size="14" fill="#9aa0a6" font-family="Google Sans, sans-serif">2</text>
+        <text x="225" y="186" text-anchor="middle" font-size="14" fill="#9aa0a6" font-family="Google Sans, sans-serif">4</text>
+        <text x="196" y="216" text-anchor="middle" font-size="14" fill="#9aa0a6" font-family="Google Sans, sans-serif">5</text>
+        <text x="64"  y="216" text-anchor="middle" font-size="14" fill="#9aa0a6" font-family="Google Sans, sans-serif">7</text>
+        <text x="34"  y="186" text-anchor="middle" font-size="14" fill="#9aa0a6" font-family="Google Sans, sans-serif">8</text>
+        <text x="34"  y="80"  text-anchor="middle" font-size="14" fill="#9aa0a6" font-family="Google Sans, sans-serif">10</text>
+        <text x="64"  y="52"  text-anchor="middle" font-size="14" fill="#9aa0a6" font-family="Google Sans, sans-serif">11</text>
+        <!-- hands -->
+        <rect id="hr-hand" x="127" y="68" width="6" height="66" rx="3" fill="#1a73e8" transform="rotate(0 130 130)"/>
+        <rect id="mn-hand" x="128.5" y="36" width="3" height="98" rx="1.5" fill="#5f6368" transform="rotate(0 130 130)"/>
+        <circle cx="130" cy="130" r="7" fill="#d93025"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 2. TIME EXPRESSIONS ===================== -->
+<div class="card">
+  <div class="section-label"><i class="fas fa-language"></i> Time Expressions</div>
+  <h2 class="card-title"><i class="fas fa-language"></i>صيغ التعبير عن الوقت (15 صيغة)</h2>
+  <p style="font-size:13px;color:var(--text-m);margin-bottom:16px;">اضغط على أي بطاقة لسماع النطق</p>
+
+  <div class="expr-grid" id="expr-grid"></div>
+
+  <hr class="section-divider">
+
+  <h3 style="font-size:15px;font-weight:700;color:var(--text-h);margin-bottom:14px;">جدول صيغ الوقت الكامل</h3>
+  <div style="overflow-x:auto;">
+  <table class="dates-table">
+    <thead>
+      <tr>
+        <th>الوقت</th>
+        <th>الصيغة البريطانية</th>
+        <th>الصيغة الأمريكية</th>
+        <th>المعنى بالعربية</th>
+      </tr>
+    </thead>
+    <tbody id="time-table-body"></tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ===================== 3. DAYS ===================== -->
+<div class="card">
+  <div class="section-label"><i class="fas fa-calendar-week"></i> Days of the Week</div>
+  <h2 class="card-title"><i class="fas fa-calendar-week"></i>أيام الأسبوع</h2>
+  <div class="days-grid" id="days-grid"></div>
+
+  <hr class="section-divider">
+
+  <h3 style="font-size:15px;font-weight:700;color:var(--text-h);margin-bottom:14px;">جمل مفيدة عن الأيام</h3>
+  <table class="phrases-table">
+    <thead><tr><th>الجملة</th><th>النطق</th><th>المعنى</th><th>مثال</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><div class="ph-en">What day is it today?</div></td>
+        <td><div class="ph-pron">/wɒt deɪ ɪz ɪt/</div></td>
+        <td><div class="ph-ar">أي يوم هو اليوم؟</div></td>
+        <td><div class="ph-example">— It's Monday.</div></td>
+      </tr>
+      <tr>
+        <td><div class="ph-en">See you next Friday</div></td>
+        <td><div class="ph-pron">/nekst ˈfraɪdeɪ/</div></td>
+        <td><div class="ph-ar">أراك الجمعة القادمة</div></td>
+        <td><div class="ph-example">The meeting is next Friday.</div></td>
+      </tr>
+      <tr>
+        <td><div class="ph-en">Last Tuesday</div></td>
+        <td><div class="ph-pron">/lɑːst ˈtjuːzdeɪ/</div></td>
+        <td><div class="ph-ar">الثلاثاء الماضي</div></td>
+        <td><div class="ph-example">I called you last Tuesday.</div></td>
+      </tr>
+      <tr>
+        <td><div class="ph-en">Every weekend</div></td>
+        <td><div class="ph-pron">/ˈevri ˈwiːkend/</div></td>
+        <td><div class="ph-ar">كل عطلة نهاية أسبوع</div></td>
+        <td><div class="ph-example">I go hiking every weekend.</div></td>
+      </tr>
+      <tr>
+        <td><div class="ph-en">On Mondays</div></td>
+        <td><div class="ph-pron">/ɒn ˈmʌndeɪz/</div></td>
+        <td><div class="ph-ar">أيام الإثنين (بصفة عامة)</div></td>
+        <td><div class="ph-example">The gym closes on Mondays.</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===================== 4. MONTHS ===================== -->
+<div class="card">
+  <div class="section-label"><i class="fas fa-calendar-alt"></i> Months of the Year</div>
+  <h2 class="card-title"><i class="fas fa-calendar-alt"></i>شهور السنة</h2>
+  <div class="months-grid" id="months-grid"></div>
+</div>
+
+<!-- ===================== 5. NUMBERS + ORDINALS ===================== -->
+<div class="card">
+  <div class="section-label"><i class="fas fa-hashtag"></i> Numbers &amp; Ordinals</div>
+  <h2 class="card-title"><i class="fas fa-hashtag"></i>الأرقام الأساسية والترتيبية</h2>
+
+  <h3 style="font-size:14px;font-weight:700;color:var(--text-s);margin-bottom:12px;">الأرقام الأساسية 1–12</h3>
+  <div class="nums-grid" id="nums-grid"></div>
+
+  <hr class="section-divider">
+
+  <h3 style="font-size:14px;font-weight:700;color:var(--text-s);margin-bottom:12px;">الأرقام الترتيبية 1st–31st (لقراءة التواريخ)</h3>
+  <div class="ord-grid" id="ord-grid"></div>
+
+  <hr class="section-divider">
+
+  <h3 style="font-size:14px;font-weight:700;color:var(--text-s);margin-bottom:12px;">قاعدة تكوين الأرقام الترتيبية</h3>
+  <div class="adv-grid">
+    <div class="adv-card">
+      <div class="adv-card-title"><i class="fas fa-lightbulb"></i> القاعدة العامة</div>
+      <ul class="adv-list">
+        <li><strong>+ th</strong><span>four → four<strong>th</strong>, six → six<strong>th</strong></span></li>
+        <li><strong>+ st</strong><span>1st, 21st, 31st</span></li>
+        <li><strong>+ nd</strong><span>2nd, 22nd</span></li>
+        <li><strong>+ rd</strong><span>3rd, 23rd</span></li>
+      </ul>
+    </div>
+    <div class="adv-card">
+      <div class="adv-card-title"><i class="fas fa-exclamation-triangle"></i> استثناءات</div>
+      <ul class="adv-list">
+        <li><strong>1st → first</strong><span>ليس "oneth"</span></li>
+        <li><strong>2nd → second</strong><span>ليس "twoth"</span></li>
+        <li><strong>3rd → third</strong><span>ليس "threeth"</span></li>
+        <li><strong>5th → fifth</strong><span>five تصبح fif</span></li>
+        <li><strong>9th → ninth</strong><span>تُحذف الـ e</span></li>
+        <li><strong>12th → twelfth</strong><span>twelve → twelf</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 6. DATES ===================== -->
+<div class="card">
+  <div class="section-label"><i class="fas fa-calendar-day"></i> Dates</div>
+  <h2 class="card-title"><i class="fas fa-calendar-day"></i>كيف نكتب وننطق التواريخ</h2>
+
+  <div class="adv-grid" style="margin-bottom:20px;">
+    <div class="adv-card">
+      <div class="adv-card-title"><i class="fas fa-flag-usa"></i> الصيغة الأمريكية</div>
+      <ul class="adv-list">
+        <li><strong>Month / Day / Year</strong><span>June 15, 2024</span></li>
+        <li><strong>MM/DD/YYYY</strong><span>06/15/2024</span></li>
+        <li><strong>مثال</strong><span>July 4th, 1776</span></li>
+      </ul>
+    </div>
+    <div class="adv-card">
+      <div class="adv-card-title"><i class="fas fa-flag"></i> الصيغة البريطانية</div>
+      <ul class="adv-list">
+        <li><strong>Day / Month / Year</strong><span>15 June 2024</span></li>
+        <li><strong>DD/MM/YYYY</strong><span>15/06/2024</span></li>
+        <li><strong>مثال</strong><span>the 15th of June</span></li>
+      </ul>
+    </div>
+    <div class="adv-card">
+      <div class="adv-card-title"><i class="fas fa-microphone"></i> كيف تنطقها</div>
+      <ul class="adv-list">
+        <li><strong>"June fifteenth"</strong><span>الأمريكي</span></li>
+        <li><strong>"the fifteenth of June"</strong><span>البريطاني</span></li>
+        <li><strong>"twenty twenty-four"</strong><span>قراءة السنة</span></li>
+        <li><strong>"two thousand and one"</strong><span>2001</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="font-size:14px;font-weight:700;color:var(--text-s);margin-bottom:12px;">أمثلة على تواريخ كاملة</h3>
+  <div style="overflow-x:auto;">
+  <table class="dates-table">
+    <thead>
+      <tr>
+        <th>الصيغة المكتوبة</th>
+        <th>كيف تُقرأ (أمريكي)</th>
+        <th>كيف تُقرأ (بريطاني)</th>
+        <th>بالعربية</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>January 1, 2024</td>
+        <td>January first, twenty twenty-four</td>
+        <td>the first of January, twenty twenty-four</td>
+        <td style="font-family:var(--font-ar);text-align:right;direction:rtl;">1 يناير 2024</td>
+      </tr>
+      <tr>
+        <td>March 20, 2025</td>
+        <td>March twentieth, twenty twenty-five</td>
+        <td>the twentieth of March, twenty twenty-five</td>
+        <td style="font-family:var(--font-ar);text-align:right;direction:rtl;">20 مارس 2025</td>
+      </tr>
+      <tr>
+        <td>July 4, 1776</td>
+        <td>July fourth, seventeen seventy-six</td>
+        <td>the fourth of July, seventeen seventy-six</td>
+        <td style="font-family:var(--font-ar);text-align:right;direction:rtl;">4 يوليو 1776</td>
+      </tr>
+      <tr>
+        <td>December 25, 2024</td>
+        <td>December twenty-fifth, twenty twenty-four</td>
+        <td>the twenty-fifth of December, twenty twenty-four</td>
+        <td style="font-family:var(--font-ar);text-align:right;direction:rtl;">25 ديسمبر 2024</td>
+      </tr>
+      <tr>
+        <td>February 29, 2000</td>
+        <td>February twenty-ninth, two thousand</td>
+        <td>the twenty-ninth of February, two thousand</td>
+        <td style="font-family:var(--font-ar);text-align:right;direction:rtl;">29 فبراير 2000</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ===================== 7. PREPOSITIONS ===================== -->
+<div class="card">
+  <div class="section-label"><i class="fas fa-arrows-alt"></i> Prepositions of Time</div>
+  <h2 class="card-title"><i class="fas fa-arrows-alt"></i>حروف الجر الزمنية IN · ON · AT</h2>
+
+  <div class="prep-grid">
+    <div class="prep-card prep-in" onclick="speak('in January')">
+      <div class="prep-word-big">IN</div>
+      <div class="prep-rule">الشهور · السنوات · الفصول · أجزاء اليوم</div>
+      <ul class="prep-examples-list">
+        <li><strong>In January</strong> <span>في يناير</span></li>
+        <li><strong>In 2024</strong> <span>في عام 2024</span></li>
+        <li><strong>In summer</strong> <span>في الصيف</span></li>
+        <li><strong>In the morning</strong> <span>في الصباح</span></li>
+        <li><strong>In the evening</strong> <span>في المساء</span></li>
+      </ul>
+    </div>
+    <div class="prep-card prep-on" onclick="speak('on Monday')">
+      <div class="prep-word-big">ON</div>
+      <div class="prep-rule">الأيام · التواريخ · مناسبات بعينها</div>
+      <ul class="prep-examples-list">
+        <li><strong>On Monday</strong> <span>يوم الإثنين</span></li>
+        <li><strong>On June 15th</strong> <span>في 15 يونيو</span></li>
+        <li><strong>On my birthday</strong> <span>في عيد ميلادي</span></li>
+        <li><strong>On weekends</strong> <span>في عطل نهاية الأسبوع</span></li>
+        <li><strong>On Christmas Day</strong> <span>في يوم الكريسماس</span></li>
+      </ul>
+    </div>
+    <div class="prep-card prep-at" onclick="speak('at five o clock')">
+      <div class="prep-word-big">AT</div>
+      <div class="prep-rule">الأوقات المحددة · نقاط زمنية</div>
+      <ul class="prep-examples-list">
+        <li><strong>At 5 o'clock</strong> <span>الساعة الخامسة</span></li>
+        <li><strong>At midnight</strong> <span>عند منتصف الليل</span></li>
+        <li><strong>At noon</strong> <span>عند الظهيرة</span></li>
+        <li><strong>At lunchtime</strong> <span>وقت الغداء</span></li>
+        <li><strong>At the weekend</strong> <span>(بريطاني) نهاية الأسبوع</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <h3 style="font-size:14px;font-weight:700;color:var(--text-s);margin-bottom:12px;">جمل توضيحية</h3>
+  <table class="phrases-table">
+    <thead><tr><th>الجملة</th><th>المعنى</th><th>ملاحظة</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><div class="ph-en">I was born <span style="color:var(--green)">in</span> 1990.</div></td>
+        <td><div class="ph-ar">وُلدت عام 1990</div></td>
+        <td><div class="ph-example">سنة ← IN</div></td>
+      </tr>
+      <tr>
+        <td><div class="ph-en">The party is <span style="color:var(--blue-500)">on</span> Saturday.</div></td>
+        <td><div class="ph-ar">الحفلة يوم السبت</div></td>
+        <td><div class="ph-example">يوم ← ON</div></td>
+      </tr>
+      <tr>
+        <td><div class="ph-en">Meet me <span style="color:var(--amber)">at</span> 3 PM.</div></td>
+        <td><div class="ph-ar">قابلني الساعة 3 مساءً</div></td>
+        <td><div class="ph-example">وقت محدد ← AT</div></td>
+      </tr>
+      <tr>
+        <td><div class="ph-en">School starts <span style="color:var(--green)">in</span> September.</div></td>
+        <td><div class="ph-ar">تبدأ المدرسة في سبتمبر</div></td>
+        <td><div class="ph-example">شهر ← IN</div></td>
+      </tr>
+      <tr>
+        <td><div class="ph-en">He arrived <span style="color:var(--blue-500)">on</span> June 5th.</div></td>
+        <td><div class="ph-ar">وصل في 5 يونيو</div></td>
+        <td><div class="ph-example">تاريخ ← ON</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===================== 8. ADVANCED EXPRESSIONS ===================== -->
+<div class="card">
+  <div class="section-label"><i class="fas fa-rocket"></i> Advanced Expressions</div>
+  <h2 class="card-title"><i class="fas fa-rocket"></i>تعبيرات متقدمة</h2>
+
+  <div class="adv-grid">
+    <div class="adv-card">
+      <div class="adv-card-title"><i class="fas fa-sun"></i> أوقات اليوم</div>
+      <ul class="adv-list">
+        <li><strong>Midnight</strong><span>منتصف الليل (12:00 am)</span></li>
+        <li><strong>Dawn / Sunrise</strong><span>الفجر / شروق الشمس</span></li>
+        <li><strong>Morning</strong><span>الصباح (6am–12pm)</span></li>
+        <li><strong>Noon</strong><span>الظهيرة (12:00 pm)</span></li>
+        <li><strong>Afternoon</strong><span>بعد الظهر (12–6pm)</span></li>
+        <li><strong>Evening</strong><span>المساء (6–9pm)</span></li>
+        <li><strong>Night</strong><span>الليل (9pm–6am)</span></li>
+      </ul>
+    </div>
+    <div class="adv-card">
+      <div class="adv-card-title"><i class="fas fa-forward"></i> ماضٍ ومستقبل</div>
+      <ul class="adv-list">
+        <li><strong>Yesterday</strong><span>أمس</span></li>
+        <li><strong>Today</strong><span>اليوم</span></li>
+        <li><strong>Tomorrow</strong><span>غداً</span></li>
+        <li><strong>Last week / year</strong><span>الأسبوع / السنة الماضية</span></li>
+        <li><strong>Next week / month</strong><span>الأسبوع / الشهر القادم</span></li>
+        <li><strong>The day before yesterday</strong><span>أول أمس</span></li>
+        <li><strong>The day after tomorrow</strong><span>بعد غد</span></li>
+      </ul>
+    </div>
+    <div class="adv-card">
+      <div class="adv-card-title"><i class="fas fa-hourglass"></i> مدة ومواعيد</div>
+      <ul class="adv-list">
+        <li><strong>For 2 hours</strong><span>لمدة ساعتين</span></li>
+        <li><strong>Since 9 AM</strong><span>منذ الساعة 9 صباحاً</span></li>
+        <li><strong>Until / Till 5 PM</strong><span>حتى الساعة 5 مساءً</span></li>
+        <li><strong>During the meeting</strong><span>خلال الاجتماع</span></li>
+        <li><strong>By Friday</strong><span>بحلول يوم الجمعة</span></li>
+        <li><strong>In 10 minutes</strong><span>بعد 10 دقائق</span></li>
+        <li><strong>On time / Late / Early</strong><span>في الوقت / متأخر / مبكر</span></li>
+      </ul>
+    </div>
+    <div class="adv-card">
+      <div class="adv-card-title"><i class="fas fa-redo"></i> التكرار</div>
+      <ul class="adv-list">
+        <li><strong>Every day / Daily</strong><span>يومياً</span></li>
+        <li><strong>Every week / Weekly</strong><span>أسبوعياً</span></li>
+        <li><strong>Once a week</strong><span>مرة في الأسبوع</span></li>
+        <li><strong>Twice a month</strong><span>مرتين في الشهر</span></li>
+        <li><strong>Three times a year</strong><span>3 مرات في السنة</span></li>
+        <li><strong>Every other day</strong><span>كل يومين</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 9. EXERCISE ===================== -->
+<div class="card">
+  <div class="section-label"><i class="fas fa-pen-fancy"></i> Interactive Exercise</div>
+  <h2 class="card-title"><i class="fas fa-pen-fancy"></i>تمرين تفاعلي</h2>
+
+  <div class="exercise-wrap">
+    <div class="exercise-title">اختر التعبير الصحيح للوقت</div>
+    <div class="exercise-subtitle" id="ex-progress">تمرين 1 من 10</div>
+    <div class="ex-time-display" id="ex-time">10:15</div>
+    <div class="ex-opts" id="ex-opts"></div>
+    <div class="feedback" id="ex-fb"></div>
+    <button class="next-btn" onclick="nextExercise()">التمرين التالي →</button>
+  </div>
+</div>
+
+</div><!-- /page-wrap -->
 
 <script>
-function setTime(hour, minute) {
-  const timeDisplay = document.getElementById('current-time');
-  const hourHand = document.getElementById('hour-hand');
-  const minuteHand = document.getElementById('minute-hand');
-  
-  // تحديث العرض الرقمي
-  timeDisplay.textContent = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
-  
-  // تحديث عقارب الساعة
-  const hourAngle = (hour % 12) * 30 + minute * 0.5;
-  const minuteAngle = minute * 6;
-  
-  hourHand.style.transform = `translateX(-50%) rotate(${hourAngle}deg)`;
-  minuteHand.style.transform = `translateX(-50%) rotate(${minuteAngle}deg)`;
+/* =========================================
+   DATA
+========================================= */
+const days = [
+  { en:"Monday",    ar:"الإثنين",  pron:"/ˈmʌndeɪ/",    short:"Mon" },
+  { en:"Tuesday",   ar:"الثلاثاء", pron:"/ˈtjuːzdeɪ/",  short:"Tue" },
+  { en:"Wednesday", ar:"الأربعاء", pron:"/ˈwenzdeɪ/",   short:"Wed" },
+  { en:"Thursday",  ar:"الخميس",  pron:"/ˈθɜːrzdeɪ/",  short:"Thu" },
+  { en:"Friday",    ar:"الجمعة",  pron:"/ˈfraɪdeɪ/",   short:"Fri" },
+  { en:"Saturday",  ar:"السبت",   pron:"/ˈsætərdeɪ/",  short:"Sat" },
+  { en:"Sunday",    ar:"الأحد",   pron:"/ˈsʌndeɪ/",    short:"Sun" }
+];
+
+const months = [
+  { en:"January",   ar:"يناير",   pron:"/ˈdʒænjueri/",  season:"Winter",  num:1  },
+  { en:"February",  ar:"فبراير",  pron:"/ˈfebrueri/",   season:"Winter",  num:2  },
+  { en:"March",     ar:"مارس",    pron:"/mɑːrtʃ/",      season:"Spring",  num:3  },
+  { en:"April",     ar:"أبريل",   pron:"/ˈeɪprəl/",     season:"Spring",  num:4  },
+  { en:"May",       ar:"مايو",    pron:"/meɪ/",          season:"Spring",  num:5  },
+  { en:"June",      ar:"يونيو",   pron:"/dʒuːn/",       season:"Summer",  num:6  },
+  { en:"July",      ar:"يوليو",   pron:"/dʒuˈlaɪ/",     season:"Summer",  num:7  },
+  { en:"August",    ar:"أغسطس",   pron:"/ˈɔːɡəst/",     season:"Summer",  num:8  },
+  { en:"September", ar:"سبتمبر",  pron:"/sepˈtembər/",  season:"Autumn",  num:9  },
+  { en:"October",   ar:"أكتوبر",  pron:"/ɑːkˈtoʊbər/",  season:"Autumn",  num:10 },
+  { en:"November",  ar:"نوفمبر",  pron:"/noʊˈvembər/",  season:"Autumn",  num:11 },
+  { en:"December",  ar:"ديسمبر",  pron:"/dɪˈsembər/",   season:"Winter",  num:12 }
+];
+
+const nums = [
+  { n:1,  word:"one",    pron:"/wʌn/" },
+  { n:2,  word:"two",    pron:"/tuː/" },
+  { n:3,  word:"three",  pron:"/θriː/" },
+  { n:4,  word:"four",   pron:"/fɔːr/" },
+  { n:5,  word:"five",   pron:"/faɪv/" },
+  { n:6,  word:"six",    pron:"/sɪks/" },
+  { n:7,  word:"seven",  pron:"/ˈsevn/" },
+  { n:8,  word:"eight",  pron:"/eɪt/" },
+  { n:9,  word:"nine",   pron:"/naɪn/" },
+  { n:10, word:"ten",    pron:"/ten/" },
+  { n:11, word:"eleven", pron:"/ɪˈlevn/" },
+  { n:12, word:"twelve", pron:"/twelv/" }
+];
+
+const ordinals = [
+  {n:1,w:"first"},{n:2,w:"second"},{n:3,w:"third"},{n:4,w:"fourth"},
+  {n:5,w:"fifth"},{n:6,w:"sixth"},{n:7,w:"seventh"},{n:8,w:"eighth"},
+  {n:9,w:"ninth"},{n:10,w:"tenth"},{n:11,w:"eleventh"},{n:12,w:"twelfth"},
+  {n:13,w:"thirteenth"},{n:14,w:"fourteenth"},{n:15,w:"fifteenth"},
+  {n:16,w:"sixteenth"},{n:17,w:"seventeenth"},{n:18,w:"eighteenth"},
+  {n:19,w:"nineteenth"},{n:20,w:"twentieth"},{n:21,w:"twenty-first"},
+  {n:22,w:"twenty-second"},{n:23,w:"twenty-third"},{n:24,w:"twenty-fourth"},
+  {n:25,w:"twenty-fifth"},{n:26,w:"twenty-sixth"},{n:27,w:"twenty-seventh"},
+  {n:28,w:"twenty-eighth"},{n:29,w:"twenty-ninth"},{n:30,w:"thirtieth"},
+  {n:31,w:"thirty-first"}
+];
+
+const ordSuffix = n => {
+  if(n===1||n===21||n===31) return "st";
+  if(n===2||n===22) return "nd";
+  if(n===3||n===23) return "rd";
+  return "th";
+};
+
+const timeExpressions = [
+  { en:"o'clock",      pron:"/əˈklɑːk/",      ar:"الساعة تماماً",  ex:"It's three o'clock" },
+  { en:"half past",    pron:"/hæf pæst/",      ar:"والنصف",         ex:"Half past seven" },
+  { en:"quarter past", pron:"/ˈkwɔːrtər pæst/", ar:"والربع",        ex:"Quarter past two" },
+  { en:"quarter to",   pron:"/ˈkwɔːrtər tuː/",  ar:"إلا ربعاً",     ex:"Quarter to nine" },
+  { en:"past",         pron:"/pæst/",           ar:"بعد",            ex:"Ten past six" },
+  { en:"to",           pron:"/tuː/",            ar:"إلا",            ex:"Twenty to eight" },
+  { en:"sharp",        pron:"/ʃɑːrp/",          ar:"بالضبط / تماماً",ex:"At 8 sharp" },
+  { en:"a.m.",         pron:"/ˌeɪˈem/",         ar:"قبل الظهر",     ex:"9 a.m." },
+  { en:"p.m.",         pron:"/ˌpiːˈem/",        ar:"بعد الظهر",     ex:"5 p.m." },
+  { en:"noon",         pron:"/nuːn/",           ar:"الظهيرة",        ex:"At noon" },
+  { en:"midnight",     pron:"/ˈmɪdnaɪt/",      ar:"منتصف الليل",   ex:"At midnight" },
+  { en:"dawn",         pron:"/dɔːn/",           ar:"الفجر",          ex:"Before dawn" },
+  { en:"dusk",         pron:"/dʌsk/",           ar:"الغسق / المغرب", ex:"After dusk" },
+  { en:"lunchtime",    pron:"/ˈlʌntʃtaɪm/",    ar:"وقت الغداء",    ex:"At lunchtime" },
+  { en:"rush hour",    pron:"/ˈrʌʃ aʊər/",     ar:"ساعة الذروة",   ex:"During rush hour" },
+];
+
+const timeTable = [
+  { time:"2:00",  br:"two o'clock",           us:"two o'clock",          ar:"الساعة الثانية تماماً" },
+  { time:"2:05",  br:"five past two",         us:"two oh five",          ar:"الثانية وخمس دقائق" },
+  { time:"2:10",  br:"ten past two",          us:"two ten",              ar:"الثانية وعشر دقائق" },
+  { time:"2:15",  br:"quarter past two",      us:"two fifteen",          ar:"الثانية والربع" },
+  { time:"2:20",  br:"twenty past two",       us:"two twenty",           ar:"الثانية وعشرون دقيقة" },
+  { time:"2:25",  br:"twenty-five past two",  us:"two twenty-five",      ar:"الثانية وخمس وعشرون" },
+  { time:"2:30",  br:"half past two",         us:"two thirty",           ar:"الثانية والنصف" },
+  { time:"2:35",  br:"twenty-five to three",  us:"two thirty-five",      ar:"الثالثة إلا خمس وعشرين" },
+  { time:"2:40",  br:"twenty to three",       us:"two forty",            ar:"الثالثة إلا عشرين" },
+  { time:"2:45",  br:"quarter to three",      us:"two forty-five",       ar:"الثالثة إلا الربع" },
+  { time:"2:50",  br:"ten to three",          us:"two fifty",            ar:"الثالثة إلا عشر دقائق" },
+  { time:"2:55",  br:"five to three",         us:"two fifty-five",       ar:"الثالثة إلا خمس دقائق" },
+];
+
+/* =========================================
+   CLOCK LOGIC
+========================================= */
+let curH = 12, curM = 0;
+let qAttempts = 0, qCorrect = 0;
+let selectedOpt = null;
+let correctAns = "";
+
+function setTime(h, m) {
+  curH = h; curM = m;
+  updateClock(h, m);
+  generateQuiz(h, m);
 }
 
-function playDaySound(day) {
-  console.log('Playing day sound:', day);
+function setRandTime() {
+  const h = Math.floor(Math.random()*12)+1;
+  const mOpts = [0,5,10,15,20,25,30,35,40,45,50,55];
+  const m = mOpts[Math.floor(Math.random()*mOpts.length)];
+  setTime(h, m);
 }
 
-function playMonthSound(month) {
-  console.log('Playing month sound:', month);
+function updateClock(h, m) {
+  const hDeg = ((h % 12) / 12) * 360 + (m / 60) * 30;
+  const mDeg = (m / 60) * 360;
+  document.getElementById('hr-hand').setAttribute('transform', `rotate(${hDeg} 130 130)`);
+  document.getElementById('mn-hand').setAttribute('transform', `rotate(${mDeg} 130 130)`);
+
+  const hh = String(h).padStart(2,'0');
+  const mm = String(m).padStart(2,'0');
+  document.getElementById('dig-time').textContent = `${hh}:${mm}`;
+  document.getElementById('dig-label').textContent = getTimeText(h, m);
 }
 
-function checkAnswer(button, isCorrect) {
-  const buttons = button.parentElement.querySelectorAll('.option-btn');
-  
-  buttons.forEach(btn => {
-    btn.disabled = true;
-    if (btn === button) {
-      btn.classList.add(isCorrect ? 'correct' : 'incorrect');
-    } else if (btn.onclick.toString().includes('true')) {
-      btn.classList.add('correct');
-    }
+function getTimeText(h, m) {
+  const nums12 = ["","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve"];
+  const mins = ["","one","two","three","four","five","six","seven","eight","nine","ten",
+    "eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty",
+    "twenty-one","twenty-two","twenty-three","twenty-four","twenty-five","twenty-six","twenty-seven",
+    "twenty-eight","twenty-nine"];
+  const h12 = h % 12 || 12;
+  const next = (h12 % 12) + 1;
+  if(m === 0) return `It's ${nums12[h12]} o'clock`;
+  if(m === 15) return `It's quarter past ${nums12[h12]}`;
+  if(m === 30) return `It's half past ${nums12[h12]}`;
+  if(m === 45) return `It's quarter to ${nums12[next]}`;
+  if(m < 30) return `It's ${mins[m]} past ${nums12[h12]}`;
+  return `It's ${mins[60-m]} to ${nums12[next]}`;
+}
+
+function generateQuiz(h, m) {
+  correctAns = getTimeText(h, m);
+  const wrongs = generateWrongAnswers(h, m);
+  const allOpts = shuffle([correctAns, ...wrongs.slice(0,3)]);
+  selectedOpt = null;
+
+  const q = document.getElementById('quiz-q');
+  q.textContent = "ما هو الوقت الصحيح للساعة المعروضة؟";
+
+  const container = document.getElementById('quiz-opts');
+  container.innerHTML = allOpts.map(o =>
+    `<button class="qopt" onclick="selectOpt(this,'${o.replace(/'/g,"&#39;")}')">${o}</button>`
+  ).join('');
+
+  const fb = document.getElementById('quiz-fb');
+  fb.className = 'feedback';
+  fb.textContent = '';
+}
+
+function generateWrongAnswers(h, m) {
+  const wrong = [];
+  const offsets = [15, -15, 30, -30, 5, -5, 10, -10];
+  for(const off of offsets) {
+    let nm = m + off;
+    let nh = h;
+    while(nm < 0) { nm += 60; nh = nh === 1 ? 12 : nh - 1; }
+    while(nm >= 60) { nm -= 60; nh = nh === 12 ? 1 : nh + 1; }
+    const t = getTimeText(nh, nm);
+    if(t !== correctAns && !wrong.includes(t)) wrong.push(t);
+    if(wrong.length >= 3) break;
+  }
+  return wrong;
+}
+
+function shuffle(arr) {
+  const a = [...arr];
+  for(let i = a.length-1; i > 0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function selectOpt(el, val) {
+  document.querySelectorAll('.qopt').forEach(b => b.classList.remove('sel'));
+  el.classList.add('sel');
+  selectedOpt = val;
+}
+
+function checkQuiz() {
+  if(!selectedOpt) return;
+  qAttempts++;
+  const fb = document.getElementById('quiz-fb');
+
+  document.querySelectorAll('.qopt').forEach(b => {
+    if(b.textContent === correctAns) b.classList.add('correct-a');
+    else if(b.classList.contains('sel')) b.classList.add('wrong-a');
   });
-}
 
-function checkMatching() {
-  const targets = document.querySelectorAll('.match-target');
-  let correctMatches = 0;
-  
-  targets.forEach(target => {
-    const droppedItem = target.querySelector('.match-item');
-    if (droppedItem && droppedItem.dataset.match === target.dataset.match) {
-      target.classList.add('matched');
-      correctMatches++;
-    }
-  });
-  
-  if (correctMatches === targets.length) {
-    alert('ممتاز! جميع الإجابات صحيحة');
+  if(selectedOpt === correctAns) {
+    qCorrect++;
+    fb.textContent = "✅ إجابة صحيحة! " + correctAns;
+    fb.className = 'feedback ok show';
+    speak(correctAns);
   } else {
-    alert(`${correctMatches} من ${targets.length} إجابات صحيحة`);
+    fb.textContent = `❌ الإجابة الصحيحة: ${correctAns}`;
+    fb.className = 'feedback err show';
+  }
+
+  const acc = Math.round((qCorrect/qAttempts)*100);
+  document.getElementById('sc-attempts').innerHTML = `<i class="fas fa-bullseye"></i> ${qAttempts} / 10`;
+  document.getElementById('sc-accuracy').innerHTML = `<i class="fas fa-chart-bar"></i> ${acc}%`;
+}
+
+/* =========================================
+   EXERCISE
+========================================= */
+const exercises = [
+  { time:"10:15", opts:["ten fifteen","quarter past ten","quarter to ten","half past ten"], ans:"quarter past ten" },
+  { time:"3:30",  opts:["half past two","quarter past three","half past three","three thirty"], ans:"half past three" },
+  { time:"7:45",  opts:["quarter to eight","quarter past seven","seven forty-five","half past seven"], ans:"quarter to eight" },
+  { time:"12:00", opts:["twelve sharp","noon / midnight","twelve o'clock","it's half past twelve"], ans:"twelve o'clock" },
+  { time:"5:05",  opts:["five past five","five to five","a quarter past five","five five"], ans:"five past five" },
+  { time:"8:50",  opts:["ten past eight","ten to nine","fifty past eight","eight fifty"], ans:"ten to nine" },
+  { time:"1:20",  opts:["twenty to one","twenty past one","quarter past one","one twenty"], ans:"twenty past one" },
+  { time:"6:55",  opts:["five to six","five past six","five to seven","fifty-five past six"], ans:"five to seven" },
+  { time:"9:00",  opts:["nine o'clock","quarter past nine","half past eight","nine sharp"], ans:"nine o'clock" },
+  { time:"4:40",  opts:["twenty to four","twenty to five","forty past four","twenty past four"], ans:"twenty to five" },
+];
+
+let exIdx = 0;
+let exDone = false;
+
+function loadExercise() {
+  const ex = exercises[exIdx % exercises.length];
+  exDone = false;
+  document.getElementById('ex-time').textContent = ex.time;
+  document.getElementById('ex-progress').textContent = `تمرين ${(exIdx % exercises.length)+1} من ${exercises.length}`;
+  const container = document.getElementById('ex-opts');
+  container.innerHTML = shuffle(ex.opts).map(o =>
+    `<button class="ex-opt-btn" onclick="checkEx(this,'${o}','${ex.ans}')">${o}</button>`
+  ).join('');
+  const fb = document.getElementById('ex-fb');
+  fb.className = 'feedback';
+  fb.textContent = '';
+}
+
+function checkEx(el, chosen, ans) {
+  if(exDone) return;
+  exDone = true;
+  document.querySelectorAll('.ex-opt-btn').forEach(b => {
+    if(b.textContent === ans) b.classList.add('correct-a');
+    else if(b.textContent === chosen && chosen !== ans) b.classList.add('wrong-a');
+  });
+  const fb = document.getElementById('ex-fb');
+  if(chosen === ans) {
+    fb.textContent = "✅ ممتاز! الإجابة صحيحة.";
+    fb.className = 'feedback ok show';
+    speak(ans);
+  } else {
+    fb.textContent = `❌ الصحيح: ${ans}`;
+    fb.className = 'feedback err show';
   }
 }
 
-// إعداد وظائف السحب والإسقاط
-document.addEventListener('DOMContentLoaded', function() {
-  const draggables = document.querySelectorAll('.match-item');
-  const targets = document.querySelectorAll('.match-target');
-  
-  draggables.forEach(draggable => {
-    draggable.addEventListener('dragstart', function(e) {
-      e.dataTransfer.setData('text/plain', this.dataset.match);
-      this.style.opacity = '0.5';
-    });
-    
-    draggable.addEventListener('dragend', function() {
-      this.style.opacity = '1';
-    });
-  });
-  
-  targets.forEach(target => {
-    target.addEventListener('dragover', function(e) {
-      e.preventDefault();
-      this.classList.add('drag-over');
-    });
-    
-    target.addEventListener('dragleave', function() {
-      this.classList.remove('drag-over');
-    });
-    
-    target.addEventListener('drop', function(e) {
-      e.preventDefault();
-      this.classList.remove('drag-over');
-      
-      const match = e.dataTransfer.getData('text/plain');
-      const draggedElement = document.querySelector(`[data-match="${match}"].match-item`);
-      
-      if (draggedElement) {
-        const clone = draggedElement.cloneNode(true);
-        clone.classList.remove('match-item');
-        clone.draggable = false;
-        clone.style.cursor = 'default';
-        
-        this.appendChild(clone);
-        draggedElement.remove();
-      }
-    });
-  });
-  
-  // تعيين الوقت الحالي
-  const now = new Date();
-  setTime(now.getHours(), now.getMinutes());
+function nextExercise() {
+  exIdx++;
+  loadExercise();
+}
+
+/* =========================================
+   SPEECH
+========================================= */
+function speak(text) {
+  if(!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US'; u.rate = 0.85; u.volume = 0.95;
+  speechSynthesis.speak(u);
+}
+
+/* =========================================
+   RENDER
+========================================= */
+function renderAll() {
+  /* expression cards */
+  document.getElementById('expr-grid').innerHTML = timeExpressions.map(e =>
+    `<div class="expr-card" onclick="speak('${e.en}')">
+      <div class="expr-en">${e.en}</div>
+      <div class="expr-pron">${e.pron}</div>
+      <div class="expr-ar">${e.ar}</div>
+      <div class="expr-example">${e.ex}</div>
+    </div>`
+  ).join('');
+
+  /* time table */
+  document.getElementById('time-table-body').innerHTML = timeTable.map(r =>
+    `<tr>
+      <td><strong style="font-family:var(--font-mono);color:var(--blue-600)">${r.time}</strong></td>
+      <td>${r.br}</td>
+      <td>${r.us}</td>
+      <td style="font-family:var(--font-ar);direction:rtl;text-align:right;">${r.ar}</td>
+    </tr>`
+  ).join('');
+
+  /* days */
+  document.getElementById('days-grid').innerHTML = days.map((d,i) =>
+    `<div class="day-card" onclick="speak('${d.en}')">
+      <div class="day-num">DAY ${i+1}</div>
+      <div class="day-en">${d.en}</div>
+      <div class="day-short-tag">${d.short}</div>
+      <div class="day-ar">${d.ar}</div>
+      <div class="day-pron-s">${d.pron}</div>
+    </div>`
+  ).join('');
+
+  /* months */
+  document.getElementById('months-grid').innerHTML = months.map(m =>
+    `<div class="month-card" onclick="speak('${m.en}')">
+      <div class="month-num-badge">${m.num}</div>
+      <div class="month-en">${m.en}</div>
+      <div class="month-ar-s">${m.ar}</div>
+      <div class="month-pron-s">${m.pron}</div>
+      <span class="season-chip season-${m.season}">${m.season}</span>
+    </div>`
+  ).join('');
+
+  /* numbers */
+  document.getElementById('nums-grid').innerHTML = nums.map(n =>
+    `<div class="num-card" onclick="speak('${n.word}')">
+      <div class="num-arabic">${n.n}</div>
+      <div class="num-word">${n.word.toUpperCase()}</div>
+      <div class="num-pron">${n.pron}</div>
+    </div>`
+  ).join('');
+
+  /* ordinals */
+  document.getElementById('ord-grid').innerHTML = ordinals.map(o =>
+    `<div class="ord-card" onclick="speak('${o.w}')">
+      <div class="ord-num">${o.n}${ordSuffix(o.n)}</div>
+      <div class="ord-word">${o.w}</div>
+    </div>`
+  ).join('');
+}
+
+/* =========================================
+   HEADER HIDE ON SCROLL
+========================================= */
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const cur = window.scrollY;
+  const header = document.getElementById('site-header');
+  if(cur > lastScroll && cur > 100) {
+    header.classList.add('hidden');
+  } else {
+    header.classList.remove('hidden');
+  }
+  lastScroll = cur;
+}, { passive: true });
+
+/* =========================================
+   INIT
+========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  renderAll();
+  updateClock(12, 0);
+  generateQuiz(12, 0);
+  loadExercise();
 });
-
-function previousLesson() {
-  if (window.parent && window.parent.previousLesson) {
-    window.parent.previousLesson();
-  }
-}
-
-function nextLesson() {
-  if (window.parent && window.parent.nextLesson) {
-    window.parent.nextLesson();
-  }
-}
 </script>
+</body>
+</html>
