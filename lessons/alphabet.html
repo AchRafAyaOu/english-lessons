@@ -1,7 +1,19 @@
 <div class="lesson-content">
   <div class="lesson-header">
-    <h1 class="lesson-title">الدرس الأول: الحروف الأبجدية والأرقام</h1>
-    <p class="lesson-description">تعلم الحروف الإنجليزية والأرقام الأساسية مع النطق الصحيح والتدريب العملي</p>
+    <h1 class="lesson-title">الدرس الأول: أساسيات الإنجليزية</h1>
+    <p class="lesson-description">
+      مرحباً بك في رحلتك لتعلم اللغة الإنجليزية! في هذا الدرس، ستتعلم الحروف الأبجدية والأرقام الأساسية.
+      سنركز على النطق الصحيح ونقدم أمثلة عملية لترسيخ الفهم.
+      <br>
+      **ما ستتعلمه في هذا الدرس:**
+      <ul>
+        <li>الحروف الأبجدية الإنجليزية (A-Z) ونطقها.</li>
+        <li>أمثلة لكلمات تبدأ بكل حرف.</li>
+        <li>الأرقام الأساسية من 0 إلى 20 وكيفية نطقها.</li>
+        <li>أمثلة لاستخدام الأرقام في جمل.</li>
+        <li>تمارين تفاعلية لاختبار فهمك.</li>
+      </ul>
+    </p>
   </div>
 
   <div class="lesson-sections">
@@ -9,100 +21,44 @@
     <div class="lesson-section">
       <h2 class="section-title">
         <i class="fas fa-font"></i>
-        الحروف الأبجدية الإنجليزية
+        الحروف الأبجدية الإنجليزية (A-Z)
       </h2>
+      <p class="section-intro">
+        اللغة الإنجليزية تتكون من 26 حرفاً، لكل منها شكل كبير (Capital) وصغير (Small). تذكر أن هناك 5 حروف متحركة (Vowels): A, E, I, O, U، وباقي الحروف هي ساكنة (Consonants).
+      </p>
       
       <div class="alphabet-grid">
-        <div class="letter-card" onclick="playLetterSound('a')">
-          <div class="letter-upper">A</div>
-          <div class="letter-lower">a</div>
-          <div class="letter-pronunciation">/eɪ/</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="letter-card" onclick="playLetterSound('b')">
-          <div class="letter-upper">B</div>
-          <div class="letter-lower">b</div>
-          <div class="letter-pronunciation">/biː/</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="letter-card" onclick="playLetterSound('c')">
-          <div class="letter-upper">C</div>
-          <div class="letter-lower">c</div>
-          <div class="letter-pronunciation">/siː/</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="letter-card" onclick="playLetterSound('d')">
-          <div class="letter-upper">D</div>
-          <div class="letter-lower">d</div>
-          <div class="letter-pronunciation">/diː/</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="letter-card" onclick="playLetterSound('e')">
-          <div class="letter-upper">E</div>
-          <div class="letter-lower">e</div>
-          <div class="letter-pronunciation">/iː/</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="letter-card" onclick="playLetterSound('f')">
-          <div class="letter-upper">F</div>
-          <div class="letter-lower">f</div>
-          <div class="letter-pronunciation">/ef/</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="letter-card" onclick="playLetterSound('g')">
-          <div class="letter-upper">G</div>
-          <div class="letter-lower">g</div>
-          <div class="letter-pronunciation">/dʒiː/</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="letter-card" onclick="playLetterSound('h')">
-          <div class="letter-upper">H</div>
-          <div class="letter-lower">h</div>
-          <div class="letter-pronunciation">/eɪtʃ/</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="letter-card" onclick="playLetterSound('i')">
-          <div class="letter-upper">I</div>
-          <div class="letter-lower">i</div>
-          <div class="letter-pronunciation">/aɪ/</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="letter-card" onclick="playLetterSound('j')">
-          <div class="letter-upper">J</div>
-          <div class="letter-lower">j</div>
-          <div class="letter-pronunciation">/dʒeɪ/</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
+        <!-- الحروف من A إلى Z مع أمثلة -->
+        <div class="letter-card" onclick="playLetterSound('A', 'Apple')"> <div class="letter-upper">A</div> <div class="letter-lower">a</div> <div class="letter-pronunciation">/eɪ/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=A" alt="Apple icon"> Apple (تفاحة)</div> <button class="audio-btn" aria-label="Play sound for A and Apple"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('B', 'Ball')"> <div class="letter-upper">B</div> <div class="letter-lower">b</div> <div class="letter-pronunciation">/biː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=B" alt="Ball icon"> Ball (كرة)</div> <button class="audio-btn" aria-label="Play sound for B and Ball"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('C', 'Cat')"> <div class="letter-upper">C</div> <div class="letter-lower">c</div> <div class="letter-pronunciation">/siː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=C" alt="Cat icon"> Cat (قطة)</div> <button class="audio-btn" aria-label="Play sound for C and Cat"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('D', 'Dog')"> <div class="letter-upper">D</div> <div class="letter-lower">d</div> <div class="letter-pronunciation">/diː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=D" alt="Dog icon"> Dog (كلب)</div> <button class="audio-btn" aria-label="Play sound for D and Dog"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('E', 'Elephant')"> <div class="letter-upper">E</div> <div class="letter-lower">e</div> <div class="letter-pronunciation">/iː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=E" alt="Elephant icon"> Elephant (فيل)</div> <button class="audio-btn" aria-label="Play sound for E and Elephant"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('F', 'Fish')"> <div class="letter-upper">F</div> <div class="letter-lower">f</div> <div class="letter-pronunciation">/ef/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=F" alt="Fish icon"> Fish (سمكة)</div> <button class="audio-btn" aria-label="Play sound for F and Fish"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('G', 'Grape')"> <div class="letter-upper">G</div> <div class="letter-lower">g</div> <div class="letter-pronunciation">/dʒiː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=G" alt="Grape icon"> Grape (عنب)</div> <button class="audio-btn" aria-label="Play sound for G and Grape"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('H', 'House')"> <div class="letter-upper">H</div> <div class="letter-lower">h</div> <div class="letter-pronunciation">/eɪtʃ/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=H" alt="House icon"> House (منزل)</div> <button class="audio-btn" aria-label="Play sound for H and House"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('I', 'Ice')"> <div class="letter-upper">I</div> <div class="letter-lower">i</div> <div class="letter-pronunciation">/aɪ/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=I" alt="Ice icon"> Ice (ثلج)</div> <button class="audio-btn" aria-label="Play sound for I and Ice"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('J', 'Jellyfish')"> <div class="letter-upper">J</div> <div class="letter-lower">j</div> <div class="letter-pronunciation">/dʒeɪ/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=J" alt="Jellyfish icon"> Jellyfish (قنديل البحر)</div> <button class="audio-btn" aria-label="Play sound for J and Jellyfish"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('K', 'Kite')"> <div class="letter-upper">K</div> <div class="letter-lower">k</div> <div class="letter-pronunciation">/keɪ/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=K" alt="Kite icon"> Kite (طائرة ورقية)</div> <button class="audio-btn" aria-label="Play sound for K and Kite"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('L', 'Lion')"> <div class="letter-upper">L</div> <div class="letter-lower">l</div> <div class="letter-pronunciation">/el/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=L" alt="Lion icon"> Lion (أسد)</div> <button class="audio-btn" aria-label="Play sound for L and Lion"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('M', 'Monkey')"> <div class="letter-upper">M</div> <div class="letter-lower">m</div> <div class="letter-pronunciation">/em/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=M" alt="Monkey icon"> Monkey (قرد)</div> <button class="audio-btn" aria-label="Play sound for M and Monkey"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('N', 'Nest')"> <div class="letter-upper">N</div> <div class="letter-lower">n</div> <div class="letter-pronunciation">/en/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=N" alt="Nest icon"> Nest (عش)</div> <button class="audio-btn" aria-label="Play sound for N and Nest"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('O', 'Owl')"> <div class="letter-upper">O</div> <div class="letter-lower">o</div> <div class="letter-pronunciation">/oʊ/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=O" alt="Owl icon"> Owl (بومة)</div> <button class="audio-btn" aria-label="Play sound for O and Owl"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('P', 'Penguin')"> <div class="letter-upper">P</div> <div class="letter-lower">p</div> <div class="letter-pronunciation">/piː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=P" alt="Penguin icon"> Penguin (بطريق)</div> <button class="audio-btn" aria-label="Play sound for P and Penguin"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('Q', 'Queen')"> <div class="letter-upper">Q</div> <div class="letter-lower">q</div> <div class="letter-pronunciation">/kjuː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=Q" alt="Queen icon"> Queen (ملكة)</div> <button class="audio-btn" aria-label="Play sound for Q and Queen"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('R', 'Rabbit')"> <div class="letter-upper">R</div> <div class="letter-lower">r</div> <div class="letter-pronunciation">/ɑːr/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=R" alt="Rabbit icon"> Rabbit (أرنب)</div> <button class="audio-btn" aria-label="Play sound for R and Rabbit"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('S', 'Sun')"> <div class="letter-upper">S</div> <div class="letter-lower">s</div> <div class="letter-pronunciation">/es/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=S" alt="Sun icon"> Sun (شمس)</div> <button class="audio-btn" aria-label="Play sound for S and Sun"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('T', 'Tree')"> <div class="letter-upper">T</div> <div class="letter-lower">t</div> <div class="letter-pronunciation">/tiː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=T" alt="Tree icon"> Tree (شجرة)</div> <button class="audio-btn" aria-label="Play sound for T and Tree"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('U', 'Umbrella')"> <div class="letter-upper">U</div> <div class="letter-lower">u</div> <div class="letter-pronunciation">/juː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=U" alt="Umbrella icon"> Umbrella (مظلة)</div> <button class="audio-btn" aria-label="Play sound for U and Umbrella"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('V', 'Violin')"> <div class="letter-upper">V</div> <div class="letter-lower">v</div> <div class="letter-pronunciation">/viː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=V" alt="Violin icon"> Violin (كمان)</div> <button class="audio-btn" aria-label="Play sound for V and Violin"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('W', 'Watch')"> <div class="letter-upper">W</div> <div class="letter-lower">w</div> <div class="letter-pronunciation">/ˈdʌbəljuː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=W" alt="Watch icon"> Watch (ساعة يد)</div> <button class="audio-btn" aria-label="Play sound for W and Watch"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('X', 'Xylophone')"> <div class="letter-upper">X</div> <div class="letter-lower">x</div> <div class="letter-pronunciation">/eks/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=X" alt="Xylophone icon"> Xylophone (إكسيليفون)</div> <button class="audio-btn" aria-label="Play sound for X and Xylophone"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('Y', 'Yacht')"> <div class="letter-upper">Y</div> <div class="letter-lower">y</div> <div class="letter-pronunciation">/waɪ/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=Y" alt="Yacht icon"> Yacht (يخت)</div> <button class="audio-btn" aria-label="Play sound for Y and Yacht"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="letter-card" onclick="playLetterSound('Z', 'Zebra')"> <div class="letter-upper">Z</div> <div class="letter-lower">z</div> <div class="letter-pronunciation">/ziː/</div> <div class="letter-example"><img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=Z" alt="Zebra icon"> Zebra (حمار وحشي)</div> <button class="audio-btn" aria-label="Play sound for Z and Zebra"><i class="fas fa-volume-up"></i></button> </div>
       </div>
+      <p class="section-tips">
+        **نصيحة للنطق:** استمع جيداً للنطق المتكرر وحاول تقليده. النطق الصحيح أساسي لتعلم اللغة!
+      </p>
     </div>
 
     <!-- قسم الأرقام -->
@@ -111,107 +67,37 @@
         <i class="fas fa-calculator"></i>
         الأرقام الأساسية (0-20)
       </h2>
+      <p class="section-intro">
+        تعلم الأرقام الإنجليزية أمر حيوي للمحادثات اليومية، سواء للسؤال عن العمر، السعر، أو الوقت.
+      </p>
       
       <div class="numbers-grid">
-        <div class="number-card" onclick="playNumberSound('zero')">
-          <div class="number-digit">0</div>
-          <div class="number-word">Zero</div>
-          <div class="number-arabic">صفر</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="number-card" onclick="playNumberSound('one')">
-          <div class="number-digit">1</div>
-          <div class="number-word">One</div>
-          <div class="number-arabic">واحد</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="number-card" onclick="playNumberSound('two')">
-          <div class="number-digit">2</div>
-          <div class="number-word">Two</div>
-          <div class="number-arabic">اثنان</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="number-card" onclick="playNumberSound('three')">
-          <div class="number-digit">3</div>
-          <div class="number-word">Three</div>
-          <div class="number-arabic">ثلاثة</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="number-card" onclick="playNumberSound('four')">
-          <div class="number-digit">4</div>
-          <div class="number-word">Four</div>
-          <div class="number-arabic">أربعة</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="number-card" onclick="playNumberSound('five')">
-          <div class="number-digit">5</div>
-          <div class="number-word">Five</div>
-          <div class="number-arabic">خمسة</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="number-card" onclick="playNumberSound('six')">
-          <div class="number-digit">6</div>
-          <div class="number-word">Six</div>
-          <div class="number-arabic">ستة</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="number-card" onclick="playNumberSound('seven')">
-          <div class="number-digit">7</div>
-          <div class="number-word">Seven</div>
-          <div class="number-arabic">سبعة</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="number-card" onclick="playNumberSound('eight')">
-          <div class="number-digit">8</div>
-          <div class="number-word">Eight</div>
-          <div class="number-arabic">ثمانية</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="number-card" onclick="playNumberSound('nine')">
-          <div class="number-digit">9</div>
-          <div class="number-word">Nine</div>
-          <div class="number-arabic">تسعة</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-        
-        <div class="number-card" onclick="playNumberSound('ten')">
-          <div class="number-digit">10</div>
-          <div class="number-word">Ten</div>
-          <div class="number-arabic">عشرة</div>
-          <button class="audio-btn">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
+        <!-- الأرقام من 0 إلى 20 مع أمثلة -->
+        <div class="number-card" onclick="playNumberSound('zero', 'I have zero apples.')"> <div class="number-digit">0</div> <div class="number-word">Zero</div> <div class="number-arabic">صفر</div> <div class="number-example">I have zero apples.</div> <button class="audio-btn" aria-label="Play sound for Zero"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('one', 'I have one book.')"> <div class="number-digit">1</div> <div class="number-word">One</div> <div class="number-arabic">واحد</div> <div class="number-example">I have one book.</div> <button class="audio-btn" aria-label="Play sound for One"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('two', 'She has two cats.')"> <div class="number-digit">2</div> <div class="number-word">Two</div> <div class="number-arabic">اثنان</div> <div class="number-example">She has two cats.</div> <button class="audio-btn" aria-label="Play sound for Two"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('three', 'There are three birds.')"> <div class="number-digit">3</div> <div class="number-word">Three</div> <div class="number-arabic">ثلاثة</div> <div class="number-example">There are three birds.</div> <button class="audio-btn" aria-label="Play sound for Three"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('four', 'I am four years old.')"> <div class="number-digit">4</div> <div class="number-word">Four</div> <div class="number-arabic">أربعة</div> <div class="number-example">I am four years old.</div> <button class="audio-btn" aria-label="Play sound for Four"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('five', 'Five fingers on a hand.')"> <div class="number-digit">5</div> <div class="number-word">Five</div> <div class="number-arabic">خمسة</div> <div class="number-example">Five fingers on a hand.</div> <button class="audio-btn" aria-label="Play sound for Five"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('six', 'Six flowers in the vase.')"> <div class="number-digit">6</div> <div class="number-word">Six</div> <div class="number-arabic">ستة</div> <div class="number-example">Six flowers in the vase.</div> <button class="audio-btn" aria-label="Play sound for Six"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('seven', 'Seven days in a week.')"> <div class="number-digit">7</div> <div class="number-word">Seven</div> <div class="number-arabic">سبعة</div> <div class="number-example">Seven days in a week.</div> <button class="audio-btn" aria-label="Play sound for Seven"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('eight', 'Eight planets in our solar system.')"> <div class="number-digit">8</div> <div class="number-word">Eight</div> <div class="number-arabic">ثمانية</div> <div class="number-example">Eight planets in our solar system.</div> <button class="audio-btn" aria-label="Play sound for Eight"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('nine', 'Nine children are playing.')"> <div class="number-digit">9</div> <div class="number-word">Nine</div> <div class="number-arabic">تسعة</div> <div class="number-example">Nine children are playing.</div> <button class="audio-btn" aria-label="Play sound for Nine"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('ten', 'Ten fingers on two hands.')"> <div class="number-digit">10</div> <div class="number-word">Ten</div> <div class="number-arabic">عشرة</div> <div class="number-example">Ten fingers on two hands.</div> <button class="audio-btn" aria-label="Play sound for Ten"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('eleven', 'I have eleven pencils.')"> <div class="number-digit">11</div> <div class="number-word">Eleven</div> <div class="number-arabic">أحد عشر</div> <div class="number-example">I have eleven pencils.</div> <button class="audio-btn" aria-label="Play sound for Eleven"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('twelve', 'There are twelve months in a year.')"> <div class="number-digit">12</div> <div class="number-word">Twelve</div> <div class="number-arabic">اثنا عشر</div> <div class="number-example">There are twelve months in a year.</div> <button class="audio-btn" aria-label="Play sound for Twelve"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('thirteen', 'He is thirteen years old.')"> <div class="number-digit">13</div> <div class="number-word">Thirteen</div> <div class="number-arabic">ثلاثة عشر</div> <div class="number-example">He is thirteen years old.</div> <button class="audio-btn" aria-label="Play sound for Thirteen"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('fourteen', 'Fourteen students are in the class.')"> <div class="number-digit">14</div> <div class="number-word">Fourteen</div> <div class="number-arabic">أربعة عشر</div> <div class="number-example">Fourteen students are in the class.</div> <button class="audio-btn" aria-label="Play sound for Fourteen"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('fifteen', 'The game starts at fifteen past.')"> <div class="number-digit">15</div> <div class="number-word">Fifteen</div> <div class="number-arabic">خمسة عشر</div> <div class="number-example">The game starts at fifteen past.</div> <button class="audio-btn" aria-label="Play sound for Fifteen"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('sixteen', 'She bought sixteen cookies.')"> <div class="number-digit">16</div> <div class="number-word">Sixteen</div> <div class="number-arabic">ستة عشر</div> <div class="number-example">She bought sixteen cookies.</div> <button class="audio-btn" aria-label="Play sound for Sixteen"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('seventeen', 'There are seventeen cars.')"> <div class="number-digit">17</div> <div class="number-word">Seventeen</div> <div class="number-arabic">سبعة عشر</div> <div class="number-example">There are seventeen cars.</div> <button class="audio-btn" aria-label="Play sound for Seventeen"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('eighteen', 'He is eighteen years old.')"> <div class="number-digit">18</div> <div class="number-word">Eighteen</div> <div class="number-arabic">ثمانية عشر</div> <div class="number-example">He is eighteen years old.</div> <button class="audio-btn" aria-label="Play sound for Eighteen"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('nineteen', 'Nineteen birds flew away.')"> <div class="number-digit">19</div> <div class="number-word">Nineteen</div> <div class="number-arabic">تسعة عشر</div> <div class="number-example">Nineteen birds flew away.</div> <button class="audio-btn" aria-label="Play sound for Nineteen"><i class="fas fa-volume-up"></i></button> </div>
+        <div class="number-card" onclick="playNumberSound('twenty', 'I have twenty dollars.')"> <div class="number-digit">20</div> <div class="number-word">Twenty</div> <div class="number-arabic">عشرون</div> <div class="number-example">I have twenty dollars.</div> <button class="audio-btn" aria-label="Play sound for Twenty"><i class="fas fa-volume-up"></i></button> </div>
       </div>
+      <p class="section-tips">
+        **نصيحة للاستخدام:** حاول استخدام الأرقام في جمل بسيطة من حياتك اليومية لترسيخها. مثلاً: "I have two brothers." (لدي أخوان).
+      </p>
     </div>
 
     <!-- قسم التمارين -->
@@ -220,17 +106,20 @@
         <i class="fas fa-pencil-alt"></i>
         التمارين التفاعلية
       </h2>
+      <p class="section-intro">
+        اختبر فهمك للحروف والأرقام من خلال هذه التمارين السريعة.
+      </p>
       
       <div class="exercise-container">
         <div class="exercise-item">
           <h3>تمرين 1: اختر الحرف الصحيح</h3>
           <div class="exercise-question">
-            <p>اختر الحرف الذي يأتي بعد الحرف B:</p>
-            <div class="exercise-options">
-              <button class="option-btn" onclick="checkAnswer(this, false)">A</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">B</button>
-              <button class="option-btn" onclick="checkAnswer(this, true)">C</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">D</button>
+            <p>اختر الحرف الذي يأتي بعد الحرف M:</p>
+            <div class="exercise-options" data-correct-answer="N">
+              <button class="option-btn" onclick="checkAnswer(this, 'O')">O</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'P')">P</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'N')">N</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'L')">L</button>
             </div>
           </div>
         </div>
@@ -238,12 +127,54 @@
         <div class="exercise-item">
           <h3>تمرين 2: اختر الرقم الصحيح</h3>
           <div class="exercise-question">
-            <p>ما هو الرقم الذي يأتي بعد الرقم 7؟</p>
-            <div class="exercise-options">
-              <button class="option-btn" onclick="checkAnswer(this, false)">6</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">7</button>
-              <button class="option-btn" onclick="checkAnswer(this, true)">8</button>
-              <button class="option-btn" onclick="checkAnswer(this, false)">9</button>
+            <p>ما هو الرقم "Fifteen"؟</p>
+            <div class="exercise-options" data-correct-answer="15">
+              <button class="option-btn" onclick="checkAnswer(this, '5')">5</button>
+              <button class="option-btn" onclick="checkAnswer(this, '50')">50</button>
+              <button class="option-btn" onclick="checkAnswer(this, '15')">15</button>
+              <button class="option-btn" onclick="checkAnswer(this, '14')">14</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise-item">
+          <h3>تمرين 3: التعرف على الحرف من الصوت</h3>
+          <div class="exercise-question">
+            <p>اضغط على زر الاستماع ثم اختر الحرف الذي تسمعه:</p>
+            <button class="audio-btn" onclick="playSound('G', 'en-US')" aria-label="Play sound for letter G">
+              <i class="fas fa-volume-up"></i> استمع
+            </button>
+            <div class="exercise-options" data-correct-answer="G">
+              <button class="option-btn" onclick="checkAnswer(this, 'J')">J</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'C')">C</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'G')">G</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'Z')">Z</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise-item">
+          <h3>تمرين 4: أكمل الجملة</h3>
+          <div class="exercise-question">
+            <p>I have _____ brothers. (الرقم 2)</p>
+            <div class="exercise-options" data-correct-answer="two">
+              <button class="option-btn" onclick="checkAnswer(this, 'to')">to</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'too')">too</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'two')">two</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'twelve')">twelve</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise-item">
+          <h3>تمرين 5: ترتيب الحروف</h3>
+          <div class="exercise-question">
+            <p>ما هو الترتيب الصحيح للحروف التالية؟ (R, Q, P)</p>
+            <div class="exercise-options" data-correct-answer="P, Q, R">
+              <button class="option-btn" onclick="checkAnswer(this, 'R, Q, P')">R, Q, P</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'P, R, Q')">P, R, Q</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'Q, R, P')">Q, R, P</button>
+              <button class="option-btn" onclick="checkAnswer(this, 'P, Q, R')">P, Q, R</button>
             </div>
           </div>
         </div>
@@ -265,159 +196,237 @@
 </div>
 
 <style>
+/* تعريف المتغيرات الأساسية لمظهر Google UI */
+:root {
+  --primary-color: #1a73e8; /* Google Blue */
+  --primary-dark: #174ea6; /* Darker Google Blue */
+  --secondary-color: #0f9d58; /* Google Green */
+  --secondary-dark: #0a8043; /* Darker Google Green */
+  --bg-primary: #ffffff; /* White background */
+  --bg-secondary: #f8f9fa; /* Light grey background */
+  --text-color: #202124; /* Dark grey for text */
+  --text-light: #5f6368; /* Lighter grey for descriptions */
+  --text-muted: #70757a; /* Muted grey for hints */
+  --border-color: #dadce0; /* Light border grey */
+  --border-light: #f1f3f4; /* Even lighter border */
+  --success-color: #34a853; /* Google Green for success */
+  --danger-color: #ea4335; /* Google Red for danger */
+  --warning-color: #fbbc04; /* Google Yellow for warning */
+  --shadow-sm: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15); /* Small shadow */
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); /* Medium shadow */
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); /* Large shadow */
+  --border-radius: 8px; /* Standard border radius */
+  --border-radius-lg: 12px; /* Larger border radius */
+  --transition: all 0.2s ease-in-out; /* Smooth transition */
+}
+
+/* الأنماط العامة */
+body {
+  font-family: 'Roboto', Arial, sans-serif; /* استخدام Roboto أو Arial كبديل */
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-secondary); /* خلفية فاتحة للجسم */
+  margin: 0;
+  padding: 20px;
+  direction: rtl; /* لجعل التخطيط من اليمين لليسار */
+  text-align: right; /* محاذاة النص لليمين */
+}
+
 .lesson-content {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem;
   background: var(--bg-primary);
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md); /* ظل متوسط */
 }
 
 .lesson-header {
   text-align: center;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color); /* خط فاصل خفيف */
 }
 
 .lesson-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-weight: 800;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
 }
 
 .lesson-description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-light);
-  line-height: 1.6;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lesson-description ul {
+  list-style-type: disc; /* نقاط عادية */
+  padding-right: 20px; /* تباعد عن اليمين */
+  text-align: right;
+  margin-top: 1rem;
+  color: var(--text-color);
+}
+
+.lesson-description ul li {
+  margin-bottom: 0.5rem;
 }
 
 .lesson-section {
-  margin-bottom: 3rem;
-  padding: 2rem;
-  background: var(--bg-secondary);
+  margin-bottom: 3.5rem;
+  padding: 2.5rem;
+  background: var(--bg-primary); /* نفس خلفية المحتوى لتجنب التكرار البصري */
   border-radius: var(--border-radius);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-light); /* حدود خفيفة جداً */
+  box-shadow: var(--shadow-sm); /* ظل خفيف للقسم */
 }
 
 .section-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--text-color);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
+  justify-content: flex-end; /* لمحاذاة العنوان والأيقونة لليمين */
+  font-weight: 600;
 }
 
-.alphabet-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
+.section-title i {
+  color: var(--secondary-color); /* أيقونات خضراء */
+  font-size: 1.8rem;
+}
+
+.section-intro, .section-tips {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.7;
   margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border-right: 4px solid var(--primary-color); /* شريط جانبي */
 }
 
-.letter-card {
+.section-tips {
+  border-right: 4px solid var(--secondary-color);
+  margin-top: 2rem;
+}
+
+.alphabet-grid, .numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* زيادة حجم البطاقات قليلاً */
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.letter-card, .number-card {
   background: var(--bg-primary);
   border-radius: var(--border-radius);
-  padding: 2rem;
+  padding: 1.8rem;
   text-align: center;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   transition: var(--transition);
   cursor: pointer;
-  position: relative;
+  box-shadow: var(--shadow-sm); /* ظل خفيف للبطاقات */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* توزيع المحتوى بالتساوي */
+  min-height: 220px; /* ارتفاع أدنى للبطاقات */
 }
 
-.letter-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+.letter-card:hover, .number-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md); /* ظل أكبر عند التحويم */
   border-color: var(--primary-color);
 }
 
 .letter-upper {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .letter-lower {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--text-light);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .letter-pronunciation {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
   font-style: italic;
   margin-bottom: 1rem;
 }
 
-.numbers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+.letter-example, .number-example {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: row-reverse; /* لجعل النص على اليمين والأيقونة على اليسار */
+  text-align: right;
+  line-height: 1.4;
 }
 
-.number-card {
-  background: var(--bg-primary);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  text-align: center;
-  border: 2px solid var(--border-color);
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.number-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--secondary-color);
+.letter-example img, .number-example img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0; /* منع الصورة من الانكماش */
 }
 
 .number-digit {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
   color: var(--secondary-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .number-word {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--text-color);
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .number-arabic {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-light);
   margin-bottom: 1rem;
 }
 
 .audio-btn {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  background: var(--primary-color);
   color: white;
   border: none;
-  padding: 0.75rem;
+  padding: 0.8rem;
   border-radius: 50%;
   cursor: pointer;
   font-size: 1.2rem;
   transition: var(--transition);
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-sm);
+  margin-top: 1.2rem; /* لتباعد زر الصوت عن المحتوى */
 }
 
 .audio-btn:hover {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-lg);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+  background: var(--primary-dark);
 }
 
 .exercise-container {
@@ -425,75 +434,93 @@
   border-radius: var(--border-radius);
   padding: 2rem;
   margin-top: 2rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .exercise-item {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
   background: var(--bg-secondary);
   border-radius: var(--border-radius);
   border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
 }
 
 .exercise-item h3 {
   color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  text-align: right;
+  font-weight: 600;
 }
 
 .exercise-question p {
   font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
   color: var(--text-color);
+  text-align: right;
 }
 
 .exercise-options {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: flex-end; /* لمحاذاة الخيارات لليمين */
 }
 
 .option-btn {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--border-color);
+  padding: 0.8rem 1.8rem;
+  border: 1px solid var(--border-color);
   background: var(--bg-primary);
   color: var(--text-color);
   border-radius: var(--border-radius);
   cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 500;
   transition: var(--transition);
-  min-width: 80px;
+  min-width: 100px; /* عرض أدنى للزر */
+  box-shadow: var(--shadow-sm);
 }
 
-.option-btn:hover {
+.option-btn:hover:not(:disabled) {
   border-color: var(--primary-color);
   background: var(--primary-color);
   color: white;
+  box-shadow: var(--shadow-md);
 }
 
 .option-btn.correct {
   background: var(--success-color);
   border-color: var(--success-color);
   color: white;
+  box-shadow: var(--shadow-md);
 }
 
 .option-btn.incorrect {
   background: var(--danger-color);
   border-color: var(--danger-color);
   color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.option-btn.correct-reveal { /* لإظهار الإجابة الصحيحة إذا أخطأ المستخدم */
+  background: var(--success-color);
+  border-color: var(--success-color);
+  color: white;
+  opacity: 0.7;
+  pointer-events: none; /* منع التفاعل معها بعد الكشف */
 }
 
 .lesson-navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 2px solid var(--border-color);
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .nav-btn {
-  padding: 1rem 2rem;
+  padding: 1rem 2.2rem;
   border: none;
   border-radius: var(--border-radius);
   font-size: 1.1rem;
@@ -502,7 +529,9 @@
   transition: var(--transition);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
+  flex-direction: row-reverse; /* لعكس اتجاه الأيقونة والنص */
+  box-shadow: var(--shadow-sm);
 }
 
 .prev-btn {
@@ -511,82 +540,184 @@
 }
 
 .next-btn {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  background: var(--primary-color);
   color: white;
 }
 
 .nav-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
+  background: var(--primary-dark);
 }
 
 .nav-btn:disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
+/* الاستجابة لتصاميم الشاشات الصغيرة */
 @media (max-width: 768px) {
   .lesson-content {
     padding: 1rem;
   }
   
+  .lesson-title {
+    font-size: 2rem;
+  }
+
+  .lesson-description {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
   .alphabet-grid,
   .numbers-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* تصغير حجم البطاقات أكثر */
     gap: 1rem;
   }
   
   .letter-card,
   .number-card {
-    padding: 1.5rem;
+    padding: 1.2rem;
+    min-height: 180px;
+  }
+
+  .letter-upper, .number-digit {
+    font-size: 2.5rem;
+  }
+
+  .letter-lower {
+    font-size: 1.8rem;
+  }
+
+  .number-word {
+    font-size: 1.3rem;
   }
   
   .exercise-options {
     flex-direction: column;
+    align-items: stretch; /* لجعل الخيارات تأخذ العرض الكامل */
+  }
+
+  .option-btn {
+    min-width: unset;
+    width: 100%;
+    text-align: center;
   }
   
   .lesson-navigation {
     flex-direction: column;
     gap: 1rem;
   }
+
+  .nav-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 </style>
 
 <script>
-function playLetterSound(letter) {
-  // هنا يمكن إضافة كود تشغيل الصوت
-  console.log('Playing sound for letter:', letter);
+// قائمة انتظار لتشغيل الأصوات بشكل متتابع
+let speechQueue = [];
+let isSpeaking = false;
+
+function playSound(text, lang = 'en-US', rate = 0.9) {
+  if (!('speechSynthesis' in window)) {
+    console.warn('Speech synthesis not supported in this browser.');
+    alert('متصفحك لا يدعم خاصية تحويل النص إلى كلام.');
+    return;
+  }
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = lang;
+  utterance.rate = rate;
+  utterance.volume = 1;
+
+  utterance.onend = () => {
+    isSpeaking = false;
+    processSpeechQueue(); // تشغيل الصوت التالي في الطابور
+  };
+
+  utterance.onerror = (event) => {
+    console.error('Speech synthesis error:', event.error);
+    isSpeaking = false;
+    processSpeechQueue();
+  };
+
+  speechQueue.push(utterance);
+  processSpeechQueue();
 }
 
-function playNumberSound(number) {
-  // هنا يمكن إضافة كود تشغيل الصوت
-  console.log('Playing sound for number:', number);
+function processSpeechQueue() {
+  if (!isSpeaking && speechQueue.length > 0) {
+    isSpeaking = true;
+    const utterance = speechQueue.shift();
+    window.speechSynthesis.speak(utterance);
+  }
 }
 
-function checkAnswer(button, isCorrect) {
-  const buttons = button.parentElement.querySelectorAll('.option-btn');
+function playLetterSound(letter, exampleWord) {
+  window.speechSynthesis.cancel(); // إلغاء أي كلام سابق
+  speechQueue = []; // مسح الطابور القديم
+
+  // تشغيل الحرف أولاً
+  playSound(letter);
+  // ثم تشغيل الكلمة المثال
+  playSound(exampleWord);
+}
+
+function playNumberSound(numberWord, exampleSentence) {
+  window.speechSynthesis.cancel(); // إلغاء أي كلام سابق
+  speechQueue = []; // مسح الطابور القديم
+
+  // تشغيل الكلمة الرقمية أولاً
+  playSound(numberWord);
+  // ثم تشغيل الجملة المثال
+  playSound(exampleSentence);
+}
+
+function checkAnswer(button, selectedAnswer) {
+  const optionsContainer = button.parentElement;
+  const buttons = optionsContainer.querySelectorAll('.option-btn');
+  const correctAnswer = optionsContainer.dataset.correctAnswer;
   
+  // تعطيل جميع الأزرار لمنع التحديد المتعدد
   buttons.forEach(btn => {
     btn.disabled = true;
-    if (btn === button) {
-      btn.classList.add(isCorrect ? 'correct' : 'incorrect');
-    } else if (btn.onclick.toString().includes('true')) {
-      btn.classList.add('correct');
-    }
   });
+
+  if (selectedAnswer === correctAnswer) {
+    button.classList.add('correct');
+    playSound('Correct!', 'en-US');
+  } else {
+    button.classList.add('incorrect');
+    playSound('Incorrect, try again!', 'en-US');
+    // إظهار الإجابة الصحيحة
+    buttons.forEach(btn => {
+      if (btn.textContent.trim() === correctAnswer) { // استخدام textContent للمقارنة
+        btn.classList.add('correct-reveal');
+      }
+    });
+  }
 }
 
 function previousLesson() {
-  // سيتم تنفيذ هذا من الكود الرئيسي
-  if (window.parent && window.parent.previousLesson) {
-    window.parent.previousLesson();
-  }
+  alert('الانتقال إلى الدرس السابق (هذه وظيفة وهمية).');
+  console.log('Previous Lesson clicked');
+  // هنا يمكنك إضافة منطق الانتقال للدرس السابق فعلياً
+  // مثال: window.location.href = 'lesson-0.html';
 }
 
 function nextLesson() {
-  // سيتم تنفيذ هذا من الكود الرئيسي
-  if (window.parent && window.parent.nextLesson) {
-    window.parent.nextLesson();
-  }
+  alert('الانتقال إلى الدرس التالي (هذه وظيفة وهمية).');
+  console.log('Next Lesson clicked');
+  // هنا يمكنك إضافة منطق الانتقال للدرس التالي فعلياً
+  // مثال: window.location.href = 'lesson-2.html';
 }
 </script>
